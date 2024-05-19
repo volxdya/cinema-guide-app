@@ -14,6 +14,7 @@ STACK:
 4. Redux Toolkit
 5. Axios
 6. Postgres
+7. Docker
 
 Начало: 19.05.2024
 Конец: XX.XX.2024
