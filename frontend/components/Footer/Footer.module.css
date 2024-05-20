@@ -1,0 +1,19 @@
+.footer-link {
+    color: #d6d6d6;
+    font-size: 20px;
+}
+.footer-link:hover {
+    color: #c1c1c1;
+    transition: color 0.3s;
+}
+
+.footer {
+    font-size: 25px;
+}
+
+.footerContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 150px;
+}

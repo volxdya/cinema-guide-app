@@ -4,8 +4,14 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <h1>Hello next!</h1>
-      <Link href="/test">123</Link>
+      {
+        /* 
+          Main page
+        */
+      }
+      <h1>HELLO DANIL</h1>
+      <Link href="/profile">profile</Link>
+      <Link href="/genres">genres</Link>
     </>
   );
 }
