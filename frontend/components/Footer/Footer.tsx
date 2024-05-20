@@ -9,6 +9,7 @@ export function Footer() {
             <div>
                 vk
                 inst
+                tg
             </div>
         </footer>
     )
