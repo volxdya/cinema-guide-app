@@ -8,7 +8,11 @@ import { usePathname } from 'next/navigation';
 
 export default function Header() {
     const path = usePathname();
-    console.log(path);
+    if (path === "/"){
+        console.log(true)
+    } else {
+        console.log(false);
+    }
 
     return (
         <header className={styles.header}>
@@ -16,10 +20,10 @@ export default function Header() {
                 <h3 className={styles.title}>CinemaGuide</h3>
             </Link>
             <Link href="/">
-                <p className={path == '/' ? styles.active : styles.item}>Главная</p>
+                <p className={path === "/" ? styles.active : styles.item}>Главная</p>
             </Link>
             <Link href="/genres">
-                <p className={styles.item}>Жанры</p>
+                <p className={path === '/genres' ? styles.active : styles.item}>Жанры</p>
             </Link>
             <form>
                 <input type="text" placeholder="Поиск" className={styles.input} />

@@ -4,7 +4,7 @@ export function Footer() {
     return (
         <footer className={styles.footerContainer}>
             <div>
-                <p className="footer">ⓒ LLC «Мультимедиа Визион»</p>
+                <p className="footer">LLC  ⓒ «Мультимедиа Визион»</p>
             </div>
             <div>
                 vk

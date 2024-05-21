@@ -24,7 +24,7 @@
 .item {
     text-decoration-color: #DC5DFC;
 }
-.acitve {
+.active {
     text-decoration: underline;
     cursor: pointer;
     text-underline-offset: 10px;
@@ -36,6 +36,7 @@
     cursor: pointer;
     text-underline-offset: 10px;
     text-decoration-color: #DC5DFC;
+    text-shadow: rgba(255, 0, 194, 0.77) 0 0 5px;
     /* transition: text-decoration 22.5s ease-in-out 22.5s, 
     text-underline-offset 22.5s ease-in-out 22.5s; */
 }
