@@ -2,6 +2,7 @@ import styles from './MainFilm.module.css';
 import {Star} from "@/icons/Star";
 import Like from "@/icons/Like";
 import Reroll from "@/icons/Reroll";
+import Link from "next/link";
 
 export function MainFilm(){
     return (
@@ -24,9 +25,11 @@ export function MainFilm(){
 
                 <div className={styles.buttons + ' mt-5'}>
                     <button className={styles.button + ' ' + styles.mainButton}>Трейлер</button>
-                    <button className={styles.secondButton + ' ' + styles.button}>О фильме</button>
+                    <Link href="/film">
+                        <button className={styles.secondButton + ' ' + styles.button}>О фильме</button>
+                    </Link>
                     <button className={styles.thirdButton}>
-                        <Like/>
+                    <Like/>
                     </button>
                     <button className={styles.thirdButton}><Reroll/></button>
                 </div>

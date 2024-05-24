@@ -17,3 +17,15 @@
     justify-content: space-between;
     margin-top: 150px;
 }
+.rules {
+    color: #767676;
+}
+.item {
+    outline: 3px solid gray;
+    border-radius: 10px;
+    padding: 7px;
+}
+.item:hover {
+    cursor: pointer;
+    outline: 3px solid #626161;
+}
