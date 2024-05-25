@@ -10,6 +10,5 @@ async function start() {
     console.log(`http://localhost:${PORT}`);
   });
 }
-start();
 
-// hello danil
+start();
