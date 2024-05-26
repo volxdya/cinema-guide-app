@@ -19,4 +19,10 @@ export class UserService {
 
     return users;
   }
+
+  async getOneUser(login: string) {
+    const user = await this.userRepository.findOne({ where: { login } });
+
+    return user;
+  }
 }
