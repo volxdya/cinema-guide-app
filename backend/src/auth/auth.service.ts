@@ -12,7 +12,6 @@ export class AuthService {
   ) {
   }
 
-
   // function for examination user data's (really data and data, which come from frontend)
 
   private async validateUser(userDto: UserDto) {
@@ -30,6 +29,8 @@ export class AuthService {
   // function which generate toke
 
   private async generateToken(user: User) {
+
+    // payload - data which need return in auth
     const payload = {
       login: user.login,
       firstName: user.firstName,
