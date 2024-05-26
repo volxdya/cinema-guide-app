@@ -5,6 +5,7 @@ import { UserController } from './user/user.controller';
 import { UserModule } from './user/user.module';
 import * as process from 'node:process';
 import { User } from './user/user.model';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { User } from './user/user.model';
       models: [User],
     }),
     UserModule,
+    AuthModule
   ],
   controllers: [],
   providers: [],
