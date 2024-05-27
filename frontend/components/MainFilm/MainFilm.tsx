@@ -25,7 +25,7 @@ export function MainFilm(){
 
                 <div className={styles.buttons + ' mt-5'}>
                     <button className={styles.button + ' ' + styles.mainButton}>Трейлер</button>
-                    <Link href="/film">
+                    <Link href="/backend/src/film">
                         <button className={styles.secondButton + ' ' + styles.button}>О фильме</button>
                     </Link>
                     <button className={styles.thirdButton}>

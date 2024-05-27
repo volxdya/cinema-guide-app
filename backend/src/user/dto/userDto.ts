@@ -1,4 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { Genre } from '../../genre/genre.model';
 
 export class UserDto {
 

@@ -40,6 +40,7 @@ export class UserController {
     status: 200,
     type: UserDto,
   })
+
   @Get('/get_by_login/:login')
   get_by_login(@Param('login') login: string) {
     return this.userService.getOneUser(login);
