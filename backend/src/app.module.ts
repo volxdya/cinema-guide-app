@@ -6,6 +6,8 @@ import { UserModule } from './user/user.module';
 import * as process from 'node:process';
 import { User } from './user/user.model';
 import { AuthModule } from './auth/auth.module';
+import { GenreModule } from './genre/genre.module';
+import { Genre } from './genre/genre.model';
 
 @Module({
   imports: [
@@ -20,10 +22,11 @@ import { AuthModule } from './auth/auth.module';
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRES_DB,
       autoLoadModels: true,
-      models: [User],
+      models: [User, Genre],
     }),
     UserModule,
-    AuthModule
+    AuthModule,
+    GenreModule
   ],
   controllers: [],
   providers: [],
