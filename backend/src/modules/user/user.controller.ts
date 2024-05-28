@@ -45,4 +45,10 @@ export class UserController {
   get_by_login(@Param('login') login: string) {
     return this.userService.getOneUser(login);
   }
+
+  @Get(`/get_random_user`)
+  get_random_user(){
+    return this.userService.getCountAllUsers();
+  }
+
 }

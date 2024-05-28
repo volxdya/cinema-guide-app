@@ -25,4 +25,20 @@ export class UserService {
 
     return user;
   }
+
+  async getOneUserById(id: number) {
+    const user = await this.userRepository.findOne({ where: { id } });
+
+    return user;
+  }
+
+  async getCountAllUsers(){
+    function getRandomInt(max: number): number {
+      return Math.floor(Math.random() * max);
+    }
+
+    const count = (await this.getAllUsers()).length;
+
+    return this.getOneUserById(getRandomInt(count));
+  }
 }

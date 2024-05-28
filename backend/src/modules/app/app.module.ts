@@ -1,14 +1,13 @@
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { ConfigModule } from '@nestjs/config';
-import { UserController } from './user/user.controller';
-import { UserModule } from './user/user.module';
 import * as process from 'node:process';
-import { User } from './user/user.model';
-import { AuthModule } from './auth/auth.module';
-import { GenreModule } from './genre/genre.module';
-import { Genre } from './genre/genre.model';
-import { Film } from './film/film.model';
+import { UserModule } from '../user/user.module';
+import { User } from '../user/user.model';
+import { Genre } from '../genre/genre.model';
+import { Film } from '../film/film.model';
+import { AuthModule } from '../auth/auth.module';
+import { GenreModule } from '../genre/genre.module';
 
 @Module({
   imports: [
