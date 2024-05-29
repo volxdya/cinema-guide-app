@@ -10,5 +10,3 @@ import { Roles } from './roles.model';
   imports: [SequelizeModule.forFeature([Roles])]
 })
 export class RolesModule {}
-
-// hello danil
