@@ -10,6 +10,7 @@ import { AuthModule } from '../auth/auth.module';
 import { GenreModule } from '../genre/genre.module';
 import { FilmModule } from '../film/film.module';
 import { FilmGenres } from '../genre/film-genres.model';
+import { Favorites } from '../film/favorites.model';
 
 @Module({
   imports: [
@@ -24,7 +25,7 @@ import { FilmGenres } from '../genre/film-genres.model';
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRES_DB,
       autoLoadModels: true,
-      models: [User, Genre, Film, FilmGenres],
+      models: [User, Genre, Film, FilmGenres, Favorites],
     }),
     UserModule,
     AuthModule,

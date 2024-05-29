@@ -2,6 +2,7 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { UserService } from './user.service';
 import { UserDto } from './dto/userDto';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { FavoriteDto } from './dto/favoriteDto';
 
 @ApiTags('User')
 @Controller('/user/')
@@ -51,4 +52,8 @@ export class UserController {
     return this.userService.getCountAllUsers();
   }
 
+  @Post(`/add_favorite`)
+  addFavorite(@Body() favoriteDto: FavoriteDto){
+    return this.userService.addFavorite(favoriteDto.userId, favoriteDto.filmId)
+  }
 }

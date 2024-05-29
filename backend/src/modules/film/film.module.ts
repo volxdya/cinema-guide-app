@@ -6,13 +6,16 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { Film } from './film.model';
 import { FilmGenres } from '../genre/film-genres.model';
 import { GenreModule } from '../genre/genre.module';
-import { GenreService } from '../genre/genre.service';
+import { User } from '../user/user.model';
 
 @Module({
   providers: [FilmService],
   controllers: [FilmController],
-  imports: [SequelizeModule.forFeature([Genre, Film, FilmGenres]),
-    GenreModule
+  imports: [SequelizeModule.forFeature([Genre, Film, FilmGenres, User]),
+    GenreModule,
   ],
+  exports: [
+    FilmService
+  ]
 })
 export class FilmModule {}

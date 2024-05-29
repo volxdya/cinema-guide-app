@@ -1,5 +1,7 @@
-import { Column, DataType, HasMany, Model, Table } from 'sequelize-typescript';
+import { BelongsToMany, Column, DataType, HasMany, Model, Table } from 'sequelize-typescript';
 import { Genre } from '../genre/genre.model';
+import { Film } from '../film/film.model';
+import { Favorites } from '../film/favorites.model';
 
 interface IUser {
   login: string;
@@ -25,4 +27,7 @@ export class User extends Model<User, IUser>{
 
   @Column({type: DataType.STRING, allowNull: false})
   password: string;
+
+  @BelongsToMany(() => Film, () => Favorites)
+  favorites: Film[]
 }
