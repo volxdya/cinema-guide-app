@@ -3,7 +3,6 @@ import { InjectModel } from '@nestjs/sequelize';
 import { User } from './user.model';
 import { UserDto } from './dto/userDto';
 import { FilmService } from '../film/film.service';
-import { RolesService } from '../roles/roles.service';
 import { Film } from '../film/film.model';
 
 @Injectable()
@@ -12,16 +11,12 @@ export class UserService {
     @InjectModel(User)
     private userRepository: typeof User,
     private filmService: FilmService,
-    private roleService: RolesService
   ) {
   }
 
   async createUser(dto: UserDto) {
     const user = await this.userRepository.create(dto);
 
-    const role = await this.roleService.getByTitle(dto.roleTitle)
-
-    await user.$add('role', [role]);
     return user;
   }
 

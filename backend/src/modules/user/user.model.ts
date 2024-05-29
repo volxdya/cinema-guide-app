@@ -1,9 +1,6 @@
-import { BelongsToMany, Column, DataType, HasMany, Model, Table } from 'sequelize-typescript';
-import { Genre } from '../genre/genre.model';
+import { BelongsToMany, Column, DataType, Model, Table } from 'sequelize-typescript';
 import { Film } from '../film/film.model';
 import { Favorites } from '../film/favorites.model';
-import { Role } from '../roles/roles.model';
-import { UserRoles } from '../roles/user-roles.model';
 
 interface IUser {
   login: string;
@@ -33,6 +30,4 @@ export class User extends Model<User, IUser>{
   @BelongsToMany(() => Film, () => Favorites)
   favorites: Film[]
 
-  @BelongsToMany(() => Role, () => UserRoles)
-  roles: Role[]
 }

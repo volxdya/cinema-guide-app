@@ -1,20 +1,16 @@
-import { BelongsToMany, Column, DataType, ForeignKey, Model, PrimaryKey, Table } from 'sequelize-typescript';
-import { User } from '../user/user.model';
-import { UserRoles } from './user-roles.model';
+import { Column, DataType, Model, Table } from 'sequelize-typescript';
 
-
-interface IRole {
+interface IRoles {
   title: string;
 }
 
-@Table({tableName: 'user_roles'})
-export class Role extends Model<Role, IRole>{
-  @Column({type: DataType.STRING, unique: true, allowNull: false})
-  title: string;
 
-  @Column({type: DataType.INTEGER, primaryKey: true, allowNull: false, autoIncrement: true})
+@Table({tableName: 'roles'})
+export class Roles extends Model<Roles, IRoles>{
+  @Column({type: DataType.INTEGER, allowNull: false, autoIncrement: true, unique: true, primaryKey: true})
   id: number;
 
-  @BelongsToMany(() => User, () => UserRoles)
-  users: User[]
+  @Column({type: DataType.STRING, allowNull: false, unique: true})
+  title: string;
+
 }

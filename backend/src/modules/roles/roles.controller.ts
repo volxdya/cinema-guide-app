@@ -1,54 +1,30 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { RolesService } from './roles.service';
 import { RolesDto } from './dto/rolesDto';
-import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { GenreDto } from '../genre/dto/genreDto';
-import { Role } from './roles.model';
+import { FavoriteDto } from '../user/dto/favoriteDto';
 
-@ApiTags('Roles')
 @Controller('/roles/')
 export class RolesController {
 
   constructor(private readonly rolesService: RolesService) {}
 
-  @ApiOperation({
-    summary: 'Создание новой роли',
-  })
-
-  @ApiResponse({
-    status: 200,
-    type: Role
-  })
   @Post(`/create`)
   create(@Body() dto: RolesDto){
     return this.rolesService.create(dto);
   }
 
-
-  @ApiOperation({
-    summary: 'Получение массива ролей',
-  })
-
-  @ApiResponse({
-    status: 200,
-    type: [Role]
-  })
-  @Get('/get_all')
-  getAll(){
-    return this.rolesService.getAll();
+  @Get('/get_by_title/:title')
+  get_by_title(@Param('title') title: string) {
+    return this.rolesService.getByTitle(title);
   }
 
+  @Get('/get_by_id/:id')
+  get_by_id(@Param('id') id: number) {
+    return this.rolesService.getById(id);
+  }
 
-  @ApiOperation({
-    summary: 'Получение роли по названию',
-  })
-
-  @ApiResponse({
-    status: 200,
-    type: Role
-  })
-  @Get('/get_by_title/:title')
-  getByTitle(@Param('title') title: string){
-    return this.rolesService.getByTitle(title);
+  @Get('/get_all')
+  getAll() {
+    return this.rolesService.getAll();
   }
 }
