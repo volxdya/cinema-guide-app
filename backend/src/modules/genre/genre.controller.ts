@@ -2,7 +2,7 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { GenreService } from './genre.service';
 import { GenreDto } from './dto/genreDto';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { Genre } from './genre.model';
+import { FilmDto } from '../film/dto/filmDto';
 
 @ApiTags('Genre')
 @Controller('/genre/')
@@ -41,7 +41,7 @@ export class GenreController {
   })
   @ApiResponse({
     status: 200,
-    type: Genre
+    type: GenreDto
   })
   @Get(`/get_one/:title`)
   getOne(@Param('title') title: string) {
@@ -53,12 +53,21 @@ export class GenreController {
   })
   @ApiResponse({
     status: 200,
-    type: Genre
+    type: GenreDto
   })
+
   @Get(`/get_one/:id`)
   getOneById(@Param('id') id: number) {
     return this.genreService.getOneById(id);
   }
+
+  @ApiOperation({
+    summary: "Получение фильмов по жанру"
+  })
+  @ApiResponse({
+    status: 200,
+    type: [FilmDto]
+  })
 
   @Get('/get_film_by_genre/:title')
   getFilmByGenre(@Param('title') title: string) {

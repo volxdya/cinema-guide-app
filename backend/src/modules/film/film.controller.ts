@@ -2,7 +2,6 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { FilmDto } from './dto/filmDto';
 import { FilmService } from './film.service';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { Film } from './film.model';
 
 @ApiTags('Films')
 @Controller('/film/')
@@ -15,7 +14,7 @@ export class FilmController {
 
   @ApiResponse({
     status: 200,
-    type: Film
+    type: FilmDto
   })
   @Post('/create')
   createFilm(@Body() dto: FilmDto){
@@ -28,7 +27,7 @@ export class FilmController {
 
   @ApiResponse({
     status: 200,
-    type: Film
+    type: FilmDto
   })
 
   @Get(`/get_one/:id`)
@@ -42,7 +41,7 @@ export class FilmController {
 
   @ApiResponse({
     status: 200,
-    type: [Film]
+    type: [FilmDto]
   })
 
   @Get(`/get_all`)
@@ -56,7 +55,7 @@ export class FilmController {
 
   @ApiResponse({
     status: 200,
-    type: Film
+    type: FilmDto
   })
 
   @Get('/get_by_title/:title')
@@ -64,14 +63,18 @@ export class FilmController {
     return this.filmService.getByTitle(title);
   }
 
+  @ApiOperation({
+    summary: "Получение рандомного фильма"
+  })
+
+  @ApiResponse({
+    status: 200,
+    type: FilmDto
+  })
+
   @Get('/get_random')
   getRandom() {
     return this.filmService.getRandomFilm();
-  }
-
-  @Get(`/get_by_genre/:title`)
-  getByGenre(title: string) {
-    return this.filmService.getByTitle(title);
   }
 
 }
