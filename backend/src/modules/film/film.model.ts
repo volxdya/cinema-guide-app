@@ -1,4 +1,6 @@
-import { Column, DataType, Model, Table } from 'sequelize-typescript';
+import { BelongsToMany, Column, DataType, Model, Table } from 'sequelize-typescript';
+import { Genre } from '../genre/genre.model';
+import { FilmGenres } from '../genre/film-genres.model';
 
 interface IFilm {
   title: string;
@@ -40,4 +42,6 @@ export class Film extends Model<Film, IFilm>{
   @Column({type: DataType.INTEGER, allowNull: false})
   rating: number;
 
+  @BelongsToMany(() => Genre, () => FilmGenres)
+  Genres: Genre[]
 }

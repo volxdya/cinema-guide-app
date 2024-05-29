@@ -8,6 +8,8 @@ import { Genre } from '../genre/genre.model';
 import { Film } from '../film/film.model';
 import { AuthModule } from '../auth/auth.module';
 import { GenreModule } from '../genre/genre.module';
+import { FilmModule } from '../film/film.module';
+import { FilmGenres } from '../genre/film-genres.model';
 
 @Module({
   imports: [
@@ -22,11 +24,12 @@ import { GenreModule } from '../genre/genre.module';
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRES_DB,
       autoLoadModels: true,
-      models: [User, Genre, Film],
+      models: [User, Genre, Film, FilmGenres],
     }),
     UserModule,
     AuthModule,
-    GenreModule
+    GenreModule,
+    FilmModule
   ],
   controllers: [],
   providers: [],
