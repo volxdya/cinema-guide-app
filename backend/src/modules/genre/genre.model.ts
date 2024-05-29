@@ -7,7 +7,7 @@ interface IGenre {
   id: number;
 }
 
-@Table({tableName: 'genre'})
+@Table({tableName: 'genre', createdAt: false, updatedAt: false})
 export class Genre extends Model<Genre, IGenre>{
   @Column({type: DataType.STRING, unique: true, allowNull: false})
   title: string;

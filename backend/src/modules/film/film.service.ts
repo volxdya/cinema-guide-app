@@ -3,6 +3,8 @@ import { InjectModel } from '@nestjs/sequelize';
 import { Film } from './film.model';
 import { FilmDto } from './dto/filmDto';
 import { GenreService } from '../genre/genre.service';
+import { GenresFilmDto } from './dto/genresFilmDto';
+import { Genre } from '../genre/genre.model';
 
 @Injectable()
 
@@ -15,6 +17,9 @@ export class FilmService {
 
   async create(dto: FilmDto): Promise<Film> {
     const film = await this.filmService.create(dto);
+    const genre = await this.genreService.getOneById(dto.genreId);
+
+    await film.$add('Genres', [genre]);
 
     return film;
   }
@@ -26,7 +31,7 @@ export class FilmService {
   }
 
   async getAll() {
-    const films = await this.filmService.findAll();
+    const films = await this.filmService.findAll({include: [Genre]});
 
     return films;
   }
@@ -40,5 +45,6 @@ export class FilmService {
       return film;
     }
   }
+
 
 }

@@ -7,7 +7,7 @@ interface IFilmGenresModel {
   genreId: number;
 
 }
-@Table({tableName: 'film-genre', createdAt: false, updatedAt: false})
+@Table({tableName: 'film-genre'})
 export class FilmGenres extends Model<FilmGenres, IFilmGenresModel>{
   @Column({type: DataType.INTEGER, unique: true, allowNull: false, autoIncrement: true, primaryKey: true})
   id: number;

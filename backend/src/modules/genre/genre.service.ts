@@ -24,4 +24,10 @@ export class GenreService {
 
     return genre;
   }
+
+  async getOneById(id: number): Promise<Genre> {
+    const genre = await this.genreService.findOne({ where: { id } });
+
+    return genre;
+  }
 }

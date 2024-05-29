@@ -1,4 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { GenreDto } from '../../genre/dto/genreDto';
 
 export class FilmDto {
 
@@ -49,4 +50,6 @@ export class FilmDto {
     example: '2 154 661',
   })
   readonly revenue: number;
+
+  readonly genreId: number;
 }
