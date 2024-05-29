@@ -17,7 +17,7 @@ export class FilmService {
 
   async create(dto: FilmDto): Promise<Film> {
     const film = await this.filmService.create(dto);
-    const genre = await this.genreService.getOneById(dto.genreId);
+    const genre = await this.genreService.getOneGenre(dto.genreTitle);
 
     await film.$add('Genres', [genre]);
 

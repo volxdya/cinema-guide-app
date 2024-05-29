@@ -51,5 +51,9 @@ export class FilmDto {
   })
   readonly revenue: number;
 
-  readonly genreId: number;
+  @ApiProperty({
+    description: 'Название жанра',
+    example: 'Боевик',
+  })
+  readonly genreTitle: string;
 }
