@@ -47,4 +47,21 @@ export class GenreController {
   getOne(@Param('title') title: string) {
     return this.genreService.getOneGenre(title);
   }
+
+  @ApiOperation({
+    summary: "Получение одного жанра по названию"
+  })
+  @ApiResponse({
+    status: 200,
+    type: Genre
+  })
+  @Get(`/get_one/:id`)
+  getOneById(@Param('id') id: number) {
+    return this.genreService.getOneById(id);
+  }
+
+  @Get('/get_film_by_genre/:title')
+  getFilmByGenre(@Param('title') title: string) {
+    return this.genreService.getFilmsByGenre(title);
+  }
 }

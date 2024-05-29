@@ -14,13 +14,13 @@ export class GenreService {
   }
 
   async getAllGenres(): Promise<Genre[]> {
-    const genres = await this.genreService.findAll();
+    const genres = await this.genreService.findAll({include: {all: true}});
 
     return genres;
   }
 
   async getOneGenre(title: string): Promise<Genre> {
-    const genre = await this.genreService.findOne({ where: { title } });
+    const genre = await this.genreService.findOne({ where: { title }, include: {all: true} });
 
     return genre;
   }
@@ -29,5 +29,9 @@ export class GenreService {
     const genre = await this.genreService.findOne({ where: { id } });
 
     return genre;
+  }
+
+  async getFilmsByGenre(title: string) {
+    return (await (this.getOneGenre(title))).films;
   }
 }

@@ -3,10 +3,7 @@ import { InjectModel } from '@nestjs/sequelize';
 import { Film } from './film.model';
 import { FilmDto } from './dto/filmDto';
 import { GenreService } from '../genre/genre.service';
-import { GenresFilmDto } from './dto/genresFilmDto';
 import { Genre } from '../genre/genre.model';
-import { where } from 'sequelize';
-import { max } from 'rxjs';
 
 @Injectable()
 
