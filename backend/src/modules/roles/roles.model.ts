@@ -8,7 +8,7 @@ interface IRoles {
 }
 
 
-@Table({tableName: 'roles'})
+@Table({tableName: 'roles', updatedAt: false, createdAt: false})
 export class Roles extends Model<Roles, IRoles>{
   @Column({type: DataType.INTEGER, allowNull: false, autoIncrement: true, unique: true, primaryKey: true})
   id: number;

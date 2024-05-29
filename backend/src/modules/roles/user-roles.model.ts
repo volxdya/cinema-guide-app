@@ -8,7 +8,7 @@ interface IUserRoles {
   roleId: number;
 }
 
-@Table({tableName: 'user_roles'})
+@Table({tableName: 'user_roles', createdAt: false, updatedAt: false})
 export class UserRoles extends Model<UserRoles, IUserRoles>{
   @Column({type: DataType.INTEGER, primaryKey: true, autoIncrement: true, unique: true})
   id: number;

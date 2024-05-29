@@ -15,7 +15,7 @@ interface IFilm {
   rating: number;
 }
 
-@Table({tableName: 'film'})
+@Table({tableName: 'film', updatedAt: false, createdAt: false})
 export class Film extends Model<Film, IFilm>{
   @Column({type: DataType.STRING, unique: true, allowNull: false})
   title: string;

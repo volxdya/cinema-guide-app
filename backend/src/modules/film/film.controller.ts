@@ -64,4 +64,9 @@ export class FilmController {
     return this.filmService.getByTitle(title);
   }
 
+  @Get('/get_random')
+  getRandom() {
+    return this.filmService.getRandomFilm();
+  }
+
 }
