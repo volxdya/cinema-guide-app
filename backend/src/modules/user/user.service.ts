@@ -4,6 +4,7 @@ import { User } from './user.model';
 import { UserDto } from './dto/userDto';
 import { FilmService } from '../film/film.service';
 import { Film } from '../film/film.model';
+import { RolesService } from '../roles/roles.service';
 
 @Injectable()
 export class UserService {
@@ -11,17 +12,22 @@ export class UserService {
     @InjectModel(User)
     private userRepository: typeof User,
     private filmService: FilmService,
+    private roleService: RolesService
   ) {
   }
 
   async createUser(dto: UserDto) {
     const user = await this.userRepository.create(dto);
 
+    const role = await this.roleService.getByTitle("user");
+
+    await user.$add('roles', [role]);
+
     return user;
   }
 
   async getAllUsers() {
-    const users = await this.userRepository.findAll({include: [Film]});
+    const users = await this.userRepository.findAll({include: {all: true}});
 
     return users;
   }

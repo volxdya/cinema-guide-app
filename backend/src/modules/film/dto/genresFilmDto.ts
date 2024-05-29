@@ -4,9 +4,7 @@ export class GenresFilmDto {
   @ApiProperty({
     description: "id фильма",
   })
-
   readonly filmId: number;
-
   @ApiProperty({
     description: "id жанра",
   })
