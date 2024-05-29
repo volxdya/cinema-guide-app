@@ -37,6 +37,7 @@ export class UserController {
   @ApiOperation({
     summary: 'Получение одного пользователя по логину',
   })
+
   @ApiResponse({
     status: 200,
     type: UserDto,
@@ -47,10 +48,28 @@ export class UserController {
     return this.userService.getOneUser(login);
   }
 
+  @ApiOperation({
+    summary: 'Получение случайного пользователя',
+  })
+
+  @ApiResponse({
+    status: 200,
+    type: UserDto,
+  })
+
   @Get(`/get_random_user`)
   get_random_user(){
     return this.userService.getCountAllUsers();
   }
+
+  @ApiOperation({
+    summary: 'Добавление фильма в избранное',
+  })
+
+  @ApiResponse({
+    status: 200,
+    type: UserDto,
+  })
 
   @Post(`/add_favorite`)
   addFavorite(@Body() favoriteDto: FavoriteDto){

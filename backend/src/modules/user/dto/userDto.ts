@@ -26,4 +26,6 @@ export class UserDto {
     example: "secret_password123456"
   })
   readonly password: string;
+
+  readonly roleTitle: string;
 }
