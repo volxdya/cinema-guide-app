@@ -85,6 +85,7 @@ export class UserController {
   }
 
   @ApiOperation({
+    summary: "Обновление данных пользователя"
   })
 
   @ApiResponse({
