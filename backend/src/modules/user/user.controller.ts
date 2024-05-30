@@ -3,9 +3,7 @@ import { UserService } from './user.service';
 import { UserDto } from './dto/userDto';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { FavoriteDto } from './dto/favoriteDto';
-import { RolesGuard } from '../auth/roles.guard';
-import { RolesDecorator } from '../auth/roles.decorator';
-import { AuthGuard } from '../auth/auth.guard';
+import { AuthGuard } from '../../guards/auth.guard';
 
 @ApiTags('User')
 @Controller('/user/')
@@ -87,7 +85,6 @@ export class UserController {
   }
 
   @ApiOperation({
-    summary: 'Обновление пользователя',
   })
 
   @ApiResponse({

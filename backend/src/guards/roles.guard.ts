@@ -1,9 +1,9 @@
 import { CanActivate, ExecutionContext, UnauthorizedException } from '@nestjs/common';
-import { AuthService } from './auth.service';
 import { Observable } from 'rxjs';
 import { Reflector } from '@nestjs/core';
-import { ROLES_KEY } from './roles.decorator';
 import { JwtService } from '@nestjs/jwt';
+import { ROLES_KEY } from '../decorators/roles.decorator';
+import { AuthService } from '../modules/auth/auth.service';
 
 export class RolesGuard implements CanActivate {
   constructor(
