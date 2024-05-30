@@ -85,4 +85,18 @@ export class UserController {
   addFavorite(@Body() favoriteDto: FavoriteDto){
     return this.userService.addFavorite(favoriteDto.userId, favoriteDto.filmId)
   }
+
+  @ApiOperation({
+    summary: 'Обновление пользователя',
+  })
+
+  @ApiResponse({
+    status: 200,
+    type: UserDto,
+  })
+
+  @Post(`/update/:login`)
+  update(@Body() userDto: UserDto, @Param('login') login: string) {
+    return this.userService.update(login, userDto);
+  }
 }

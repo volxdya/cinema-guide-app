@@ -1,33 +1,36 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { FilmDto } from './dto/filmDto';
 import { FilmService } from './film.service';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { Film } from './film.model';
 
 @ApiTags('Films')
 @Controller('/film/')
 export class FilmController {
 
-  constructor(private readonly filmService: FilmService) {}
+  constructor(private readonly filmService: FilmService) {
+  }
+
   @ApiOperation({
-    summary: "Создание фильма"
+    summary: 'Создание фильма',
   })
 
   @ApiResponse({
     status: 200,
-    type: FilmDto
+    type: FilmDto,
   })
   @Post('/create')
-  createFilm(@Body() dto: FilmDto){
+  createFilm(@Body() dto: FilmDto) {
     return this.filmService.create(dto);
   }
 
   @ApiOperation({
-    summary: "Получение одного фильма по id"
+    summary: 'Получение одного фильма по id',
   })
 
   @ApiResponse({
     status: 200,
-    type: FilmDto
+    type: FilmDto,
   })
 
   @Get(`/get_one/:id`)
@@ -36,12 +39,12 @@ export class FilmController {
   }
 
   @ApiOperation({
-    summary: "Получение массива всех фильмов"
+    summary: 'Получение массива всех фильмов',
   })
 
   @ApiResponse({
     status: 200,
-    type: [FilmDto]
+    type: [FilmDto],
   })
 
   @Get(`/get_all`)
@@ -50,12 +53,12 @@ export class FilmController {
   }
 
   @ApiOperation({
-    summary: "Получение одного фильма по title"
+    summary: 'Получение одного фильма по title',
   })
 
   @ApiResponse({
     status: 200,
-    type: FilmDto
+    type: FilmDto,
   })
 
   @Get('/get_by_title/:title')
@@ -64,12 +67,12 @@ export class FilmController {
   }
 
   @ApiOperation({
-    summary: "Получение рандомного фильма"
+    summary: 'Получение рандомного фильма',
   })
 
   @ApiResponse({
     status: 200,
-    type: FilmDto
+    type: FilmDto,
   })
 
   @Get('/get_random')
@@ -77,4 +80,31 @@ export class FilmController {
     return this.filmService.getRandomFilm();
   }
 
+  @ApiOperation({
+    summary: 'Обновление одного фильма',
+  })
+
+  @ApiResponse({
+    status: 200,
+    type: FilmDto,
+  })
+
+  @Post(`/update/:id`)
+  update(dto: FilmDto, id: number) {
+    return this.filmService.update(id, dto);
+  }
+
+  @ApiOperation({
+    summary: 'Удаление фильма',
+  })
+
+  @ApiResponse({
+    status: 200,
+    type: FilmDto,
+  })
+
+  @Delete('/delete/:id')
+  delete(@Param('id') id: number) {
+    return this.filmService.delete(id);
+  }
 }

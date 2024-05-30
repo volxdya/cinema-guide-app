@@ -63,4 +63,15 @@ export class UserService {
     return user;
 
   }
+
+  async update(login: string, dto: UserDto) {
+    const user = await this.userRepository.findOne({ where: { login: login } });
+    await user.update({
+      firstName: dto.firstName,
+      lastName: dto.lastName,
+      password: dto.password,
+    });
+
+    return user;
+  }
 }

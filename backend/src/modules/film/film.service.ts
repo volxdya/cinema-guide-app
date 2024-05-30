@@ -60,4 +60,28 @@ export class FilmService {
 
     return film;
   }
+
+  async update(id: number, dto: FilmDto) {
+
+    const film = await this.filmService.findOne({ where: { id: id } });
+
+    await film.update({
+      title: dto.title,
+      description: dto.description,
+      image: dto.avatar,
+      revenue: dto.revenue,
+      budget: dto.budget,
+      year: dto.year,
+      time: dto.time,
+      rating: dto.rating,
+    });
+
+    return film;
+  }
+
+  async delete(id: number){
+    const film = await this.filmService.destroy({ where: { id: id } });
+
+    return film;
+  }
 }
