@@ -1,7 +1,8 @@
 import {
+  BelongsTo,
   BelongsToMany,
   Column,
-  DataType,
+  DataType, ForeignKey,
   Model,
   Table,
 } from 'sequelize-typescript';
@@ -9,6 +10,7 @@ import { Genre } from '../genre/genre.model';
 import { FilmGenres } from '../genre/film-genres.model';
 import { User } from '../user/user.model';
 import { Favorites } from './favorites.model';
+import {Production} from "../production/production.model";
 
 interface IFilm {
   title: string;
@@ -51,8 +53,15 @@ export class Film extends Model<Film, IFilm> {
   rating: number;
 
   @BelongsToMany(() => Genre, () => FilmGenres)
-  Genres: Genre[];
+  genres: Genre[];
 
   @BelongsToMany(() => User, () => Favorites)
   users: User[];
+
+  @ForeignKey(() => Production)
+  @Column({type: DataType.INTEGER})
+  productionId: number;
+
+  @BelongsTo(() => Production)
+  productions: Production[];
 }

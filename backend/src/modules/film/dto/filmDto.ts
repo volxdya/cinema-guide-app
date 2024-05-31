@@ -37,7 +37,7 @@ export class FilmDto {
     description: 'URL на сторонний API, где хрнаится картинка фильма',
     example: 'i.bb/....',
   })
-  readonly avatar: string;
+  readonly image: string;
 
   @ApiProperty({
     description: 'Бюджет фильма',
@@ -56,4 +56,6 @@ export class FilmDto {
     example: 'Боевик',
   })
   readonly genreTitle: string;
+
+  readonly productionId: number;
 }

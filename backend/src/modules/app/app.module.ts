@@ -44,5 +44,3 @@ import {ProductionModule} from "../production/production.module";
 })
 export class AppModule {
 }
-
-// hello danil

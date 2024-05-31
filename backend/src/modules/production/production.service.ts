@@ -15,7 +15,7 @@ export class ProductionService {
     }
 
     async getAll() {
-        const productions = await this.productionService.findAll();
+        const productions = await this.productionService.findAll({include: {all: true}});
 
         return productions;
     }

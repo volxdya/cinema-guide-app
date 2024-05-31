@@ -68,7 +68,7 @@ export class FilmService {
     await film.update({
       title: dto.title,
       description: dto.description,
-      image: dto.avatar,
+      image: dto.image,
       revenue: dto.revenue,
       budget: dto.budget,
       year: dto.year,

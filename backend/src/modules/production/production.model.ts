@@ -1,5 +1,17 @@
-import {BelongsTo, BelongsToMany, Column, DataType, ForeignKey, Model, Table} from 'sequelize-typescript';
+import {
+    BelongsTo,
+    BelongsToMany,
+    Column,
+    DataType,
+    ForeignKey,
+    HasMany,
+    HasOne,
+    Model,
+    Table
+} from 'sequelize-typescript';
 import {User} from "../user/user.model";
+import {Film} from "../film/film.model";
+import {UserRoles} from "../roles/user-roles.model";
 
 interface IProduction {
   title: string;
@@ -27,4 +39,7 @@ export class Production extends Model<Production, IProduction> {
 
     @BelongsTo(() => User)
     owner: User[]
+
+    @HasMany(() => Film)
+    films: Film[];
 }
