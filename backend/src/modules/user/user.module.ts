@@ -8,11 +8,12 @@ import { FilmModule } from '../film/film.module';
 import { Roles } from '../roles/roles.model';
 import { RolesModule } from '../roles/roles.module';
 import { UserRoles } from '../roles/user-roles.model';
+import {Production} from "../production/production.model";
 
 
 @Module({
   providers: [UserService],
-  imports: [SequelizeModule.forFeature([User, Film, Roles, UserRoles]),
+  imports: [SequelizeModule.forFeature([User, Film, Roles, UserRoles, Production]),
     FilmModule,
     RolesModule,
   ],

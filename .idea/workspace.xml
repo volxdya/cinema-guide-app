@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="568ff671-c0cc-4721-abc8-ba23696c0d31" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/modules/production/dto/ProductionDto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/modules/production/production.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/modules/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/modules/film/film.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/film/film.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/modules/film/film.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/film/film.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/production/dto/ProductionDto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/production/dto/ProductionDto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/production/production.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/production/production.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/production/production.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/production/production.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/user/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/user/user.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/user/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/user/user.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1717138250877</updated>
       <workItem from="1717138254090" duration="41000" />
-      <workItem from="1717142072734" duration="2683000" />
+      <workItem from="1717142072734" duration="3647000" />
     </task>
     <servers />
   </component>

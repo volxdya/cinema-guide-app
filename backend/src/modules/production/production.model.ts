@@ -1,4 +1,5 @@
-import {Column, DataType, Model, Table} from 'sequelize-typescript';
+import {BelongsTo, BelongsToMany, Column, DataType, ForeignKey, Model, Table} from 'sequelize-typescript';
+import {User} from "../user/user.model";
 
 interface IProduction {
   title: string;
@@ -6,17 +7,24 @@ interface IProduction {
   image: string;
 }
 
-@Table({ tableName: 'Production' })
+@Table({ tableName: 'production' })
 export class Production extends Model<Production, IProduction> {
-    @Column({type: DataType.STRING, allowNull: false, unique: true})
-    title: string;
-
-    @Column({type: DataType.INTEGER, allowNull: false, unique: true, primaryKey: true})
+    @Column({type: DataType.INTEGER, unique: true, autoIncrement: true, primaryKey: true})
     id: number;
 
-    @Column({type: DataType.STRING, allowNull: false})
+    @Column({type: DataType.STRING, unique: true})
+    title: string;
+
+    @Column({type: DataType.STRING})
     description: string;
 
-    @Column({type: DataType.STRING, allowNull: false, unique: true})
+    @Column({type: DataType.STRING, unique: true})
     image: string;
+
+    @ForeignKey(() => User)
+    @Column({type: DataType.INTEGER})
+    userId: number;
+
+    @BelongsTo(() => User)
+    owner: User[]
 }
