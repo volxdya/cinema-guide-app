@@ -11,11 +11,10 @@ import { User } from '../user/user.model';
 @Module({
   providers: [FilmService],
   controllers: [FilmController],
-  imports: [SequelizeModule.forFeature([Genre, Film, FilmGenres, User]),
+  imports: [
+    SequelizeModule.forFeature([Genre, Film, FilmGenres, User]),
     GenreModule,
   ],
-  exports: [
-    FilmService
-  ]
+  exports: [FilmService],
 })
 export class FilmModule {}

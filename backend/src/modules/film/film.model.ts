@@ -1,4 +1,10 @@
-import { BelongsToMany, Column, DataType, Model, Table } from 'sequelize-typescript';
+import {
+  BelongsToMany,
+  Column,
+  DataType,
+  Model,
+  Table,
+} from 'sequelize-typescript';
 import { Genre } from '../genre/genre.model';
 import { FilmGenres } from '../genre/film-genres.model';
 import { User } from '../user/user.model';
@@ -15,38 +21,38 @@ interface IFilm {
   rating: number;
 }
 
-@Table({tableName: 'film', updatedAt: false, createdAt: false})
-export class Film extends Model<Film, IFilm>{
-  @Column({type: DataType.STRING, unique: true, allowNull: false})
+@Table({ tableName: 'film', updatedAt: false, createdAt: false })
+export class Film extends Model<Film, IFilm> {
+  @Column({ type: DataType.STRING, unique: true, allowNull: false })
   title: string;
 
-  @Column({type: DataType.INTEGER, autoIncrement: true, primaryKey: true})
+  @Column({ type: DataType.INTEGER, autoIncrement: true, primaryKey: true })
   id: number;
 
-  @Column({type: DataType.STRING, allowNull: false})
+  @Column({ type: DataType.STRING, allowNull: false })
   description: string;
 
-  @Column({type: DataType.STRING, allowNull: false})
+  @Column({ type: DataType.STRING, allowNull: false })
   image: string;
 
-  @Column({type: DataType.INTEGER, allowNull: false})
+  @Column({ type: DataType.INTEGER, allowNull: false })
   revenue: number;
 
-  @Column({type: DataType.INTEGER, allowNull: false})
+  @Column({ type: DataType.INTEGER, allowNull: false })
   budget: number;
 
-  @Column({type: DataType.INTEGER, allowNull: false})
+  @Column({ type: DataType.INTEGER, allowNull: false })
   year: number;
 
-  @Column({type: DataType.INTEGER, allowNull: false})
+  @Column({ type: DataType.INTEGER, allowNull: false })
   time: number;
 
-  @Column({type: DataType.INTEGER, allowNull: false})
+  @Column({ type: DataType.INTEGER, allowNull: false })
   rating: number;
 
   @BelongsToMany(() => Genre, () => FilmGenres)
-  Genres: Genre[]
+  Genres: Genre[];
 
   @BelongsToMany(() => User, () => Favorites)
-  users: User[]
+  users: User[];
 }
