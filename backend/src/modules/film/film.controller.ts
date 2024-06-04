@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
 import { FilmDto } from './dto/filmDto';
 import { FilmService } from './film.service';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
@@ -89,7 +89,7 @@ export class FilmController {
     type: FilmDto,
   })
 
-  @Post(`/update/:id`)
+  @Put(`/update/:id`)
   update(dto: FilmDto, id: number) {
     return this.filmService.update(id, dto);
   }

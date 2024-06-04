@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
+import {Body, Controller, Delete, Get, Param, Post, Put, UseGuards} from '@nestjs/common';
 import { UserService } from './user.service';
 import { UserDto } from './dto/userDto';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
@@ -93,8 +93,18 @@ export class UserController {
     type: UserDto,
   })
 
-  @Post(`/update/:login`)
+  @Put(`/update/:login`)
   update(@Body() userDto: UserDto, @Param('login') login: string) {
     return this.userService.update(login, userDto);
+  }
+
+  @ApiResponse({
+    status: 200,
+    type: UserDto,
+  })
+
+  @Delete('/delete/:id')
+  delete(id: number) {
+    return this.userService.delete(id);
   }
 }

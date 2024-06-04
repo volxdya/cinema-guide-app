@@ -27,5 +27,9 @@ export class UserDto {
   })
   readonly password: string;
 
+  @ApiProperty({
+    description: 'Название роли',
+    example: 'User'
+  })
   readonly roleTitle: string;
 }

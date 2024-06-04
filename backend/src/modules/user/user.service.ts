@@ -74,4 +74,11 @@ export class UserService {
 
     return user;
   }
+
+  async delete(id: number){
+    const user = await this.userRepository.findOne({ where: { id } });
+    await user.destroy();
+
+    return user;
+  }
 }
