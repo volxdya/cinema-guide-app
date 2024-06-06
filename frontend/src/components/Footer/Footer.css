@@ -8,9 +8,15 @@
     display: flex;
     justify-content: space-between;
 }
+.footer-main {
+    display: flex;
+}
 
 @media screen and (max-width: 768px) {
-    footer {
-        justify-content: flex-end;
+    .footer {
+        display: block;
+    }
+    .footer-main {
+        display: block;
     }
 }
