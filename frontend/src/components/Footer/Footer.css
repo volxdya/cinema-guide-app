@@ -1,0 +1,16 @@
+.footer-title {
+    font-weight: 600;
+}
+.privacy {
+    color: #FFFFFFB2;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        justify-content: flex-end;
+    }
+}
