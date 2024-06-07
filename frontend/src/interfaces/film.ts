@@ -1,3 +1,6 @@
+import {genre} from "./genre.ts";
+import {production} from "./production.ts";
+
 export interface film {
     readonly title: string;
     readonly description: string;
@@ -9,4 +12,6 @@ export interface film {
     readonly revenue: number;
     readonly genreTitle: string;
     readonly productionId: number;
+    readonly genres: genre[];
+    readonly productions: production[];
 }

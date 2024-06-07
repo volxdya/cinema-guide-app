@@ -5,22 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="568ff671-c0cc-4721-abc8-ba23696c0d31" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Main/MainPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/interfaces/film.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/interfaces/genre.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/interfaces/production.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/interfaces/role.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/interfaces/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/icons/Heart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/icons/Reroll.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/icons/Star.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/random-film.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/modules/film/dto/filmDto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/film/dto/filmDto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/film/film.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/film/film.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/MainPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main/MainPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/main.global.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/main.global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/interfaces/film.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/interfaces/film.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -104,7 +100,7 @@
       <workItem from="1717697393093" duration="4358000" />
       <workItem from="1717767358035" duration="379000" />
       <workItem from="1717767810103" duration="669000" />
-      <workItem from="1717771548857" duration="6978000" />
+      <workItem from="1717771548857" duration="8997000" />
     </task>
     <servers />
   </component>

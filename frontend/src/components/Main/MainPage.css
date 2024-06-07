@@ -1,6 +1,3 @@
-.test {
-    border: 1px solid red;
-}
 .wrapper {
     position: relative;
     width: 100%;
@@ -13,58 +10,8 @@
     background-position: top;
 }
 
-
 .main-page {
     top: 0;
     height: 100vh;
     z-index: 2;
-}
-.random-film {
-    height: 600px;
-    display: flex;
-    align-items: center;
-}
-.rating-film {
-    border-radius: 16px;
-    background: #3f9811;
-    padding-left: 15px;
-    display: flex;
-    height: 25px;
-    align-items: center;
-    padding-right: 15px;
-}
-.stats-text {
-    color: #FFFFFFB2;
-    font-size: 19px;
-}
-.main-title-film h2{
-    font-weight: bold;
-    font-size: 45px;
-}
-.description-film {
-    font-size: 20px;
-    color: #FFFFFFB2;
-}
-.dark-btn {
-    background: var(--darkBtn);
-}
-.purple-btn {
-    background: var(--purple);
-}
-.dark-btn, .purple-btn {
-    border-radius: 50px;
-    font-size: 17px;
-    padding: 11px 30px 11px 30px;
-}
-.dark-btn:hover {
-    background: var(--secondaryDark);
-    transition: background 0.3s;
-}
-.purple-btn:hover {
-    background: var(--secondaryPurple);
-    transition: background 0.3s;
-}
-
-.purple-btn:hover, .dark-btn:hover {
-    transform: scale(1.02);
 }
