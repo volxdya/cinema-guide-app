@@ -54,8 +54,10 @@ export class FilmService {
         const count = (await this.filmService.findAll()).length;
         let film = await this.filmService.findOne({where: {id: getRandom(count)}, include: {all: true}});
 
+
         while (!film) {
             film = await this.filmService.findOne({where: {id: getRandom(count)}});
+
         }
 
         return film;

@@ -9,9 +9,3 @@
     background-repeat: no-repeat;
     background-position: top;
 }
-
-.main-page {
-    top: 0;
-    height: 100vh;
-    z-index: 2;
-}

@@ -1,0 +1,11 @@
+.film-card img {
+    width: 281px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+.film-card:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    filter: drop-shadow(0 -0mm 4mm rgb(160, 0, 210));
+    transition: all 0.3s ease-in-out;
+}
