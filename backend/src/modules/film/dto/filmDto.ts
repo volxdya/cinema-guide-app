@@ -1,5 +1,4 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { GenreDto } from '../../genre/dto/genreDto';
 
 export class FilmDto {
 

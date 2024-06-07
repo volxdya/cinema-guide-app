@@ -3,7 +3,7 @@ import './Header.css';
 export function Header() {
 
     return (
-        <header className="header">
+        <header className="header main-container mt-2 mb-2">
             <div className="d-grid gap-3" style={{
                 gridTemplateColumns: "10fr 10fr 15fr 1fr"
             }}>
@@ -19,7 +19,7 @@ export function Header() {
                     <a href="#" className="link-header">Жанры</a>
                 </div>
 
-                <div className="d-flex pe-5">
+                <div className="d-flex align-items-center pe-5">
                     <form className="w-100 me-3" role="search">
                         <input type="search" className="input-header" placeholder="Поиск" aria-label="Search"/>
                     </form>

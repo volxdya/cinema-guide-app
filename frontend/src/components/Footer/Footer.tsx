@@ -2,7 +2,7 @@ import './Footer.css';
 
 export function Footer() {
     return (
-        <footer className="footer">
+        <footer className="footer main-container">
             <div className="gap-3 footer-main">
                 <p className="footer-title">LLC «Мультимедиа Визион»</p>
                 <p className="privacy">© Все права защищены</p>

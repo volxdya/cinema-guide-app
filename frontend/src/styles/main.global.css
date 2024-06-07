@@ -1,11 +1,32 @@
+:root {
+    --purple: #6A5DC2;
+    --darkBtn: #00000066;
+    --secondaryDark: #232323;
+    --secondaryPurple: #6049ff;
+}
+
 body {
     background-color: #0A0B0B;
     color: aliceblue;
 }
-.app {
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.main-container {
     width: 1600px;
     margin: 0 auto;
 }
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+}
+
+
 
 @media screen and (max-width: 768px) {
     .app {
