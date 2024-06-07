@@ -46,10 +46,10 @@ export class Film extends Model<Film, IFilm> {
   @Column({ type: DataType.INTEGER, allowNull: false })
   year: number;
 
-  @Column({ type: DataType.INTEGER, allowNull: false })
+  @Column({ type: DataType.DOUBLE, allowNull: false })
   time: number;
 
-  @Column({ type: DataType.INTEGER, allowNull: false })
+  @Column({ type: DataType.FLOAT, allowNull: false })
   rating: number;
 
   @BelongsToMany(() => Genre, () => FilmGenres)

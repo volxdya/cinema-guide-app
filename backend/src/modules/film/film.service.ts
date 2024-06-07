@@ -47,16 +47,20 @@ export class FilmService {
     }
 
     async getRandomFilm() {
-        function getRandom(max: number): number {
-            return Math.floor(Math.random() * max);
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
         }
 
-        const count = (await this.filmService.findAll()).length;
-        let film = await this.filmService.findOne({where: {id: getRandom(count)}, include: {all: true}});
+        const count = (await this.filmService.findAll()).length + 1;
+        let film;
+
+        if (count > 0) {
+            film = await this.filmService.findOne({where: {id: getRandom(1, count)}, include: {all: true}});
+        }
 
 
         while (!film) {
-            film = await this.filmService.findOne({where: {id: getRandom(count)}});
+            film = await this.filmService.findOne({where: {id: getRandom(1, count)}, include: {all: true}});
 
         }
 

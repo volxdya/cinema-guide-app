@@ -5,26 +5,39 @@ import {Star} from "../../../icons/Star.tsx";
 import randomFilm from "../../../store/random-film.ts";
 import {useEffect} from "react";
 import {observer} from "mobx-react-lite";
+
 export const RandomFilm = observer(() => {
     useEffect(() => {
         randomFilm.getRandom();
     }, [])
+
+    let classNameRating = '';
+
+    if (randomFilm.random.rating < 5) {
+        classNameRating = 'bad-rating';
+    } else if (randomFilm.random.rating >= 5 && randomFilm.random.rating < 7.5) {
+        classNameRating = 'normal-rating'
+    } else if (randomFilm.random.rating >= 7.5 && randomFilm.random.rating < 8.6) {
+        classNameRating = 'good-rating'
+    } else {
+        classNameRating = 'great-rating'
+    }
 
     return (
         <div className="main-container">
             <div className="col-5 random-film">
                 <div>
                     <div className="statistics d-flex gap-4">
-                        <span className="rating-film">
+                        <span className={classNameRating + ' rating-film'}>
                             <Star/>
                             <span className="px-1">
                                 {randomFilm.random.rating}
                             </span>
                         </span>
                         <span className="stats-text">{randomFilm.random.year}</span>
-                        <span className="stats-text">заглушка жанра</span>
+                        <span className="stats-text">заглушка</span>
                         <span className="stats-text">{randomFilm.random.time} минут</span>
-                        <span className="stats-text">заглушка продакшена</span>
+                        <span className="stats-text">заглушка</span>
                         {/*<span className="stats-text">{randomFilm.random.productions[0].title}</span>*/}
                     </div>
                     <div className="main-title-film mt-4">

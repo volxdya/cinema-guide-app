@@ -6,12 +6,26 @@
 
 .rating-film {
     border-radius: 16px;
-    background: #3f9811;
     padding-left: 15px;
     display: flex;
     height: 25px;
     align-items: center;
     padding-right: 15px;
+}
+.bad-rating {
+    background: #C82020;
+}
+
+.normal-rating {
+    background: #777777;
+}
+
+.good-rating {
+    background: #3f9811;
+}
+
+.great-rating {
+    background: #A59400;
 }
 
 .stats-text {
