@@ -11,7 +11,6 @@ import {
 } from 'sequelize-typescript';
 import {User} from "../user/user.model";
 import {Film} from "../film/film.model";
-import {UserRoles} from "../roles/user-roles.model";
 import {ApiProperty} from "@nestjs/swagger";
 
 interface IProduction {

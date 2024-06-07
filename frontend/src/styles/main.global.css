@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --purple: #6A5DC2;
     --darkBtn: #00000066;
@@ -8,6 +10,9 @@
 body {
     background-color: #0A0B0B;
     color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 body::-webkit-scrollbar {

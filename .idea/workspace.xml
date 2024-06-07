@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="568ff671-c0cc-4721-abc8-ba23696c0d31" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/icons/Telegram.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/icons/VK.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/GenrePage/GenrePage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/GenrePage/GenrePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/ui/GenreCard/GenreCard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/ui/GenreCard/GenreCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/production/production.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/production/production.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/App/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/App/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/counter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/random-film.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/random-film.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/main.global.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/main.global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/Modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/Modal/Modal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="CSS File" />
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -93,7 +103,7 @@
       <workItem from="1717697393093" duration="4358000" />
       <workItem from="1717767358035" duration="379000" />
       <workItem from="1717767810103" duration="669000" />
-      <workItem from="1717771548857" duration="12101000" />
+      <workItem from="1717771548857" duration="16934000" />
     </task>
     <servers />
   </component>

@@ -27,7 +27,6 @@ class RandomFilm {
     getRandom() {
         axios.get(API_URL).then(res => {
             this.random = res.data;
-            console.log(res.data);
         });
     }
 

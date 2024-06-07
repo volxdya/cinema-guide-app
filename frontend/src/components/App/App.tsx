@@ -3,6 +3,7 @@ import {MainPage} from "../Main/MainPage.tsx";
 import '../../styles/main.global.css';
 import {Header} from "../Header/Header.tsx";
 import {Footer} from "../Footer/Footer.tsx";
+import {GenrePage} from "../GenrePage/GenrePage.tsx";
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
             <Header/>
             <Routes>
                 <Route path="/" element={<MainPage/>}/>
+                <Route path="/genres" element={<GenrePage/>}/>
             </Routes>
             <Footer/>
         </>
