@@ -7,9 +7,25 @@
 .footer {
     display: flex;
     justify-content: space-between;
+    padding: 30px 0 20px 0;
 }
 .footer-main {
     display: flex;
+}
+
+.network-footer {
+    outline: 1px solid #FFFFFFCC;
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    align-items: center;
+    width: 35px;
+    border-radius: 10px;
+}
+
+.network-footer:hover {
+    transform: scale(1.08);
+    transition: transform 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {

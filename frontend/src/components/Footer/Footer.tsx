@@ -1,4 +1,6 @@
 import './Footer.css';
+import {VK} from "../../icons/VK.tsx";
+import {Telegram} from "../../icons/Telegram.tsx";
 
 export function Footer() {
     return (
@@ -7,9 +9,13 @@ export function Footer() {
                 <p className="footer-title">LLC «Мультимедиа Визион»</p>
                 <p className="privacy">© Все права защищены</p>
             </div>
-            <div className="d-flex gap-2">
-                <p>VK</p>
-                <p>Instagram</p>
+            <div className="d-flex gap-3">
+                <a href="#" className="network-footer">
+                    <VK/>
+                </a>
+                <a href="#" className="network-footer">
+                    <Telegram/>
+                </a>
             </div>
         </footer>
     );

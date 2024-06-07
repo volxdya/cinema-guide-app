@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="568ff671-c0cc-4721-abc8-ba23696c0d31" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/icons/Telegram.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/icons/VK.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/FilmCard/FilmCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/FilmCard/FilmCard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/FilmCard/FilmCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/FilmCard/FilmCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -91,7 +93,7 @@
       <workItem from="1717697393093" duration="4358000" />
       <workItem from="1717767358035" duration="379000" />
       <workItem from="1717767810103" duration="669000" />
-      <workItem from="1717771548857" duration="11525000" />
+      <workItem from="1717771548857" duration="12101000" />
     </task>
     <servers />
   </component>
