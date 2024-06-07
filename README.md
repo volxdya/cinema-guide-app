@@ -11,13 +11,13 @@ API запросы в директории backend
 
 # STACK:
 
-1. Next.js ( SSR REACT )
-2. Nest.js ( Backend Framework )
-3. Frontend + Backend on TS
-4. Redux Toolkit
+1. React
+2. Nest.js
+3. TypeScript
+4. Mobx
 5. Axios
 6. Postgres
-7. Docker (maybe)
+7. After maybe Docker
 
 # Запуск проекта
 (пока что только через внедерение зависимостей, возможно позже заверну все в Docker-контейнеры, README.md будет обновляться)

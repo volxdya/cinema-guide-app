@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="568ff671-c0cc-4721-abc8-ba23696c0d31" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/modules/film/film.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/film/film.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/modules/film/film.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/film/film.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.css" afterDir="false" />
@@ -93,7 +94,7 @@
       <workItem from="1717697393093" duration="4358000" />
       <workItem from="1717767358035" duration="379000" />
       <workItem from="1717767810103" duration="669000" />
-      <workItem from="1717771548857" duration="19190000" />
+      <workItem from="1717771548857" duration="19389000" />
     </task>
     <servers />
   </component>
