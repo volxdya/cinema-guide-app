@@ -73,4 +73,17 @@ export class GenreController {
   getFilmByGenre(@Param('title') title: string) {
     return this.genreService.getFilmsByGenre(title);
   }
+
+  @ApiOperation({
+    summary: "Получение фильмов по жанру по id"
+  })
+  @ApiResponse({
+    status: 200,
+    type: [FilmDto]
+  })
+
+  @Get('/get_film_by_genreId/:id')
+  getFilmByGenreId(@Param('id') id: number) {
+    return this.genreService.getFilmsByGenreId(id);
+  }
 }

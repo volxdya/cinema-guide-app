@@ -5,29 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="568ff671-c0cc-4721-abc8-ba23696c0d31" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Main/Top/TopFilms.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/genres.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/GenrePage/GenreFilms/GenreFilms.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/modules/film/film.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/film/film.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/modules/film/film.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/film/film.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/modules/genre/dto/genreDto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/genre/dto/genreDto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/modules/genre/genre.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/genre/genre.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/GenrePage/GenrePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GenrePage/GenrePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/MainPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main/MainPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/interfaces/film.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/interfaces/film.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/interfaces/genre.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/interfaces/genre.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/interfaces/production.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/interfaces/production.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/interfaces/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/interfaces/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/random-film.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/films.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/FilmCard/FilmCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/FilmCard/FilmCard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/FilmCard/FilmCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/FilmCard/FilmCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/genre/genre.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/genre/genre.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/genre/genre.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/genre/genre.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/App/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/App/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/films.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/films.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/main.global.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/main.global.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/ui/GenreCard/GenreCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/GenreCard/GenreCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -116,7 +102,7 @@
       <workItem from="1717767358035" duration="379000" />
       <workItem from="1717767810103" duration="669000" />
       <workItem from="1717771548857" duration="19494000" />
-      <workItem from="1717829961598" duration="4942000" />
+      <workItem from="1717829961598" duration="8920000" />
     </task>
     <servers />
   </component>

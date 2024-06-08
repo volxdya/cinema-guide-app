@@ -34,4 +34,7 @@ export class GenreService {
   async getFilmsByGenre(title: string) {
     return (await (this.getOneGenre(title))).films;
   }
+  async getFilmsByGenreId(id: number) {
+    return (await (this.getOneById(id))).films;
+  }
 }

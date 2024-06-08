@@ -31,7 +31,10 @@ button {
     color: #FFFFFF;
 }
 
-
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
 
 @media screen and (max-width: 768px) {
     .app {

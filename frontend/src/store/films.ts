@@ -8,6 +8,7 @@ class Films {
     }
 
     films: film[] = [];
+    genreFilms: film[] = []
     random: film = {
         id: 0,
         description: "",
@@ -38,6 +39,15 @@ class Films {
         }).catch((err) => {
             console.log(err);
         });
+    }
+
+    async getByGenre(genreTitle: string){
+        await axios.get(`http://localhost:4005/genre/get_film_by_genre/${genreTitle}`).then(res => {
+            this.genreFilms = res.data;
+            console.log(genreTitle);
+        }).catch((err) => {
+            console.log(err);
+        })
     }
 
 
