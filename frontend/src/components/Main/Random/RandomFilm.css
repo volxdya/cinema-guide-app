@@ -70,3 +70,13 @@
 .purple-btn:hover, .dark-btn:hover {
     transform: scale(1.02);
 }
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: 15px;
+}

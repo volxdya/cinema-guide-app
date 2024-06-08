@@ -1,10 +1,17 @@
 import './FilmCard.css';
 
-export function FilmCard(){
+interface Props {
+    image: string;
+    title: string;
+    id: number;
+    index: number;
+}
+
+export function FilmCard({image, title, index}: Props){
     return (
         <div className="film-card">
-            <span className="top-film-card">1</span>
-            <img src="https://www.kino-teatr.ru/movie/poster/133117/96180.jpg" alt=""/>
+            <span className="top-film-card">{index + 1}</span>
+            <img src={image} alt={"Картинка фильма " + title}/>
         </div>
     )
 }

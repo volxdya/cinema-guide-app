@@ -58,10 +58,8 @@ export class FilmService {
             film = await this.filmService.findOne({where: {id: getRandom(1, count)}, include: {all: true}});
         }
 
-
         while (!film) {
             film = await this.filmService.findOne({where: {id: getRandom(1, count)}, include: {all: true}});
-
         }
 
         return film;
@@ -89,5 +87,17 @@ export class FilmService {
         const film = await this.filmService.destroy({where: {id: id}});
 
         return film;
+    }
+
+    async getWithLimit(limit: number) {
+        const films = await this.filmService.findAll();
+
+        if (films.length < limit) {
+            return new HttpException({message: "Нет столько фильмов"}, 404);
+        }
+
+        const filmsLimit = await this.filmService.findAll({limit: limit});
+
+        return filmsLimit;
     }
 }

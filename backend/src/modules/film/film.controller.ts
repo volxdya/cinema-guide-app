@@ -107,4 +107,17 @@ export class FilmController {
   delete(@Param('id') id: number) {
     return this.filmService.delete(id);
   }
+
+  @ApiOperation({
+    summary: 'Получение массива 10-ти фильмов',
+  })
+
+  @ApiResponse({
+    status: 200,
+    type: [FilmDto],
+  })
+  @Get(`/get_limit/:limit`)
+  getTenFilms(@Param('limit') limit: number) {
+    return this.filmService.getWithLimit(limit);
+  }
 }

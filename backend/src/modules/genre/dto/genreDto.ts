@@ -7,4 +7,10 @@ export class GenreDto {
     example: "Боевик"
   })
   readonly title: string;
+
+  @ApiProperty({
+    description: 'Картинка жанра',
+    example: "http://ibb.com/qwer9okqweoikr"
+  })
+  readonly image: string;
 }

@@ -1,5 +1,6 @@
 .film-card img {
     width: 281px;
+    height: 350px;
     object-fit: cover;
     border-radius: 25px;
 }

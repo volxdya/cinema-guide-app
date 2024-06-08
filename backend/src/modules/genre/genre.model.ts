@@ -19,6 +19,10 @@ export class Genre extends Model<Genre, IGenre>{
   @Column({type: DataType.INTEGER, unique: true, autoIncrement: true, primaryKey: true})
   id: number;
 
+  @ApiProperty({example: 'https://ibb.com/qwe', description: 'Уникальный id жанра'})
+  @Column({type: DataType.STRING})
+  image: string;
+
   @ApiProperty({example: '[film1, film2, ...filmN]', description: 'Массив фильмов жанра'})
   @BelongsToMany(() => Film, () => FilmGenres)
   films: Film[]

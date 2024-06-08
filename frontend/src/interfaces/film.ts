@@ -2,6 +2,7 @@ import {genre} from "./genre.ts";
 import {production} from "./production.ts";
 
 export interface film {
+    readonly id: number;
     readonly title: string;
     readonly description: string;
     readonly rating: number;

@@ -1,11 +1,17 @@
 import './GenreCard.css';
 
-export function GenreCard() {
+interface Props {
+    title: string,
+    image: string;
+    id: number;
+}
+
+export function GenreCard({title, image}: Props) {
     return (
         <div className="genre-card">
-            <img src="https://thumbs.dreamstime.com/b/%D0%BC%D0%B0%D1%81%D0%BA%D0%B8-%D1%80%D0%B0%D0%BC%D1%8B-38191460.jpg" alt=""/>
+            <img src={image} alt={"Картинка жанра " + title}/>
             <div className="genre-card-title">
-                <p className="text-center">Драма</p>
+                <p className="text-center">{title}</p>
             </div>
         </div>
     )
