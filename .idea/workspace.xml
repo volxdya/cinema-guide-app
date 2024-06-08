@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="568ff671-c0cc-4721-abc8-ba23696c0d31" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/api/auth/auth.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/utils/localStorage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/Modal/Modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/Modal/Modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/Modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/Modal/Modal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
-        <option value="TypeScript File" />
         <option value="CSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -41,25 +43,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/HEOBI/Desktop/cinema-guide-app-1",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "Settings.JavaScript.Linters.JSHint",
-    "ts.external.directory.path": "C:\\Users\\HEOBI\\Desktop\\cinema-guide-app-1\\backend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HEOBI/Desktop/cinema-guide-app-1&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Settings.JavaScript.Linters.JSHint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\HEOBI\\Desktop\\cinema-guide-app-1\\backend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HEOBI\Desktop\cinema-guide-app-1\frontend\src\styles" />
@@ -95,7 +97,8 @@
       <workItem from="1717767358035" duration="379000" />
       <workItem from="1717767810103" duration="669000" />
       <workItem from="1717771548857" duration="19494000" />
-      <workItem from="1717829961598" duration="12128000" />
+      <workItem from="1717829961598" duration="12466000" />
+      <workItem from="1717847697669" duration="933000" />
     </task>
     <servers />
   </component>
