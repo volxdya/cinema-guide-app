@@ -1,0 +1,68 @@
+.modal {
+    color: black;
+}
+.modal-header {
+    display: flex;
+    justify-content: center;
+}
+.btn-modal {
+    top: -55px;
+    position: relative;
+    right: -467px;
+}
+.btn-close {
+    color: red;
+}
+.modal-title {
+    background: -webkit-linear-gradient(150deg, #7c69f8, #d537ff);
+    -webkit-background-clip: text;
+    font-weight: 500;
+    font-size: 25px;
+    -webkit-text-fill-color: transparent;
+}
+.form-auth {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+.form-auth input {
+    width: 350px;
+    border-radius: 10px;
+    margin-top: 15px;
+    height: 45px;
+    outline: 1px solid #e8e8e8;
+    padding-left: 15px;
+    font-size: 17px;
+    color: black;
+}
+.button-auth {
+    background: var(--purple);
+    width: 350px;
+    margin-top: 25px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-auth:hover {
+    background: var(--secondaryPurple);
+    font-size: 17px;
+    transition: all ease-in-out 0.2s;
+}
+.button-register {
+    color: #000000;
+    font-weight: 500;
+    width: 350px;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-register:hover {
+    outline: 1px solid var(--purple);
+    transition: outline 0.3s;
+}

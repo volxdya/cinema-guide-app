@@ -46,8 +46,7 @@ export function Header() {
                 </div>
 
                 <div className="d-flex align-items-center px-3">
-                    <button type="button" className="link-header" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
+                    <button type="button" className="link-header" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         Войти
                     </button>
                 </div>
