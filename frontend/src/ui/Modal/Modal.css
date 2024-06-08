@@ -35,6 +35,10 @@
     font-size: 17px;
     color: black;
 }
+.form-auth input:focus {
+    outline: 1px solid var(--purple);
+    transition: outline 200ms ease;
+}
 .button-auth {
     background: var(--purple);
     width: 350px;
@@ -64,5 +68,5 @@
 }
 .button-register:hover {
     outline: 1px solid var(--purple);
-    transition: outline 0.3s;
+    transition: all ease 0.3s;
 }
