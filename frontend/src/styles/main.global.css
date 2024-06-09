@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --purple: #6A5DC2;
-    --darkBtn: rgba(255, 255, 255, 0.4);
+    --purple: #6a5dc2;
+    --darkBtn: rgb(33, 33, 33);
     --secondaryDark: #232323;
     --secondaryPurple: #6049ff;
 }

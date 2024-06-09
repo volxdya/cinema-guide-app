@@ -1,0 +1,9 @@
+.img-card-search {
+    height: 100px;
+    width: 70px;
+    object-fit: cover;
+}
+.film-card-search:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}

@@ -5,6 +5,7 @@ import {useEffect} from "react";
 import users from "../../store/users.ts";
 import {observer} from "mobx-react-lite";
 import {getItem} from "../../utils/localStorage.ts";
+import {Search} from "../Search/Search.tsx";
 
 interface navigationHeader {
     link: string;
@@ -53,8 +54,9 @@ export const Header = observer(() => {
 
                 <div className="d-flex align-items-center pe-5">
                     <form className="w-100 me-3" role="search">
-                        <input type="search" className="input-header" placeholder="Поиск" aria-label="Search"/>
+                        <input type="search" className="input-header" placeholder="Поиск"  data-bs-toggle="modal" data-bs-target="#exampleModal"/>
                     </form>
+                    <Search/>
                 </div>
 
                 <div className="d-flex align-items-center px-3">
