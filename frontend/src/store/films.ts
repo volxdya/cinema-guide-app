@@ -8,7 +8,9 @@ class Films {
     }
 
     films: film[] = [];
-    genreFilms: film[] = []
+    genreFilms: film[] = [];
+    searchFilms: film[] = [];
+
     random: film = {
         id: 0,
         description: "",
@@ -42,15 +44,20 @@ class Films {
     }
 
     async getByGenre(genreTitle: string){
-        await axios.get(`http://localhost:4005/genre/get_film_by_genre/${genreTitle}`).then(res => {
+        await axios.get(`http://localhost:${import.meta.env.VITE_API_PORT}/genre/get_film_by_genre/${genreTitle}`).then(res => {
             this.genreFilms = res.data;
-            console.log(genreTitle);
         }).catch((err) => {
             console.log(err);
         })
     }
 
-
+    async getByInputValue(inputValue: string) {
+        await axios.get(`http://localhost:${import.meta.env.VITE_API_PORT}/film/search/${inputValue}`).then(res => {
+            this.searchFilms = res.data;
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
 }
 
 export default new Films();

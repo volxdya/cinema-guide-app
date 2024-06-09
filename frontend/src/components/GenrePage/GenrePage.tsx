@@ -4,6 +4,7 @@ import {useEffect} from "react";
 import genres from "../../store/genres.ts";
 import {observer} from "mobx-react-lite";
 import {genre} from "../../interfaces/genre.ts";
+import uniqid from "uniqid";
 
 
 export const GenrePage = observer(() => {
@@ -17,7 +18,7 @@ export const GenrePage = observer(() => {
             <div className="d-flex gap-3 flex-wrap">
                 {genres.genres.map((item: genre) => {
                     return (
-                        <GenreCard id={item.id} title={item.title} image={item.image}/>
+                        <GenreCard id={item.id} title={item.title} image={item.image} key={uniqid()}/>
                     );
                 })}
             </div>

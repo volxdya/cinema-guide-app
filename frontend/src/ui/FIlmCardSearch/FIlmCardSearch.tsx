@@ -1,12 +1,20 @@
 import {Star} from "../../icons/Star.tsx";
 import './FilmCardSearch.css'
 
-export function FilmCardSearch() {
+interface Props {
+    rating: number;
+    time: number;
+    year: number;
+    image: string;
+    title: string;
+}
+
+export function FilmCardSearch({rating, image, time, year, title}: Props) {
     return (
         <div className="d-flex gap-2 mt-3 film-card-search">
             <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRoDlHKwE0COpkTc1NWy5jKFZIGGhh8sbmrQ&s"
-                alt=""
+                src={image}
+                alt={"Картинка фильма " + title}
                 className="img-card-search"
             />
             <div className="mx-4">
@@ -14,13 +22,13 @@ export function FilmCardSearch() {
                                     <span className='good-rating rating-film'>
                                         <Star/>
                                         <span className="px-1">
-                                            8.5
+                                            {rating}
                                         </span>
                                     </span>
-                    <span className="stats-text">1999</span>
-                    <span className="stats-text">69 минут</span>
+                    <span className="stats-text">{year}</span>
+                    <span className="stats-text">{time} минут</span>
                 </div>
-                <p className="mt-1">Спутник</p>
+                <p className="mt-1">{title}</p>
             </div>
         </div>
     );

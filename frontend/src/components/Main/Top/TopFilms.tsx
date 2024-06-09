@@ -3,6 +3,7 @@ import {film} from "../../../interfaces/film.ts";
 import {useEffect} from "react";
 import films from "../../../store/films.ts";
 import {observer} from "mobx-react-lite";
+import uniqid from 'uniqid';
 
 export const TopFilms = observer(() => {
     useEffect(() => {
@@ -14,7 +15,7 @@ export const TopFilms = observer(() => {
             <h1>Топ 10 фильмов</h1>
             <div className="d-flex gap-5 mt-5 flex-wrap">
                 {films.films.map((item: film, index: number) => {
-                    return <FilmCard id={item.id} title={item.title} image={item.image} index={index}  />;
+                    return <FilmCard id={item.id} title={item.title} image={item.image} index={index} key={uniqid()}  />;
                 })}
             </div>
         </div>
