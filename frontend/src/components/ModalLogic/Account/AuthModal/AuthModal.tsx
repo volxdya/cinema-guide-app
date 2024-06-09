@@ -25,6 +25,12 @@ export function AuthModal({setCurrent}: Props) {
 
         await auth(login, password);
 
+        try {
+            window.location.reload();
+        } catch (err) {
+            console.log(err);
+        }
+
         setPassword("");
         setLogin("");
     }

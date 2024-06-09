@@ -3,13 +3,15 @@ import {Modal} from "../../ui/Modal/Modal.tsx";
 import {Link, useLocation} from "react-router-dom";
 import {useEffect} from "react";
 import users from "../../store/users.ts";
+import {observer} from "mobx-react-lite";
+import {getItem} from "../../utils/localStorage.ts";
 
 interface navigationHeader {
     link: string;
     title: string;
 }
 
-export function Header() {
+export const Header = observer(() => {
 
     const url = useLocation();
 
@@ -21,12 +23,12 @@ export function Header() {
         title: 'Жанры'
     }];
 
+    const token = getItem("token");
+
 
     useEffect(() => {
         users.getUserData();
-    }, []);
-
-
+    }, [token]);
 
     return (
         <header className="header main-container mt-2 mb-2">
@@ -44,7 +46,7 @@ export function Header() {
                     {navigation.map((item: navigationHeader) => {
                         return (
                             <Link to={item.link} key={item.link}
-                                  className={url.pathname === item.link ? 'active link-header' : 'link-header'}>{item.title}</Link>
+                                  className={url.pathname === item.link ? 'active link' : 'link'}>{item.title}</Link>
                         )
                     })}
                 </div>
@@ -56,13 +58,20 @@ export function Header() {
                 </div>
 
                 <div className="d-flex align-items-center px-3">
-                    <button type="button" className="link-header" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                        Юзер{users.userData.firstName}
-                    </button>
+                    {!token || token === "" || token === undefined || token === null ? (
+                        <button type="button" className="link-header" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">
+                            Войти
+                        </button>
+                    ) : (
+                        <Link to="/profile"
+                              className={url.pathname === "/profile" ? 'active link' : 'link'}>
+                            {users.userData.firstName}
+                        </Link>
+                    )}
                 </div>
                 <Modal/>
             </div>
         </header>
     );
-}
+});

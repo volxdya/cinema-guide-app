@@ -2,7 +2,7 @@
 
 :root {
     --purple: #6A5DC2;
-    --darkBtn: #00000066;
+    --darkBtn: rgba(255, 255, 255, 0.4);
     --secondaryDark: #232323;
     --secondaryPurple: #6049ff;
 }

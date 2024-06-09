@@ -2,7 +2,15 @@ import {makeAutoObservable} from "mobx";
 import {user} from "../interfaces/user.ts";
 import {getItem} from "../utils/localStorage.ts";
 
-import { jwtDecode } from "jwt-decode";
+import {jwtDecode, JwtPayload} from "jwt-decode";
+
+// интерфейс, который расширяет jwtpayload
+interface loginJwt extends JwtPayload {
+    login: string;
+    id: number;
+    lastName: string;
+    firstName: string;
+}
 
 class Users {
 
@@ -16,16 +24,17 @@ class Users {
     }
 
     getUserData() {
-        const decoded = jwtDecode(getItem('token'));
+        let decoded: loginJwt;
 
-        this.userData.id = decoded.id;
-        this.userData.firstName = decoded.firstName;
-        this.userData.lastName = decoded.lastName;
-        this.userData.login = decoded.login;
-        this.userData.roleTitle = decoded.roleTitle;
+        const token = getItem("token");
 
-        console.log(decoded);
-
+        if (token) {
+            decoded = jwtDecode(token);
+            this.userData.id = decoded.id;
+            this.userData.firstName = decoded.firstName;
+            this.userData.lastName = decoded.lastName;
+            this.userData.login = decoded.login;
+        }
     }
 }
 

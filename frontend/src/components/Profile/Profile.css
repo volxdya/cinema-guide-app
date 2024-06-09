@@ -1,0 +1,29 @@
+.navigation-profile span{
+    font-size: 17px;
+}
+.button-log-out {
+    background: var(--purple);
+    border-radius: 25px;
+    width: 300px;
+    height: 45px;
+}
+.button-log-out:hover {
+    background: var(--secondaryPurple);
+    transition: background 0.2s ease;
+}
+.profile-avatar {
+    border-radius: 50%;
+    background: var(--darkBtn);
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.profile-info {
+    height: 45px;
+}
+.user-data {
+    font-weight: bold;
+}

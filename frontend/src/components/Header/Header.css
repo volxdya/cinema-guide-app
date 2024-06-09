@@ -36,14 +36,14 @@
     border: 3px solid #252525;
     transition: all 0.3s ease-in-out;
 }
-.link-header {
+.link {
     text-decoration: none;
     color: aliceblue;
-    font-size: 18px;
+    font-size: 19px;
 }
-.link-header:hover {
+.link:hover {
     text-decoration: underline;
-
+    cursor: pointer;
     text-decoration-color: #DC5DFC;
     text-underline-offset: 7px;
     text-decoration-thickness: 1px;
