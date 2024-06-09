@@ -59,7 +59,7 @@ export const Header = observer(() => {
 
                 <div className="d-flex align-items-center px-3">
                     {!token || token === "" || token === undefined || token === null ? (
-                        <button type="button" className="link-header" data-bs-toggle="modal"
+                        <button type="button" className="link" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop">
                             Войти
                         </button>
