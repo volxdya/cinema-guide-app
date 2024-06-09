@@ -121,6 +121,15 @@ export class FilmController {
         return this.filmService.getWithLimit(limit);
     }
 
+
+    @ApiOperation({
+        summary: 'Получение массива фильмов, по поиску инпута из фронтенда',
+    })
+
+    @ApiResponse({
+        status: 200,
+        type: [FilmDto],
+    })
     @Get(`/search/:valueInput`)
     getBySearch(@Param('valueInput') valueInput: string) {
         return this.filmService.searchFilms(valueInput);

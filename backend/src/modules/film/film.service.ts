@@ -108,9 +108,9 @@ export class FilmService {
         // поиск фильма по title нижнему регистру через значение в input'e фронтенда
         const filmsSearch = films.filter((item) => item.title.toLowerCase().includes(valueInput.toLowerCase()));
 
-        if (filmsSearch.length === 0) {
-            return new HttpException({message: "No search results found"}, 404);
-        }
+        // if (filmsSearch.length === 0) {
+        //     return new HttpException({message: "No search results found"}, 404);
+        // }
 
         return filmsSearch;
     }
