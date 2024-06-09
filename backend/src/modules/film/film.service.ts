@@ -100,4 +100,18 @@ export class FilmService {
 
         return filmsLimit;
     }
+
+    async searchFilms(valueInput: string) {
+        const films = await this.filmService.findAll({include: {all: true}});
+
+
+        // поиск фильма по title нижнему регистру через значение в input'e фронтенда
+        const filmsSearch = films.filter((item) => item.title.toLowerCase().includes(valueInput.toLowerCase()));
+
+        if (filmsSearch.length === 0) {
+            return new HttpException({message: "No search results found"}, 404);
+        }
+
+        return filmsSearch;
+    }
 }
