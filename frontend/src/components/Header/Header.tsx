@@ -1,6 +1,8 @@
 import './Header.css';
 import {Modal} from "../../ui/Modal/Modal.tsx";
 import {Link, useLocation} from "react-router-dom";
+import {useEffect} from "react";
+import users from "../../store/users.ts";
 
 interface navigationHeader {
     link: string;
@@ -19,13 +21,20 @@ export function Header() {
         title: 'Жанры'
     }];
 
+
+    useEffect(() => {
+        users.getUserData();
+    }, []);
+
+
+
     return (
         <header className="header main-container mt-2 mb-2">
             <div className="d-grid gap-3" style={{
                 gridTemplateColumns: "12fr 10fr 15fr 1fr"
             }}>
                 <Link to="/"
-                   className="col-lg-4 link-body-emphasis text-decoration-none">
+                      className="col-lg-4 link-body-emphasis text-decoration-none">
                     <h1 className="header-title">
                         Cinema
                     </h1>
@@ -34,7 +43,8 @@ export function Header() {
                 <div className="links-header d-flex align-items-center me-5">
                     {navigation.map((item: navigationHeader) => {
                         return (
-                            <Link to={item.link} key={item.link} className={url.pathname === item.link ? 'active link-header' : 'link-header'}>{item.title}</Link>
+                            <Link to={item.link} key={item.link}
+                                  className={url.pathname === item.link ? 'active link-header' : 'link-header'}>{item.title}</Link>
                         )
                     })}
                 </div>
@@ -46,8 +56,9 @@ export function Header() {
                 </div>
 
                 <div className="d-flex align-items-center px-3">
-                    <button type="button" className="link-header" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Войти
+                    <button type="button" className="link-header" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                        Юзер{users.userData.firstName}
                     </button>
                 </div>
                 <Modal/>

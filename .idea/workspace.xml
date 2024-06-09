@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="568ff671-c0cc-4721-abc8-ba23696c0d31" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/Modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/Modal/Modal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/users.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/user/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/Top/TopFilms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main/Top/TopFilms.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/interfaces/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/interfaces/user.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -55,7 +66,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "Settings.JavaScript.Linters.JSHint",
-    "ts.external.directory.path": "C:\\Users\\HEOBI\\Desktop\\test\\cinema-guide-app\\frontend\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\HEOBI\\Desktop\\test\\cinema-guide-app\\backend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -97,6 +108,7 @@
       <workItem from="1717829961598" duration="12466000" />
       <workItem from="1717847697669" duration="933000" />
       <workItem from="1717860265739" duration="42000" />
+      <workItem from="1717928048465" duration="2121000" />
     </task>
     <servers />
   </component>
