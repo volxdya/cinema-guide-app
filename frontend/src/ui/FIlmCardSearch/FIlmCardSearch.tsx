@@ -32,12 +32,12 @@ export function FilmCardSearch({rating, image, time, year, title}: Props) {
             />
             <div className="mx-4">
                 <div className="d-flex gap-3">
-                                    <span className={classNameRating + " rating-film"}>
-                                        <Star/>
-                                        <span className="px-1">
-                                            {rating}
-                                        </span>
-                                    </span>
+                    <span className={classNameRating + " rating-film"}>
+                    <Star/>
+                    <span className="px-1">
+                        {rating}
+                    </span>
+                </span>
                     <span className="stats-text">{year}</span>
                     <span className="stats-text">{time} минут</span>
                 </div>

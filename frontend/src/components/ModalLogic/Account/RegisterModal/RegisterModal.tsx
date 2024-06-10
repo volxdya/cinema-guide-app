@@ -64,9 +64,9 @@ export function RegisterModal({ setCurrent }: Props) {
                 <br />
                 <input type="text" placeholder="Фамилия" value={lastName} onChange={handleChangeLastName} />
                 <br />
-                <input type="text" placeholder="Пароль" value={password} onChange={handleChangePassword} />
+                <input type="password" placeholder="Пароль" value={password} onChange={handleChangePassword} />
                 <br />
-                <input type="text" placeholder="Подтвердите пароль" value={secondPassword} onChange={handleChangeSecondPassword} />
+                <input type="password" placeholder="Подтвердите пароль" value={secondPassword} onChange={handleChangeSecondPassword} />
                 <br />
                 <div>
                     <button className="button-auth">Создать аккаунт</button>

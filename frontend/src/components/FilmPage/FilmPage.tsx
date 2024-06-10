@@ -6,7 +6,6 @@ import './FilmPage.css';
 import {MainInfo} from "./MainInfo/MainInfo.tsx";
 import {About} from "./About/About.tsx";
 
-
 export const FilmPage = observer(() => {
     const {id} = useParams();
 

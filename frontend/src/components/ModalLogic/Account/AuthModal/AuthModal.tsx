@@ -40,7 +40,7 @@ export function AuthModal({setCurrent}: Props) {
             <div>
                 <input type="text" placeholder="Электронная почта" value={login} onChange={handleChangeLogin} />
                 <br />
-                <input type="text" placeholder="Пароль" value={password} onChange={handleChangePassword} />
+                <input type="password" placeholder="Пароль" value={password} onChange={handleChangePassword} />
                 <div>
                     <button className="button-auth">Войти</button>
                 </div>

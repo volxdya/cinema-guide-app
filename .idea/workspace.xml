@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="568ff671-c0cc-4721-abc8-ba23696c0d31" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/FilmPage/About/About.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/FilmPage/FilmPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/FilmPage/MainInfo/MainInfo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/icons/Dots.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/FilmPage/FilmPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/App/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/App/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/films.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/films.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/main.global.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/main.global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/FilmCard/FilmCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/FilmCard/FilmCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/user/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FilmPage/FilmPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FilmPage/FilmPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/AuthModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/AuthModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/RegisterModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/RegisterModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/Navigation/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Navigation/Navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Profile.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="CSS File" />
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -62,7 +61,7 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Users\\HEOBI\\Desktop\\test\\cinema-guide-app\\backend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -109,7 +108,7 @@
       <workItem from="1717959526451" duration="3581000" />
       <workItem from="1717963287401" duration="518000" />
       <workItem from="1717971158692" duration="434000" />
-      <workItem from="1718041692063" duration="3383000" />
+      <workItem from="1718041692063" duration="4677000" />
     </task>
     <servers />
   </component>
