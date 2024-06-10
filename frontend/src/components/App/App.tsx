@@ -6,6 +6,7 @@ import {Footer} from "../Footer/Footer.tsx";
 import {GenrePage} from "../GenrePage/GenrePage.tsx";
 import {GenreFilms} from "../GenrePage/GenreFilms/GenreFilms.tsx";
 import {Profile} from "../Profile/Profile.tsx";
+import {FilmPage} from "../FilmPage/FilmPage.tsx";
 
 function App() {
 
@@ -17,7 +18,9 @@ function App() {
                 <Route path="/profile" element={<Profile/>}/>
                 <Route path="/genres" element={<GenrePage/>}/>
                 <Route path="/genre/:title" element={<GenreFilms/>}/>
+                <Route path="/film/:id" element={<FilmPage/>}/>
             </Routes>
+
             <Footer/>
         </>
     )
