@@ -24,7 +24,7 @@ export const Favorites = observer(() => {
                         key={uniqid()}
                         index={index}
                     />
-                )
+                );
             })}
         </div>
     );

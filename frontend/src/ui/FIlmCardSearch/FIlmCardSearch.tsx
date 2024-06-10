@@ -1,6 +1,6 @@
 import {Star} from "../../icons/Star.tsx";
 import './FilmCardSearch.css'
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 interface Props {
     rating: number;
@@ -25,28 +25,34 @@ export function FilmCardSearch({rating, image, time, year, title, id}: Props) {
         classNameRating = 'great-rating'
     }
 
+    const navigate = useNavigate();
+
+    function redicrect() {
+        navigate(`/film/${id}`);
+
+        window.location.reload();
+    }
+
     return (
-        <Link to={"/film/" + id}>
-            <div className="d-flex gap-2 mt-3 film-card-search">
-                <img
-                    src={image}
-                    alt={"Картинка фильма " + title}
-                    className="img-card-search"
-                />
-                <div className="mx-4">
-                    <div className="d-flex gap-3">
+        <div className="d-flex gap-2 mt-3 film-card-search" data-bs-dismiss="modal" onClick={() => redicrect()}>
+            <img
+                src={image}
+                alt={"Картинка фильма " + title}
+                className="img-card-search"
+            />
+            <div className="mx-4">
+                <div className="d-flex gap-3">
                     <span className={classNameRating + " rating-film"}>
                     <Star/>
                     <span className="px-1">
                         {rating}
                     </span>
                 </span>
-                        <span className="stats-text">{year}</span>
-                        <span className="stats-text">{time} минут</span>
-                    </div>
-                    <p className="mt-1">{title}</p>
+                    <span className="stats-text">{year}</span>
+                    <span className="stats-text">{time} минут</span>
                 </div>
+                <p className="mt-1">{title}</p>
             </div>
-        </Link>
+        </div>
     );
 }
