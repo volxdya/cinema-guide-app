@@ -14,7 +14,7 @@ export const Favorites = observer(() => {
     }, []);
 
     return (
-        <>
+        <div className="d-flex gap-5 flex-wrap">
             {users.fullUserData.favorites.map((item: film, index: number) => {
                 return (
                     <FilmCard
@@ -26,6 +26,6 @@ export const Favorites = observer(() => {
                     />
                 )
             })}
-        </>
+        </div>
     );
 });

@@ -78,7 +78,7 @@ export class UserController {
     type: UserDto,
   })
 
-  @UseGuards(AuthGuard)
+  // @UseGuards(AuthGuard)
   @Post(`/add_favorite`)
   addFavorite(@Body() favoriteDto: FavoriteDto){
     return this.userService.addFavorite(favoriteDto.userId, favoriteDto.filmId)

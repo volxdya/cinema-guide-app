@@ -1,12 +1,15 @@
 import {Star} from "../../../icons/Star.tsx";
 import {Heart} from "../../../icons/Heart.tsx";
 import {film} from "../../../interfaces/film.ts";
+import {addFavorites} from "../../../api/favorites/favorites.ts";
+import {user} from "../../../interfaces/user.ts";
 
 interface Props {
-    film: film
+    film: film;
+    user: user;
 }
 
-export function MainInfo({film}: Props) {
+export function MainInfo({film, user}: Props) {
 
     let classNameRating = '';
 
@@ -46,7 +49,7 @@ export function MainInfo({film}: Props) {
                         </div>
                         <div className="buttons-film d-flex gap-3 mt-5">
                             <button className="purple-btn">Трейлер</button>
-                            <button className="dark-btn">
+                            <button className="dark-btn" onClick={() => addFavorites(film.id, user.id)}>
                                 <Heart/>
                             </button>
                         </div>

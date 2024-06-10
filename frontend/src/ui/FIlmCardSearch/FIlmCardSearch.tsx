@@ -1,5 +1,6 @@
 import {Star} from "../../icons/Star.tsx";
 import './FilmCardSearch.css'
+import {Link} from "react-router-dom";
 
 interface Props {
     rating: number;
@@ -7,9 +8,10 @@ interface Props {
     year: number;
     image: string;
     title: string;
+    id: number;
 }
 
-export function FilmCardSearch({rating, image, time, year, title}: Props) {
+export function FilmCardSearch({rating, image, time, year, title, id}: Props) {
 
     let classNameRating = '';
 
@@ -24,25 +26,27 @@ export function FilmCardSearch({rating, image, time, year, title}: Props) {
     }
 
     return (
-        <div className="d-flex gap-2 mt-3 film-card-search">
-            <img
-                src={image}
-                alt={"Картинка фильма " + title}
-                className="img-card-search"
-            />
-            <div className="mx-4">
-                <div className="d-flex gap-3">
+        <Link to={"/film/" + id}>
+            <div className="d-flex gap-2 mt-3 film-card-search">
+                <img
+                    src={image}
+                    alt={"Картинка фильма " + title}
+                    className="img-card-search"
+                />
+                <div className="mx-4">
+                    <div className="d-flex gap-3">
                     <span className={classNameRating + " rating-film"}>
                     <Star/>
                     <span className="px-1">
                         {rating}
                     </span>
                 </span>
-                    <span className="stats-text">{year}</span>
-                    <span className="stats-text">{time} минут</span>
+                        <span className="stats-text">{year}</span>
+                        <span className="stats-text">{time} минут</span>
+                    </div>
+                    <p className="mt-1">{title}</p>
                 </div>
-                <p className="mt-1">{title}</p>
             </div>
-        </div>
+        </Link>
     );
 }

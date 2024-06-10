@@ -43,6 +43,7 @@ export function Search() {
                                     image={item.image}
                                     time={item.time}
                                     year={item.year}
+                                    id={item.id}
                                     key={uniqid()}
                                 />
                             );

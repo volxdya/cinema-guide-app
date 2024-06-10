@@ -5,10 +5,15 @@ import {Star} from "../../../icons/Star.tsx";
 import {useEffect} from "react";
 import {observer} from "mobx-react-lite";
 import film from "../../../store/films.ts";
+import {Link} from "react-router-dom";
+import {addFavorites} from "../../../api/favorites/favorites.ts";
+import users from "../../../store/users.ts";
 
 export const RandomFilm = observer(() => {
     useEffect(() => {
         film.getRandom();
+
+        users.getUserData();
     }, [])
 
 
@@ -50,8 +55,10 @@ export const RandomFilm = observer(() => {
                         </div>
                         <div className="buttons-film d-flex gap-3 mt-5">
                             <button className="purple-btn">Трейлер</button>
-                            <button className="dark-btn">О фильме</button>
-                            <button className="dark-btn">
+                            <Link to={"/film/" + film.random.id}>
+                                <button className="dark-btn">О фильме</button>
+                            </Link>
+                            <button className="dark-btn" onClick={() => addFavorites(film.random.id, users.userData.id)}>
                                 <Heart/>
                             </button>
                             <button className="dark-btn" onClick={() => film.getRandom()}>
