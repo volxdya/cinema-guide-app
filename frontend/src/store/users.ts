@@ -3,6 +3,7 @@ import {user} from "../interfaces/user.ts";
 import {getItem} from "../utils/localStorage.ts";
 
 import {jwtDecode, JwtPayload} from "jwt-decode";
+import axios from "axios";
 
 // интерфейс, который расширяет jwtpayload
 interface loginJwt extends JwtPayload {
@@ -20,7 +21,11 @@ class Users {
 
 
     userData: user = {
-        firstName: "", id: 0, lastName: "", login: "", password: "", roleTitle: ""
+        firstName: "", id: 0, lastName: "", login: "", password: "", roleTitle: "", favorites: []
+    }
+
+    fullUserData: user = {
+        firstName: "", id: 0, lastName: "", login: "", password: "", roleTitle: "", favorites: []
     }
 
     getUserData() {
@@ -35,6 +40,16 @@ class Users {
             this.userData.lastName = decoded.lastName;
             this.userData.login = decoded.login;
         }
+    }
+
+    getFullUserData(login: string) {
+        axios.get(`http://localhost:${import.meta.env.VITE_API_PORT}/user/get_by_login/${login}`).then(res => {
+            this.fullUserData = res.data;
+
+            console.log(res.data);
+        }).catch((err) => {
+            console.log(err);
+        });
     }
 }
 

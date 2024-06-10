@@ -4,6 +4,7 @@ import {Navigation} from "./Navigation/Navigation.tsx";
 import {UserData} from "./UserData/UserData.tsx";
 import {LogOut} from "./LogOut/LogOut.tsx";
 import {useState} from "react";
+import {Favorites} from "./Favorites/Favorites.tsx";
 
 export const Profile = observer(() => {
 
@@ -19,7 +20,7 @@ export const Profile = observer(() => {
             )}
 
             {current === "favorites" && (
-                <div>test</div>
+                <Favorites/>
             )}
             <LogOut/>
         </div>

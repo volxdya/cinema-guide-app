@@ -1,3 +1,4 @@
+import {film} from "./film.ts";
 
 export interface user {
     id: number;
@@ -6,4 +7,5 @@ export interface user {
     lastName: string;
     password: string;
     roleTitle: string;
+    favorites: film[]
 }

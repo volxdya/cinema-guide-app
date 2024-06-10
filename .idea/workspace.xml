@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="568ff671-c0cc-4721-abc8-ba23696c0d31" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/FilmPage/FilmPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Favorites/Favorites.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/user/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/user/user.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/modules/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/user/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/FilmPage/FilmPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FilmPage/FilmPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/AuthModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/AuthModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/RegisterModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/RegisterModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/Navigation/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Navigation/Navigation.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/interfaces/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/interfaces/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/users.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/FilmCard/FilmCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/FilmCard/FilmCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +108,7 @@
       <workItem from="1717959526451" duration="3581000" />
       <workItem from="1717963287401" duration="518000" />
       <workItem from="1717971158692" duration="434000" />
-      <workItem from="1718041692063" duration="4677000" />
+      <workItem from="1718041692063" duration="6066000" />
     </task>
     <servers />
   </component>

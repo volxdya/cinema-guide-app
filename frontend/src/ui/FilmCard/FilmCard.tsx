@@ -16,5 +16,5 @@ export function FilmCard({image, title, index, id}: Props){
                 <img src={image} alt={"Картинка фильма " + title}/>
             </div>
         </Link>
-    )
+    );
 }
