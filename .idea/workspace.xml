@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="568ff671-c0cc-4721-abc8-ba23696c0d31" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/modules/user/dto/checkUserDto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/modules/film/film.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/film/film.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/modules/film/film.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/film/film.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/modules/user/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/user/user.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/modules/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/user/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/FIlmCardSearch/FIlmCardSearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/FIlmCardSearch/FIlmCardSearch.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +106,8 @@
       <workItem from="1717971158692" duration="434000" />
       <workItem from="1718041692063" duration="8782000" />
       <workItem from="1718060070831" duration="459000" />
-      <workItem from="1718094232965" duration="3171000" />
+      <workItem from="1718094232965" duration="3258000" />
+      <workItem from="1718126320550" duration="2444000" />
     </task>
     <servers />
   </component>

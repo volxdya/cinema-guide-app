@@ -4,6 +4,7 @@ import { UserDto } from './dto/userDto';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { FavoriteDto } from './dto/favoriteDto';
 import { AuthGuard } from '../../guards/auth.guard';
+import {CheckUserDto} from "./dto/checkUserDto";
 
 @ApiTags('User')
 @Controller('/user/')
@@ -113,8 +114,8 @@ export class UserController {
     return this.userService.delete(id);
   }
 
-  @Get(`/check_user_film`)
-  checkUserFilm(@Query('filmId') filmId: number, @Query('userId') userId: number){
-    return this.userService.getUserFilms(userId, filmId);
+  @Post(`/check_films_like`)
+  checkFilmsLike(@Body() checkUserDto: CheckUserDto) {
+    return this.userService.getUserFilms(checkUserDto);
   }
 }
