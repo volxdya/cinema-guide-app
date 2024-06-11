@@ -75,6 +75,7 @@ export const RandomFilm = observer(() => {
                             <Link to={"/film/" + film.random.id}>
                                 <button className="dark-btn">О фильме</button>
                             </Link>
+
                             {isLike ? (
                                 <button className="dark-btn" onClick={() => {
                                     deleteFavorite(film.random.id, users.userData.id);
@@ -91,6 +92,7 @@ export const RandomFilm = observer(() => {
                                     <Heart/>
                                 </button>
                             )}
+
                             <button className="dark-btn" onClick={() => film.getRandom()}>
                                 <Reroll/>
                             </button>
