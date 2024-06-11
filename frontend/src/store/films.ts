@@ -42,7 +42,7 @@ class Films {
         description: ""
 
     }
-
+    like = false;
 
     async getTenFilms() {
         await axios.get(`${import.meta.env.VITE_API_URL}/film/get_limit/10`).then(res => {
@@ -83,6 +83,8 @@ class Films {
             console.log(err);
         })
     }
+
+
 }
 
 export default new Films();

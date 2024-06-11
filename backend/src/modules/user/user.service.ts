@@ -67,6 +67,15 @@ export class UserService {
 
     }
 
+    async deleteFavorite(userId: number, filmId: number) {
+        const user = await this.userRepository.findOne({where: {id: userId}});
+
+        const film = await this.filmService.getOne(filmId);
+        await user.$remove('favorites', [filmId]);
+
+        return user;
+    }
+
     async update(login: string, dto: UserDto) {
         const user = await this.userRepository.findOne({where: {login: login}});
         await user.update({

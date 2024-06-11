@@ -91,6 +91,19 @@ export class UserController {
   }
 
   @ApiOperation({
+    summary: 'Удаление фильма из избранного',
+  })
+
+  @ApiResponse({
+    status: 200,
+    type: UserDto,
+  })
+  @Post(`/delete_favorite`)
+  deleteFavorite(@Body() favoriteDto: FavoriteDto){
+    return this.userService.deleteFavorite(favoriteDto.userId, favoriteDto.filmId);
+  }
+
+  @ApiOperation({
     summary: "Обновление данных пользователя"
   })
 
