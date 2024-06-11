@@ -10,6 +10,7 @@ import {addFavorites, deleteFavorite} from "../../../api/favorites/favorites.ts"
 import users from "../../../store/users.ts";
 import axios from "axios";
 import {ShadedHeart} from "../../../icons/ShadedHeart.tsx";
+import {getItem} from "../../../utils/localStorage.ts";
 
 export const RandomFilm = observer(() => {
 
@@ -36,14 +37,16 @@ export const RandomFilm = observer(() => {
     }, []);
 
     useEffect(() => {
-        axios.post(`${import.meta.env.VITE_API_URL}/user/check_films_like`, {
-            userId: users.userData.id,
-            filmId: film.random.id
-        }).then((response) => {
-            setIsLike(response.data);
-        }).catch(err => {
-            console.log(err);
-        });
+        if (getItem("token")) {
+            axios.post(`${import.meta.env.VITE_API_URL}/user/check_films_like`, {
+                userId: users.userData.id,
+                filmId: film.random.id
+            }).then((response) => {
+                setIsLike(response.data);
+            }).catch(err => {
+                console.log(err);
+            });
+        }
     }, [film.random.id]);
 
     return (
@@ -78,17 +81,22 @@ export const RandomFilm = observer(() => {
 
                             {isLike ? (
                                 <button className="dark-btn" onClick={() => {
-                                    deleteFavorite(film.random.id, users.userData.id);
-                                    setIsLike(false);
+                                    if (getItem("token")) {
+                                        deleteFavorite(film.random.id, users.userData.id);
+                                        setIsLike(false);
+                                    }
                                 }}>
                                     <ShadedHeart/>
                                 </button>
                             ) : (
                                 <button className="dark-btn"
                                         onClick={() => {
-                                            addFavorites(film.random.id, users.userData.id);
-                                            setIsLike(true);
-                                        }}>
+                                            if (getItem("token")) {
+                                                addFavorites(film.random.id, users.userData.id);
+                                                setIsLike(true);
+                                            }
+                                        }
+                                        }>
                                     <Heart/>
                                 </button>
                             )}

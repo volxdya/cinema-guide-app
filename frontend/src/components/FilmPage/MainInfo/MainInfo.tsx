@@ -7,6 +7,7 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import users from "../../../store/users.ts";
 import {ShadedHeart} from "../../../icons/ShadedHeart.tsx";
+import {getItem} from "../../../utils/localStorage.ts";
 
 interface Props {
     film: film;
@@ -32,14 +33,16 @@ export function MainInfo({film, user}: Props) {
     const [isLike, setIsLike] = useState(false);
 
     useEffect(() => {
-        axios.post(`${import.meta.env.VITE_API_URL}/user/check_films_like`, {
-            userId: user.id,
-            filmId: film.id
-        }).then((response) => {
-            setIsLike(response.data);
-        }).catch(err => {
-            console.log(err);
-        });
+        if (getItem("token")) {
+            axios.post(`${import.meta.env.VITE_API_URL}/user/check_films_like`, {
+                userId: user.id,
+                filmId: film.id
+            }).then((response) => {
+                setIsLike(response.data);
+            }).catch(err => {
+                console.log(err);
+            });
+        }
     }, []);
 
     return (
@@ -70,15 +73,19 @@ export function MainInfo({film, user}: Props) {
                             <button className="purple-btn">Трейлер</button>
                             {isLike ? (
                                 <button className="dark-btn" onClick={() => {
-                                    deleteFavorite(film.id, users.userData.id);
-                                    setIsLike(false);
+                                    if (getItem("token")) {
+                                        deleteFavorite(film.id, users.userData.id);
+                                        setIsLike(false);
+                                    }
                                 }}>
                                     <ShadedHeart/>
                                 </button>
                             ) : (
                                 <button className="dark-btn" onClick={() => {
-                                    addFavorites(film.id, users.userData.id);
-                                    setIsLike(true);
+                                    if (getItem("token")) {
+                                        addFavorites(film.id, users.userData.id);
+                                        setIsLike(true);
+                                    }
                                 }}>
                                     <Heart/>
                                 </button>
