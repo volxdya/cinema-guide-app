@@ -44,8 +44,7 @@ export const RandomFilm = observer(() => {
         }).catch(err => {
             console.log(err);
         });
-    }, [film.random.id, users.fullUserData.favorites, isLike]);
-
+    }, [film.random.id]);
 
     return (
         <div className="wrapper" style={{

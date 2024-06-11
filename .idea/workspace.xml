@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="568ff671-c0cc-4721-abc8-ba23696c0d31" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/icons/ShadedHeart.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/modules/user/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/user/user.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/modules/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/user/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/api/favorites/favorites.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/favorites/favorites.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FilmPage/MainInfo/MainInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FilmPage/MainInfo/MainInfo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/films.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/films.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +106,7 @@
       <workItem from="1718041692063" duration="8782000" />
       <workItem from="1718060070831" duration="459000" />
       <workItem from="1718094232965" duration="3258000" />
-      <workItem from="1718126320550" duration="6673000" />
+      <workItem from="1718126320550" duration="7161000" />
     </task>
     <servers />
   </component>
