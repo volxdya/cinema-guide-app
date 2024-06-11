@@ -21,11 +21,11 @@ class Users {
 
 
     userData: user = {
-        firstName: "", id: 0, lastName: "", login: "", password: "", roleTitle: "", favorites: []
+        firstName: "", id: 0, lastName: "", login: "", password: "", roleTitle: "", favorites: [], roles: []
     }
 
     fullUserData: user = {
-        firstName: "", id: 0, lastName: "", login: "", password: "", roleTitle: "", favorites: []
+        firstName: "", id: 0, lastName: "", login: "", password: "", roleTitle: "", favorites: [], roles: []
     }
 
     getUserData() {

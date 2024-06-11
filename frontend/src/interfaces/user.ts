@@ -1,4 +1,5 @@
 import {film} from "./film.ts";
+import {role} from "./role.ts";
 
 export interface user {
     id: number;
@@ -8,4 +9,5 @@ export interface user {
     password: string;
     roleTitle: string;
     favorites: film[]
+    roles: role[]
 }

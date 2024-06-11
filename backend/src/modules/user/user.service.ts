@@ -36,7 +36,7 @@ export class UserService {
     }
 
     async getOneUser(login: string) {
-        const user = await this.userRepository.findOne({where: {login}, include: [Film]});
+        const user = await this.userRepository.findOne({where: {login}, include: {all: true}});
 
         return user;
     }
