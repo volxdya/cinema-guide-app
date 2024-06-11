@@ -41,7 +41,7 @@ export class UserService {
     }
 
     async getOneUserById(id: number) {
-        const user = await this.userRepository.findOne({where: {id}});
+        const user = await this.userRepository.findOne({include: [Film], where: {id}});
 
         return user;
     }
@@ -82,5 +82,31 @@ export class UserService {
         await user.destroy();
 
         return user;
+    }
+
+    async getUserFilms(userId: number, filmId: number) {
+        const user = await this.getOneUserById(userId);
+
+        // for (let i = 0; i < user.favorites.length; i++) {
+        //     if (user.favorites[i].id === filmId) {
+        //         return true;
+        //     }
+        //
+        //     return false;
+        // }
+
+        let arr = []
+
+        for (let i = 0; i < user.favorites.length; i++) {
+            arr.push(user.favorites[i].id);
+
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[j] === user.favorites[i].id) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
     }
 }

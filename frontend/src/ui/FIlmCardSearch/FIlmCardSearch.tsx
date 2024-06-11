@@ -1,6 +1,6 @@
 import {Star} from "../../icons/Star.tsx";
 import './FilmCardSearch.css'
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 interface Props {
     rating: number;

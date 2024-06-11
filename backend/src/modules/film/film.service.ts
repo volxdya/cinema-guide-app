@@ -114,4 +114,18 @@ export class FilmService {
 
         return filmsSearch;
     }
+
+    async getUserFilm() {
+        const films = await this.filmService.findAll({include: {all: true}});
+
+        // params: filmId: number, userId: number
+
+        // const userFilm = await this.filmService.findOne({where: {id: filmId}});
+        //
+        // for (let i = 0; i < films.length; i++){
+        //     if (films[i].id === filmId){}
+        // }
+
+        return films;
+    }
 }

@@ -134,4 +134,9 @@ export class FilmController {
     getBySearch(@Param('valueInput') valueInput: string) {
         return this.filmService.searchFilms(valueInput);
     }
+
+    @Get(`/get_user_films`)
+    getUserFilms() {
+        return this.filmService.getUserFilm();
+    }
 }

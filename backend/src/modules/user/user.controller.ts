@@ -1,4 +1,4 @@
-import {Body, Controller, Delete, Get, Param, Post, Put, UseGuards} from '@nestjs/common';
+import {Body, Controller, Delete, Get, Param, Post, Put, Query, UseGuards} from '@nestjs/common';
 import { UserService } from './user.service';
 import { UserDto } from './dto/userDto';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
@@ -47,6 +47,11 @@ export class UserController {
     status: 200,
     type: UserDto,
   })
+
+  @Get('/get_by_id/:userId')
+  getById(@Param('userId') userId: number) {
+    return this.userService.getOneUserById(userId);
+  }
 
   // @UseGuards(AuthGuard)
   @Get('/get_by_login/:login')
@@ -106,5 +111,10 @@ export class UserController {
   @Delete('/delete/:id')
   delete(id: number) {
     return this.userService.delete(id);
+  }
+
+  @Get(`/check_user_film`)
+  checkUserFilm(@Query('filmId') filmId: number, @Query('userId') userId: number){
+    return this.userService.getUserFilms(userId, filmId);
   }
 }
