@@ -104,6 +104,10 @@ export class UserController {
     return this.userService.update(login, userDto);
   }
 
+  @ApiOperation({
+    summary: "Удаление данных пользователя"
+  })
+
   @ApiResponse({
     status: 200,
     type: UserDto,
@@ -113,6 +117,15 @@ export class UserController {
   delete(id: number) {
     return this.userService.delete(id);
   }
+
+  @ApiOperation({
+    summary: "Проверка, есть ли фильм в лайках пользователя"
+  })
+
+  @ApiResponse({
+    status: 200,
+    type: Boolean,
+  })
 
   @Post(`/check_films_like`)
   checkFilmsLike(@Body() checkUserDto: CheckUserDto) {
