@@ -31,7 +31,6 @@ export class UserController {
     status: 200,
     type: [UserDto],
   })
-
   // @RolesDecorator("ADMIN")
   // @UseGuards(RolesGuard)
   @UseGuards(AuthGuard)
@@ -43,12 +42,10 @@ export class UserController {
   @ApiOperation({
     summary: 'Получение одного пользователя по логину',
   })
-
   @ApiResponse({
     status: 200,
     type: UserDto,
   })
-
   @Get('/get_by_id/:userId')
   getById(@Param('userId') userId: number) {
     return this.userService.getOneUserById(userId);
@@ -63,12 +60,10 @@ export class UserController {
   @ApiOperation({
     summary: 'Получение случайного пользователя',
   })
-
   @ApiResponse({
     status: 200,
     type: UserDto,
   })
-
   @UseGuards(AuthGuard)
   @Get(`/get_random_user`)
   get_random_user(){
@@ -78,12 +73,10 @@ export class UserController {
   @ApiOperation({
     summary: 'Добавление фильма в избранное',
   })
-
   @ApiResponse({
     status: 200,
     type: UserDto,
   })
-
   @UseGuards(AuthGuard)
   @Post(`/add_favorite`)
   addFavorite(@Body() favoriteDto: FavoriteDto){
@@ -107,12 +100,11 @@ export class UserController {
   @ApiOperation({
     summary: "Обновление данных пользователя"
   })
-
   @ApiResponse({
     status: 200,
     type: UserDto,
   })
-
+  @UseGuards(AuthGuard)
   @Put(`/update/:login`)
   update(@Body() userDto: UserDto, @Param('login') login: string) {
     return this.userService.update(login, userDto);
@@ -121,12 +113,10 @@ export class UserController {
   @ApiOperation({
     summary: "Удаление данных пользователя"
   })
-
   @ApiResponse({
     status: 200,
     type: UserDto,
   })
-
   @Delete('/delete/:id')
   delete(id: number) {
     return this.userService.delete(id);

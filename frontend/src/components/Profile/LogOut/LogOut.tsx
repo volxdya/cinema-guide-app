@@ -10,7 +10,6 @@ export function LogOut() {
         navigate('/');
     }
 
-
     return (
         <div>
             <button className="button-log-out mt-3 mb-5" onClick={logOut}>

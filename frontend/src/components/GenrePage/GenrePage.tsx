@@ -6,7 +6,6 @@ import {observer} from "mobx-react-lite";
 import {genre} from "../../interfaces/genre.ts";
 import uniqid from "uniqid";
 
-
 export const GenrePage = observer(() => {
 
     useEffect(() => {
@@ -15,7 +14,7 @@ export const GenrePage = observer(() => {
 
     return (
         <div className="main-container genre-page">
-            <h1 className="mt-2 mb-5">Жанры</h1>
+            <h1 className="mt-2 mb-5 text-xl-start text-center genre-title">Жанры</h1>
             <div className="d-flex gap-3 flex-wrap justify-content-xl-start justify-content-center">
                 {genres.genres.map((item: genre) => {
                     return (

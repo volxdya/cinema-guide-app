@@ -5,6 +5,7 @@ import {observer} from "mobx-react-lite";
 import axios from "axios";
 import {Alert} from "../../../ui/Alert/Alert.tsx";
 import {CSSTransition} from 'react-transition-group';
+import {getItem} from "../../../utils/localStorage.ts";
 
 
 export const EditProfilePage = observer(() => {
@@ -55,6 +56,10 @@ export const EditProfilePage = observer(() => {
             firstName: firstName,
             lastName: lastName,
             password: password
+        }, {
+            headers: {
+                Authorization: `Bearer ${getItem("token")}`
+            }
         }).then(() => {
             success();
         });
