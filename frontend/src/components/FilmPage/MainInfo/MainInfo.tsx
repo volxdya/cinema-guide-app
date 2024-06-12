@@ -14,7 +14,7 @@ interface Props {
     user: user;
 }
 
-export function MainInfo({film, user}: Props) {
+export const MainInfo = ({film, user}: Props) => {
 
     let classNameRating = '';
 
@@ -43,7 +43,7 @@ export function MainInfo({film, user}: Props) {
                 console.log(err);
             });
         }
-    }, []);
+    });
 
     return (
         <div className="wrapper" style={{
@@ -96,4 +96,4 @@ export function MainInfo({film, user}: Props) {
             </div>
         </div>
     );
-}
+};
