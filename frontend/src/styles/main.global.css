@@ -54,8 +54,15 @@ a {
     transition: opacity 0.5s;
 }
 
+.container {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
-    .app {
+    .main-container {
         width: 100%;
+    }
+    .container {
+        display: block;
     }
 }

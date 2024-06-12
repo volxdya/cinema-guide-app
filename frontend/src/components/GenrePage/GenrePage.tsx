@@ -15,7 +15,8 @@ export const GenrePage = observer(() => {
 
     return (
         <div className="main-container genre-page">
-            <div className="d-flex gap-3 flex-wrap">
+            <h1 className="mt-2 mb-5">Жанры</h1>
+            <div className="d-flex gap-3 flex-wrap justify-content-xl-start justify-content-center">
                 {genres.genres.map((item: genre) => {
                     return (
                         <GenreCard id={item.id} title={item.title} image={item.image} key={uniqid()}/>

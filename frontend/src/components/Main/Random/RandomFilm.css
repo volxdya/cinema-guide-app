@@ -12,6 +12,7 @@
     align-items: center;
     padding-right: 15px;
 }
+
 .bad-rating {
     background: #C82020;
 }
@@ -79,4 +80,41 @@
     background-repeat: no-repeat;
     background-position: top;
     border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .random-film {
+        position: relative;
+        bottom: -90px;
+    }
+    .wrapper {
+        height: 250px;
+    }
+
+    .top {
+        position: relative;
+        bottom: -300px;
+    }
+
+    .dark-btn, .purple-btn {
+        border-radius: 50px;
+        font-size: 17px;
+        padding: 10px 30px 10px 30px;
+    }
+    .trailer-btn {
+        width: 100%;
+    }
+    .rating-film {
+        border-radius: 150px;
+    }
+
+    .stats-text {
+        color: #FFFFFFB2;
+        font-size: 16px;
+    }
+    .main-title-film h2 {
+        font-weight: bold;
+        font-size: 34px;
+    }
+
 }

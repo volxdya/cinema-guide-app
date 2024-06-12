@@ -5,21 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="568ff671-c0cc-4721-abc8-ba23696c0d31" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/EditProfile.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/EditProfilePage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/EditProfilePage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/ui/Alert/Alert.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Main/Top/TopFilms.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/icons/GenreIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/icons/SearchIcon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/App/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/App/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/FilmPage/FilmPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FilmPage/FilmPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GenrePage/GenreFilms/GenreFilms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GenrePage/GenreFilms/GenreFilms.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GenrePage/GenrePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GenrePage/GenrePage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GenrePage/GenrePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GenrePage/GenrePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/LogOut/LogOut.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/LogOut/LogOut.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/Profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/UserData/UserData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/UserData/UserData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/Top/TopFilms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main/Top/TopFilms.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/styles/main.global.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/main.global.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="package.json" />
+        <option value="TypeScript JSX File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -43,6 +40,9 @@
   <component name="JsBowerSettings">
     <bower-package value="" />
     <bower.json value="" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -122,7 +122,7 @@
       <workItem from="1718094232965" duration="3258000" />
       <workItem from="1718126320550" duration="12500000" />
       <workItem from="1718146620458" duration="917000" />
-      <workItem from="1718177929675" duration="7306000" />
+      <workItem from="1718177929675" duration="11568000" />
     </task>
     <servers />
   </component>

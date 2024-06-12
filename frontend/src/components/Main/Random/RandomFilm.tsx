@@ -53,9 +53,9 @@ export const RandomFilm = observer(() => {
         <div className="wrapper" style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url(${film.random.image})`,
         }}>
-            <div className="main-container">
-                <div className="col-5 random-film">
-                    <div>
+            <div className="main-container main-content-random">
+                <div className="col-xl-5 col-12 random-film">
+                    <div className="container-sm">
                         <div className="statistics d-flex gap-4">
                         <span className={classNameRating + ' rating-film'}>
                             <Star/>
@@ -66,44 +66,61 @@ export const RandomFilm = observer(() => {
                             <span className="stats-text">{film.random.year}</span>
                             <span className="stats-text">заглушка</span>
                             <span className="stats-text">{film.random.time} минут</span>
-                            <span className="stats-text">заглушка</span>
                             {/*<span className="stats-text">{randomFilm.random.productions[0].title}</span>*/}
                         </div>
-                        <div className="main-title-film mt-4">
+                        <div className="main-title-film mt-xl-4 mt-3">
                             <h2>{film.random.title}</h2>
-                            <p className="description-film mt-3">{film.random.description}</p>
+                            <p className="description-film mt-xl-3 mt-1">{film.random.description}</p>
                         </div>
-                        <div className="buttons-film d-flex gap-3 mt-5">
-                            <button className="purple-btn">Трейлер</button>
-                            <Link to={"/film/" + film.random.id}>
-                                <button className="dark-btn">О фильме</button>
-                            </Link>
+                        <div className="buttons-film d-xl-flex gap-3 mt-xl-5 mt-4">
+                            <button className="purple-btn trailer-btn">Трейлер</button>
+                            <div className="d-flex justify-content-between mt-xl-0 mt-3 gap-xl-3">
+                                <Link to={"/film/" + film.random.id}>
+                                    <button className="dark-btn">О фильме</button>
+                                </Link>
 
-                            {isLike ? (
-                                <button className="dark-btn" onClick={() => {
-                                    if (getItem("token")) {
-                                        deleteFavorite(film.random.id, users.userData.id);
-                                        setIsLike(false);
-                                    }
-                                }}>
-                                    <ShadedHeart/>
-                                </button>
-                            ) : (
-                                <button className="dark-btn"
-                                        onClick={() => {
-                                            if (getItem("token")) {
-                                                addFavorites(film.random.id, users.userData.id);
-                                                setIsLike(true);
-                                            }
+                                {isLike ? (
+                                    <button className="dark-btn" onClick={() => {
+                                        if (getItem("token")) {
+                                            deleteFavorite(film.random.id, users.userData.id);
+                                            setIsLike(false);
                                         }
-                                        }>
-                                    <Heart/>
-                                </button>
-                            )}
+                                    }}>
+                                        {getItem("token") ? (
+                                            <>
+                                                <ShadedHeart/>
+                                            </>
+                                        ) : (
+                                            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                <ShadedHeart/>
+                                            </button>
+                                        )}
+                                    </button>
+                                ) : (
+                                    <button className="dark-btn"
+                                            onClick={() => {
+                                                if (getItem("token")) {
+                                                    addFavorites(film.random.id, users.userData.id);
+                                                    setIsLike(true);
+                                                }
+                                            }}
+                                    >
+                                        {getItem("token") ? (
+                                            <>
+                                                <Heart/>
+                                            </>
+                                        ) : (
+                                            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                <Heart/>
+                                            </button>
+                                        )}
+                                    </button>
+                                )}
 
-                            <button className="dark-btn" onClick={() => film.getRandom()}>
-                                <Reroll/>
-                            </button>
+                                <button className="dark-btn" onClick={() => film.getRandom()}>
+                                    <Reroll/>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

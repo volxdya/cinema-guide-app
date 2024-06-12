@@ -16,8 +16,8 @@ export const GenreFilms = observer(() => {
 
     return (
         <div className="main-container mt-5">
-            <h1 className="mb-5">{title}</h1>
-            <div className="d-flex gap-5 mt-5 flex-wrap">
+            <h1 className="mb-5 text-center title-genre">{title}</h1>
+            <div className="d-flex gap-5 mt-5 flex-wrap mx-xl-0 mx-5">
                 {films.genreFilms.map((item: film, index: number) => {
                     return <FilmCard key={item.id} title={item.title} id={item.id} image={item.image} index={index}/>
                 })}
