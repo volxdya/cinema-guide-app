@@ -8,6 +8,7 @@ import {getItem} from "../../utils/localStorage.ts";
 import {Person} from "../../icons/Person.tsx";
 import {SearchIcon} from "../../icons/SearchIcon.tsx";
 import {GenreIcon} from "../../icons/GenreIcon.tsx";
+import {Search} from "../Search/Search.tsx";
 
 interface navigationHeader {
     link: string;
@@ -61,6 +62,7 @@ export const Header = observer(() => {
                         <form className="w-100 me-3" role="search">
                             <input type="search" className="input-header" placeholder="Поиск" data-bs-toggle="modal"
                                    data-bs-target="#exampleModal"/>
+                            <Search/>
                         </form>
                     </div>
 

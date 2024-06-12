@@ -71,6 +71,12 @@ export const EditProfilePage = observer(() => {
                         </p>
                         <p>{users.fullUserData.firstName} {users.fullUserData.lastName}</p>
                     </div>
+                    <div className="d-flex gap-3 d-flex align-items-center">
+                        <p className="profile-avatar">
+                            ID
+                        </p>
+                        <p>{users.fullUserData.id}</p>
+                    </div>
                     <form
                         onSubmit={handleSubmit}
                         className="d-flex justify-content-center gap-4 flex-wrap mt-4">
@@ -117,19 +123,18 @@ export const EditProfilePage = observer(() => {
                                 onChange={handleChangePassword}
                             />
                         </label>
-                        <button className="button-edit button-edit-page mb-4">Изменить</button>
+                        <button className="button-edit button-edit-page mb-5">Изменить</button>
                     </form>
 
-                    <>
-                        <CSSTransition in={isSuccess} timeout={300} unmountOnExit classNames="my-node">
-                            <div className="d-flex justify-content-center">
-                                <div className="alert-message">
-                                    <Alert message={"Успешно!"} type={"success"}/>
-                                </div>
+                    <CSSTransition in={isSuccess} timeout={300} unmountOnExit classNames="my-node">
+                        <div className="d-flex justify-content-center">
+                            <div className="alert-message">
+                                <Alert message={"Успешно!"} type={"success"}/>
                             </div>
-                        </CSSTransition>
+                        </div>
+                    </CSSTransition>
 
-                    </>
+
                 </div>
             </div>
         </div>

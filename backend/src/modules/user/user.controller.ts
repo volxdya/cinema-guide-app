@@ -54,7 +54,7 @@ export class UserController {
     return this.userService.getOneUserById(userId);
   }
 
-  // @UseGuards(AuthGuard)
+  @UseGuards(AuthGuard)
   @Get('/get_by_login/:login')
   get_by_login(@Param('login') login: string) {
     return this.userService.getOneUser(login);
@@ -84,7 +84,7 @@ export class UserController {
     type: UserDto,
   })
 
-  // @UseGuards(AuthGuard)
+  @UseGuards(AuthGuard)
   @Post(`/add_favorite`)
   addFavorite(@Body() favoriteDto: FavoriteDto){
     return this.userService.addFavorite(favoriteDto.userId, favoriteDto.filmId)
@@ -98,6 +98,7 @@ export class UserController {
     status: 200,
     type: UserDto,
   })
+  @UseGuards(AuthGuard)
   @Post(`/delete_favorite`)
   deleteFavorite(@Body() favoriteDto: FavoriteDto){
     return this.userService.deleteFavorite(favoriteDto.userId, favoriteDto.filmId);
@@ -140,6 +141,7 @@ export class UserController {
     type: Boolean,
   })
 
+  @UseGuards(AuthGuard)
   @Post(`/check_films_like`)
   checkFilmsLike(@Body() checkUserDto: CheckUserDto) {
     return this.userService.getUserFilms(checkUserDto);

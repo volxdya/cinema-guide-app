@@ -1,4 +1,4 @@
-import {Injectable} from '@nestjs/common';
+import {Injectable, UseGuards} from '@nestjs/common';
 import {InjectModel} from '@nestjs/sequelize';
 import {User} from './user.model';
 import {UserDto} from './dto/userDto';
@@ -6,6 +6,7 @@ import {FilmService} from '../film/film.service';
 import {Film} from '../film/film.model';
 import {RolesService} from '../roles/roles.service';
 import {CheckUserDto} from "./dto/checkUserDto";
+import {AuthGuard} from "../../guards/auth.guard";
 
 @Injectable()
 export class UserService {

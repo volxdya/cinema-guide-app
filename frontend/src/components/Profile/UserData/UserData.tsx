@@ -37,6 +37,15 @@ export const UserData = observer(() => {
                     <p className="m-0 user-data">{users.fullUserData.login}</p>
                 </div>
             </section>
+            <section className="d-flex gap-3 mt-3">
+                <div>
+                    <p className="profile-avatar">ID</p>
+                </div>
+                <div className="profile-info">
+                    <p className="m-0">Уникальный ключ</p>
+                    <p className="m-0 user-data">{users.fullUserData.id}</p>
+                </div>
+            </section>
 
             <section  className="d-flex gap-3 mt-3">
                 <div className="profile-avatar">

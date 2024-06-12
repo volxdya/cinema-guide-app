@@ -43,7 +43,11 @@ class Users {
     }
 
     getFullUserData(login: string) {
-        axios.get(`http://localhost:${import.meta.env.VITE_API_PORT}/user/get_by_login/${login}`).then(res => {
+        axios.get(`http://localhost:${import.meta.env.VITE_API_PORT}/user/get_by_login/${login}`, {
+            headers: {
+                Authorization: `Bearer ${getItem("token")}`,
+            }
+        }).then(res => {
             this.fullUserData = res.data;
 
             console.log(res.data);
