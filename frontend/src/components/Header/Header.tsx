@@ -29,6 +29,8 @@ export const Header = observer(() => {
 
     useEffect(() => {
         users.getUserData();
+
+        users.getFullUserData(users.userData.login);
     }, [token]);
 
     return (
@@ -68,7 +70,7 @@ export const Header = observer(() => {
                     ) : (
                         <Link to="/profile"
                               className={url.pathname === "/profile" ? 'active link' : 'link'}>
-                            {users.userData.firstName}
+                            {users.fullUserData.firstName}
                         </Link>
                     )}
                 </div>

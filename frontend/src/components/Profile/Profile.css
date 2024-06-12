@@ -1,13 +1,13 @@
 .navigation-profile span{
     font-size: 17px;
 }
-.button-log-out {
+.button-log-out, .button-edit {
     background: var(--purple);
     border-radius: 25px;
     width: 300px;
     height: 45px;
 }
-.button-log-out:hover {
+.button-log-out:hover, .button-edit:hover {
     background: var(--secondaryPurple);
     transition: background 0.2s ease;
 }

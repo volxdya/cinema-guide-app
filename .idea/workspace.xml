@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="568ff671-c0cc-4721-abc8-ba23696c0d31" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/EditProfile.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/EditProfilePage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/EditProfilePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/ui/Alert/Alert.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/FilmPage/MainInfo/MainInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FilmPage/MainInfo/MainInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/App/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/App/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FilmPage/FilmPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FilmPage/FilmPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/LogOut/LogOut.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/LogOut/LogOut.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/Profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/UserData/UserData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/UserData/UserData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/main.global.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/main.global.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +30,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="package.json" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -42,25 +56,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HEOBI/Desktop/cinema-guide-app&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\HEOBI\\Desktop\\cinema-guide-app\\frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/HEOBI/Desktop/cinema-guide-app",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "C:\\Users\\HEOBI\\Desktop\\cinema-guide-app\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HEOBI\Desktop\cinema-guide-app-1\frontend\src\styles" />
@@ -108,7 +122,7 @@
       <workItem from="1718094232965" duration="3258000" />
       <workItem from="1718126320550" duration="12500000" />
       <workItem from="1718146620458" duration="917000" />
-      <workItem from="1718177929675" duration="249000" />
+      <workItem from="1718177929675" duration="7306000" />
     </task>
     <servers />
   </component>

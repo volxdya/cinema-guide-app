@@ -16,11 +16,13 @@ export const FilmPage = observer(() => {
         }
 
         users.getUserData();
+
+        users.getFullUserData(users.userData.login);
     }, []);
 
     return (
         <>
-            <MainInfo film={films.oneFilm} user={users.userData}/>
+            <MainInfo film={films.oneFilm} user={users.fullUserData}/>
             <About film={films.oneFilm}/>
         </>
     );

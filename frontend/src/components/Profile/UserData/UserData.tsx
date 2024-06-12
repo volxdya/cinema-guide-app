@@ -15,26 +15,26 @@ export const UserData = observer(() => {
             <section className="d-flex gap-3">
                 <div>
                     <p className="profile-avatar">
-                        {users.userData.firstName.charAt(0).toUpperCase()}
-                        {users.userData.lastName.charAt(0).toUpperCase()}
+                        {users.fullUserData.firstName.charAt(0).toUpperCase()}
+                        {users.fullUserData.lastName.charAt(0).toUpperCase()}
                     </p>
                 </div>
                 <div className="profile-info">
                     <p className="m-0">Имя фамилия</p>
                     <p className="m-0 user-data">
-                        {users.userData.firstName + " "}
-                        {users.userData.lastName}
+                        {users.fullUserData.firstName + " "}
+                        {users.fullUserData.lastName}
                     </p>
                 </div>
             </section>
 
             <section className="d-flex gap-3 mt-3">
                 <div>
-                    <p className="profile-avatar">{users.userData.login.charAt(0).toUpperCase()}</p>
+                    <p className="profile-avatar">{users.fullUserData.login.charAt(0).toUpperCase()}</p>
                 </div>
                 <div className="profile-info">
                     <p className="m-0">Логин</p>
-                    <p className="m-0 user-data">{users.userData.login}</p>
+                    <p className="m-0 user-data">{users.fullUserData.login}</p>
                 </div>
             </section>
 

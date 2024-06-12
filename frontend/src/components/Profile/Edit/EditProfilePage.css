@@ -1,0 +1,36 @@
+
+
+.edit-profile-page-container {
+    outline: 1px solid #343434;
+    width: 35%;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.edit-profile-page {
+    display: flex;
+    justify-content: center;
+}
+
+.edit-input {
+    width: 350px;
+    border-radius: 10px;
+    margin-top: 15px;
+    height: 45px;
+    outline: 1px solid #e8e8e8;
+    padding-left: 15px;
+    font-size: 17px;
+    color: #ffffff;
+}
+.edit-input:focus {
+    outline: 1px solid var(--purple);
+    transition: outline 200ms ease;
+}
+.label-edit-input {
+    padding: 0px;
+    color: #e1e1e1;
+    font-weight: bold;
+}
+.alert-message, .button-edit-page {
+    width: 350px;
+}
