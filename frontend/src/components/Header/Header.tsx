@@ -19,13 +19,16 @@ export const Header = observer(() => {
 
     const url = useLocation();
 
-    const navigation: navigationHeader[] = [{
-        link: '/',
-        title: 'Главная'
-    }, {
-        link: '/genres',
-        title: 'Жанры'
-    }];
+    const navigation: navigationHeader[] = [
+        {
+            link: '/',
+            title: 'Главная'
+        },
+        {
+            link: '/genres',
+            title: 'Жанры'
+        }
+    ];
 
     const token = getItem("token");
 
@@ -52,8 +55,12 @@ export const Header = observer(() => {
                     <div className="links-header d-flex align-items-center me-5">
                         {navigation.map((item: navigationHeader) => {
                             return (
-                                <Link to={item.link} key={item.link}
-                                      className={url.pathname === item.link ? 'active link' : 'link'}>{item.title}</Link>
+                                <Link to={item.link}
+                                      key={item.link}
+                                      className={url.pathname === item.link ? 'active link' : 'link'}
+                                >
+                                    {item.title}
+                                </Link>
                             )
                         })}
                     </div>

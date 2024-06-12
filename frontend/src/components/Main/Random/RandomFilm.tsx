@@ -41,6 +41,10 @@ export const RandomFilm = observer(() => {
             axios.post(`${import.meta.env.VITE_API_URL}/user/check_films_like`, {
                 userId: users.userData.id,
                 filmId: film.random.id
+            }, {
+                headers: {
+                    Authorization: `Bearer ${getItem("token")}`
+                }
             }).then((response) => {
                 setIsLike(response.data);
             }).catch(err => {

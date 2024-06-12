@@ -37,6 +37,10 @@ export const MainInfo = ({film, user}: Props) => {
             axios.post(`${import.meta.env.VITE_API_URL}/user/check_films_like`, {
                 userId: user.id,
                 filmId: film.id
+            }, {
+                headers: {
+                    Authorization: `Bearer ${getItem("token")}`
+                }
             }).then((response) => {
                 setIsLike(response.data);
             }).catch(err => {

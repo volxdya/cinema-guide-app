@@ -13,7 +13,7 @@ export function LogOut() {
 
     return (
         <div>
-            <button className="button-log-out mt-3" onClick={logOut}>
+            <button className="button-log-out mt-3 mb-5" onClick={logOut}>
                 Выйти из аккаунта
             </button>
         </div>
