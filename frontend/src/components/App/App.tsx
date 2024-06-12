@@ -25,7 +25,9 @@ function App() {
 
             <Footer/>
         </>
-    )
+    );
 }
 
 export default App
+
+// hello danil
