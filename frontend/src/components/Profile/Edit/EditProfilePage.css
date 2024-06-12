@@ -34,3 +34,9 @@
 .alert-message, .button-edit-page {
     width: 350px;
 }
+
+@media screen and (max-width: 768px) {
+    .edit-profile-page-container {
+        width: 100%;
+    }
+}
