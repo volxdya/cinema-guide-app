@@ -7,6 +7,8 @@ export async function auth(login: string, password: string){
         password: password,
     }).then(res => {
         setItem("token", res.data.token);
+
+        return res.data.token;
     }).catch(err => {
         console.log(err);
     });
