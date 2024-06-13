@@ -1,0 +1,7 @@
+@media screen and (max-width: 768px) {
+    .about-film-container {
+        position: relative;
+
+        bottom: -250px;
+    }
+}

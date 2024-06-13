@@ -15,14 +15,16 @@ export const Profile = observer(() => {
     if (getItem("token")) {
         return (
             <div className="main-container mt-5">
-                <h1>Мой аккаунт</h1>
+                <h1 className="text-xl-start text-center">Мой аккаунт</h1>
                 <Navigation setCurrent={setCurrent} current={current}/>
 
                 {current === "settings" && (
                     <>
                         <UserData/>
-                        <EditProfile/>
-                        <LogOut/>
+                        <div className="d-xl-block text-xl-start text-center">
+                            <EditProfile/>
+                            <LogOut/>
+                        </div>
                     </>
                 )}
 
@@ -33,7 +35,7 @@ export const Profile = observer(() => {
         );
     }
 
-    return  (
+    return (
         <div>Токена нет</div>
     )
 });

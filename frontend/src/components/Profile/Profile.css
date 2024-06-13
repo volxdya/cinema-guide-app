@@ -31,3 +31,11 @@
     height: 45px;
     width: 45px;
 }
+
+@media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px){
+        .button-log-out, .button-edit {
+            width: 95%;
+        }
+    }
+}

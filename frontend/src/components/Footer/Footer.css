@@ -30,6 +30,8 @@
 @media screen and (max-width: 768px) {
     .footer {
         display: block;
+        position: relative;
+        bottom: -300px;
     }
     .footer-main {
         display: block;

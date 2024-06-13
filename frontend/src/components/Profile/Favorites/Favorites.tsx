@@ -14,7 +14,7 @@ export const Favorites = observer(() => {
     }, []);
 
     return (
-        <div className="d-flex gap-5 flex-wrap">
+        <div className="d-flex gap-5 flex-wrap justify-content-xl-start justify-content-center">
             {users.fullUserData.favorites.length === 0 ? (
                 <h2>Избранных фильмов пока нет</h2>
             ) : (
