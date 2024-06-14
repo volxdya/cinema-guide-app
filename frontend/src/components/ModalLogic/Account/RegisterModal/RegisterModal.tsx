@@ -1,6 +1,7 @@
 import {ChangeEvent, FormEvent, useState} from 'react';
 import '../AccountModal.css';
 import {register} from '../../../../api/auth/register';
+import {onChange} from "../../../../utils/onChange.ts";
 
 interface Props {
     setCurrent: React.Dispatch<React.SetStateAction<string>>
@@ -19,26 +20,6 @@ export function RegisterModal({setCurrent}: Props) {
     const [lastName, setLastName] = useState("");
 
     const [isLoading, setIsLoading] = useState(false);
-
-    const handleChangeLogin = (event: ChangeEvent<HTMLInputElement>) => {
-        setLogin(event.target.value);
-    }
-
-    const handleChangePassword = (event: ChangeEvent<HTMLInputElement>) => {
-        setPassword(event.target.value);
-    }
-
-    const handleChangeSecondPassword = (event: ChangeEvent<HTMLInputElement>) => {
-        setSecondPassword(event.target.value);
-    }
-
-    const handleChangeFirstName = (event: ChangeEvent<HTMLInputElement>) => {
-        setFirstName(event.target.value);
-    }
-
-    const handleChangeLastName = (event: ChangeEvent<HTMLInputElement>) => {
-        setLastName(event.target.value);
-    }
 
     function clear() {
         setFirstName("");
@@ -71,35 +52,35 @@ export function RegisterModal({setCurrent}: Props) {
                     type="text"
                     placeholder="Логин"
                     value={login}
-                    onChange={handleChangeLogin}
+                    onChange={onChange(setLogin)}
                 />
                 <br/>
                 <input
                     type="text"
                     placeholder="Имя"
                     value={firstName}
-                    onChange={handleChangeFirstName}
+                    onChange={onChange(setFirstName)}
                 />
                 <br/>
                 <input
                     type="text"
                     placeholder="Фамилия"
                     value={lastName}
-                    onChange={handleChangeLastName}
+                    onChange={onChange(setLastName)}
                 />
                 <br/>
                 <input
                     type="password"
                     placeholder="Пароль"
                     value={password}
-                    onChange={handleChangePassword}
+                    onChange={onChange(setPassword)}
                 />
                 <br/>
                 <input
                     type="password"
                     placeholder="Подтвердите пароль"
                     value={secondPassword}
-                    onChange={handleChangeSecondPassword}
+                    onChange={onChange(setSecondPassword)}
                 />
                 <br/>
                 <div>
