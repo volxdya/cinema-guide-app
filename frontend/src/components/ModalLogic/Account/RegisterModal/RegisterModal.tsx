@@ -1,4 +1,4 @@
-import {ChangeEvent, FormEvent, useState} from 'react';
+import {FormEvent, useState} from 'react';
 import '../AccountModal.css';
 import {register} from '../../../../api/auth/register';
 import {onChange} from "../../../../utils/onChange.ts";

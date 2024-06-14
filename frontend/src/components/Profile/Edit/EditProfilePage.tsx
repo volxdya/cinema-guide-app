@@ -1,31 +1,20 @@
 import './EditProfilePage.css';
-import {ChangeEvent, FormEvent, useEffect, useState} from "react";
+import {FormEvent, useEffect, useState} from "react";
 import users from "../../../store/users.ts";
 import {observer} from "mobx-react-lite";
 import axios from "axios";
 import {Alert} from "../../../ui/Alert/Alert.tsx";
 import {CSSTransition} from 'react-transition-group';
 import {getItem} from "../../../utils/localStorage.ts";
+import {onChange} from "../../../utils/onChange.ts";
 
 
 export const EditProfilePage = observer(() => {
 
-    const [login, setLogin] = useState(users.fullUserData.login);
     const [firstName, setFirstName] = useState(users.fullUserData.firstName);
     const [lastName, setLastName] = useState(users.fullUserData.lastName);
     const [password, setPassword] = useState("");
     const [isSuccess, setIsSuccess] = useState(false);
-
-    const handleChangeFirstName = (event: ChangeEvent<HTMLInputElement>) => {
-        setFirstName(event.target.value);
-    }
-    const handleChangeLastName = (event: ChangeEvent<HTMLInputElement>) => {
-        setLastName(event.target.value);
-    }
-
-    const handleChangePassword = (event: ChangeEvent<HTMLInputElement>) => {
-        setPassword(event.target.value);
-    }
 
     useEffect(() => {
         users.getUserData();
@@ -34,7 +23,6 @@ export const EditProfilePage = observer(() => {
     }, []);
 
     useEffect(() => {
-        setLogin(users.fullUserData.login);
         setFirstName(users.fullUserData.firstName);
         setLastName(users.fullUserData.lastName);
     }, []);
@@ -52,7 +40,6 @@ export const EditProfilePage = observer(() => {
         event.preventDefault();
 
         axios.put(`http://localhost:${import.meta.env.VITE_API_PORT}/user/update/${users.fullUserData.login}`, {
-            login: login,
             firstName: firstName,
             lastName: lastName,
             password: password
@@ -93,7 +80,7 @@ export const EditProfilePage = observer(() => {
                                 type="text"
                                 className="edit-input"
                                 value={firstName}
-                                onChange={handleChangeFirstName}
+                                onChange={onChange(setFirstName)}
                             />
                         </label>
                         <label>
@@ -104,7 +91,7 @@ export const EditProfilePage = observer(() => {
                                 type="text"
                                 className="edit-input"
                                 value={lastName}
-                                onChange={handleChangeLastName}
+                                onChange={onChange(setLastName)}
                             />
                         </label>
                         <label>
@@ -114,7 +101,7 @@ export const EditProfilePage = observer(() => {
                             <input
                                 type="text"
                                 className="edit-input"
-                                value={login}
+                                value={users.fullUserData.login}
                             />
                         </label>
                         <label>
@@ -125,7 +112,7 @@ export const EditProfilePage = observer(() => {
                                 type="password"
                                 className="edit-input"
                                 value={password}
-                                onChange={handleChangePassword}
+                                onChange={onChange(setPassword)}
                             />
                         </label>
                         <button className="button-edit button-edit-page mb-5">Изменить</button>
