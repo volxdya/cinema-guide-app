@@ -1,5 +1,5 @@
 import './Header.css';
-import {Modal} from "../../ui/Modal/Modal.tsx";
+import {ModalWindow} from "../../ui/Modal/Modal.tsx";
 import {Link, useLocation} from "react-router-dom";
 import {useEffect} from "react";
 import users from "../../store/users.ts";
@@ -86,7 +86,7 @@ export const Header = observer(() => {
                             </Link>
                         )}
                     </div>
-                    <Modal/>
+                    <ModalWindow/>
                 </div>
             </header>
 

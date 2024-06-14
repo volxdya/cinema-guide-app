@@ -1,68 +1,85 @@
-import {FormEvent, useState} from "react";
-import {auth} from "../../../../api/auth/auth";
 import '../AccountModal.css';
-import {onChange} from "../../../../utils/onChange.ts";
+import {AuthForm} from "./Form.tsx";
+import axios from "axios";
+import {setItem} from "../../../../utils/localStorage.ts";
+import {Check} from "../../../../icons/Check.tsx";
+import {ToastsBS} from "../../../../ui/Toast/ToastsBS.tsx";
+import {useState} from "react";
+import {ErrorIcon} from "../../../../icons/Error.tsx";
+import {CSSTransition} from 'react-transition-group';
 
 interface Props {
+
     setCurrent: React.Dispatch<React.SetStateAction<string>>
 }
 
 export function AuthModal({setCurrent}: Props) {
-    const [login, setLogin] = useState("");
-    const [password, setPassword] = useState("");
+    const [isSuccess, setIsSucess] = useState(false);
+    const [isError, setIsError] = useState(false);
 
 
-    const handleSubmit = async (event: FormEvent) => {
-        event.preventDefault();
-        event.stopPropagation();
+    // ПОЗЖЕ ЗАМЕНИТЬ НА ФАБРИКУ
+    function success() {
+        setIsError(false);
+        setIsSucess(true);
+    }
 
-        await auth(login, password);
+    function error() {
+        setIsSucess(false);
+        setIsError(true);
+    }
 
+    const handleSubmit = async (values: { login: string, password: string }) => {
+        await axios.post(`${import.meta.env.VITE_API_URL}/auth/login`, {
+            login: values.login,
+            password: values.password,
+        }).then(res => {
+            setItem("token", res.data.token);
 
-        window.location.reload();
+            values.login = "";
+            values.password = "";
 
-        setPassword("");
-        setLogin("");
+            success();
+
+            setTimeout(() => {
+                window.location.reload();
+            }, 2500);
+
+        }).catch(err => {
+            error();
+            console.log(err);
+        });
+
     }
 
     return (
-        <form className="justify-content-center form-auth" onSubmit={handleSubmit}>
-            <div>
-                <input
-                    type="text"
-                    placeholder="Электронная почта"
-                    value={login}
-                    required
-                    onChange={onChange(setLogin)}
-                />
-                {/*{isLoginErr && (*/}
-                {/*    <div id="validationServerUsernameFeedback" className="invalid-feedback">*/}
-                {/*        Введите имя пользователя*/}
-                {/*    </div>*/}
-                {/*)}*/}
-                {/*{!isLoginErr && !isPasswordErr && (*/}
-                {/*    <br/>*/}
-                {/*)}*/}
-                <br/>
-                <input
-                    type="password"
-                    placeholder="Пароль"
-                    value={password}
-                    onChange={onChange(setPassword)}
-                    required
-                />
-                {/*{isPasswordErr && (*/}
-                {/*    <div id="validationServerUsernameFeedback" className="invalid-feedback">*/}
-                {/*        Введите пароль*/}
-                {/*    </div>*/}
-                {/*)}*/}
-                <div>
-                    <button className="button-auth">Войти</button>
+        <>
+            <AuthForm handleSubmit={handleSubmit} setCurrent={setCurrent}/>
+
+            <CSSTransition in={isSuccess} timeout={300} unmountOnExit classNames="my-node">
+                {isSuccess && (
+                    <ToastsBS type="success" children={
+                        <div className="d-flex gap-3">
+                            <Check/>
+                            Успешно!
+                        </div>
+                    }/>
+                )}
+            </CSSTransition>
+
+
+            <CSSTransition in={isError} timeout={300} unmountOnExit classNames="my-node">
+                <div className="container-toastszxc">
+                    <ToastsBS type="error" children={
+                        <div className="d-flex gap-3">
+                            <ErrorIcon/>
+                            Неверный логин или пароль
+                        </div>
+                    }/>
                 </div>
-                <div>
-                    <button className="button-register" onClick={() => setCurrent("register")}>Регистрация</button>
-                </div>
-            </div>
-        </form>
+            </CSSTransition>
+
+
+        </>
     );
 }

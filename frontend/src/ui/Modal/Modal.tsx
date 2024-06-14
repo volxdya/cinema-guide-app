@@ -1,7 +1,7 @@
 import { ModalLogic } from '../../components/ModalLogic/ModalLogic';
 import './Modal.css';
 
-export function Modal() {
+export function ModalWindow() {
 
     return (
         <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">

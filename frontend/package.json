@@ -10,24 +10,29 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/react-router-dom": "^5.3.3",
     "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
+    "formik": "^2.4.6",
     "jwt-decode": "^4.0.0",
     "mobx": "^6.12.3",
     "mobx-react-lite": "^4.0.7",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
     "react-transition-group": "^4.4.5",
-    "uniqid": "^5.4.0"
+    "uniqid": "^5.4.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.2",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "@types/react-router-dom": "^5.3.3",
     "@types/react-transition-group": "^4.4.10",
     "@types/uniqid": "^5.3.4",
+    "@types/yup": "^0.32.0",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",

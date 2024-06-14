@@ -22,7 +22,6 @@ function App() {
                 <Route path="/film/:id" element={<FilmPage/>}/>
                 <Route path="/edit/" element={<EditProfilePage/>}/>
             </Routes>
-
             <Footer/>
         </>
     );
