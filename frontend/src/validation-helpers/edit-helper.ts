@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import {IEdit} from "../../../interfaces/validation/edit.ts";
+import {IEdit} from "../interfaces/validation/edit.ts";
 
 const password = Yup
     .string()

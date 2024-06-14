@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import {IRegister} from "../../../../interfaces/validation/register.ts";
+import {IRegister} from "../interfaces/validation/register.ts";
 
 /*const REGX = {
     name: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,20}$/

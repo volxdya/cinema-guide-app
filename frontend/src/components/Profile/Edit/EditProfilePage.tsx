@@ -7,7 +7,7 @@ import {CSSTransition} from 'react-transition-group';
 import {getItem} from "../../../utils/localStorage.ts";
 import {IEdit} from "../../../interfaces/validation/edit.ts";
 import {Formik} from "formik";
-import {initialState, schemas} from "./helper.ts";
+import {initialState, schemas} from "../../../validation-helpers/edit-helper.ts";
 import {EditForm} from "./Form.tsx";
 import {ToastsBS} from "../../../ui/Toast/ToastsBS.tsx";
 import {Check} from "../../../icons/Check.tsx";

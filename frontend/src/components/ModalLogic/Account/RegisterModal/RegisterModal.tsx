@@ -1,6 +1,6 @@
 import '../AccountModal.css';
 import {Formik} from "formik";
-import {initialState, schemas} from "./helper.ts";
+import {initialState, schemas} from "../../../../validation-helpers/register-helper.ts";
 import {RegisterForm} from "./Form.tsx";
 import axios from "axios";
 import {CSSTransition} from "react-transition-group";

@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import {IAuth} from "../../../../interfaces/validation/auth.ts";
+import {IAuth} from "../interfaces/validation/auth.ts";
 
 /*const REGX = {
     name: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,20}$/

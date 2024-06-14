@@ -7,7 +7,7 @@ import {ToastsBS} from "../../../../ui/Toast/ToastsBS.tsx";
 import {useState} from "react";
 import {ErrorIcon} from "../../../../icons/Error.tsx";
 import {CSSTransition} from 'react-transition-group';
-import {initialState, schemas} from "./helper.ts";
+import {initialState, schemas} from "../../../../validation-helpers/auth-helper.ts";
 import {Formik} from "formik";
 import {IAuth} from "../../../../interfaces/validation/auth.ts";
 
