@@ -1,5 +1,4 @@
-export interface IRegister {
-    login: string,
+export interface IEdit {
     password: string,
     firstName: string,
     lastName: string,

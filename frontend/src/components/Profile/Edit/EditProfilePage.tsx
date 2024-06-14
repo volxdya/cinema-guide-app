@@ -1,20 +1,23 @@
 import './EditProfilePage.css';
-import {FormEvent, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import users from "../../../store/users.ts";
 import {observer} from "mobx-react-lite";
 import axios from "axios";
-import {Alert} from "../../../ui/Alert/Alert.tsx";
 import {CSSTransition} from 'react-transition-group';
 import {getItem} from "../../../utils/localStorage.ts";
-import {onChange} from "../../../utils/onChange.ts";
+import {IEdit} from "../../../interfaces/validation/edit.ts";
+import {Formik} from "formik";
+import {initialState, schemas} from "./helper.ts";
+import {EditForm} from "./Form.tsx";
+import {ToastsBS} from "../../../ui/Toast/ToastsBS.tsx";
+import {Check} from "../../../icons/Check.tsx";
+import {ErrorIcon} from "../../../icons/Error.tsx";
 
 
 export const EditProfilePage = observer(() => {
 
-    const [firstName, setFirstName] = useState(users.fullUserData.firstName);
-    const [lastName, setLastName] = useState(users.fullUserData.lastName);
-    const [password, setPassword] = useState("");
     const [isSuccess, setIsSuccess] = useState(false);
+    const [isError, setIsError] = useState(false);
 
     useEffect(() => {
         users.getUserData();
@@ -22,34 +25,35 @@ export const EditProfilePage = observer(() => {
         users.getFullUserData(users.userData.login);
     }, []);
 
-    useEffect(() => {
-        setFirstName(users.fullUserData.firstName);
-        setLastName(users.fullUserData.lastName);
-    }, []);
-
-    function success() {
-        setIsSuccess(true);
-
-        setTimeout(() => {
-            setIsSuccess(false);
-        }, 5000)
+    function error() {
+        setIsSuccess(false);
+        setIsError(true);
     }
 
-    const handleSubmit = (event: FormEvent) => {
-        event.stopPropagation();
-        event.preventDefault();
+    function success() {
+        setIsError(false);
+        setIsSuccess(true);
+    }
 
-        axios.put(`http://localhost:${import.meta.env.VITE_API_PORT}/user/update/${users.fullUserData.login}`, {
-            firstName: firstName,
-            lastName: lastName,
-            password: password
-        }, {
-            headers: {
-                Authorization: `Bearer ${getItem("token")}`
-            }
-        }).then(() => {
-            success();
-        });
+    const handleSubmit = async (values: IEdit) => {
+
+        if (values.password === values.secondPassword) {
+            await axios.put(`http://localhost:${import.meta.env.VITE_API_PORT}/user/update/${users.fullUserData.login}`, {
+                firstName: values.firstName,
+                lastName: values.lastName,
+                password: values.password,
+            }, {
+                headers: {
+                    Authorization: `Bearer ${getItem("token")}`
+                }
+            }).then(() => {
+                success();
+            }).catch(() => {
+                error();
+            });
+        } else {
+            console.log("soon...");
+        }
     }
 
     return (
@@ -69,63 +73,35 @@ export const EditProfilePage = observer(() => {
                         </p>
                         <p>{users.fullUserData.id}</p>
                     </div>
-                    <form
-                        onSubmit={handleSubmit}
-                        className="d-flex justify-content-center gap-4 flex-wrap mt-4">
-                        <label>
-                            <div className="label-edit-input">
-                                Имя
-                            </div>
-                            <input
-                                type="text"
-                                className="edit-input"
-                                value={firstName}
-                                onChange={onChange(setFirstName)}
-                            />
-                        </label>
-                        <label>
-                            <div className="label-edit-input">
-                                Фамилия
-                            </div>
-                            <input
-                                type="text"
-                                className="edit-input"
-                                value={lastName}
-                                onChange={onChange(setLastName)}
-                            />
-                        </label>
-                        <label>
-                            <div className="label-edit-input">
-                                Логин
-                            </div>
-                            <input
-                                type="text"
-                                className="edit-input"
-                                value={users.fullUserData.login}
-                            />
-                        </label>
-                        <label>
-                            <div className="label-edit-input">
-                                Пароль
-                            </div>
-                            <input
-                                type="password"
-                                className="edit-input"
-                                value={password}
-                                onChange={onChange(setPassword)}
-                            />
-                        </label>
-                        <button className="button-edit button-edit-page mb-5">Изменить</button>
-                    </form>
+
+                    <Formik initialValues={initialState}
+                            validationSchema={schemas.custom}
+                            onSubmit={handleSubmit}
+                    >
+                        <EditForm/>
+                    </Formik>
 
                     <CSSTransition in={isSuccess} timeout={300} unmountOnExit classNames="my-node">
-                        <div className="d-flex justify-content-center">
-                            <div className="alert-message">
-                                <Alert message={"Успешно!"} type={"success"}/>
-                            </div>
-                        </div>
+                        {isSuccess && (
+                            <ToastsBS type="success" children={
+                                <div className="d-flex gap-3">
+                                    <Check/>
+                                    Успешно!
+                                </div>
+                            }/>
+                        )}
                     </CSSTransition>
 
+                    <CSSTransition in={isError} timeout={300} unmountOnExit classNames="my-node">
+                        <div className="container-toastszxc">
+                            <ToastsBS type="error" children={
+                                <div className="d-flex gap-3">
+                                    <ErrorIcon/>
+                                    Неизвестная ошибка...
+                                </div>
+                            }/>
+                        </div>
+                    </CSSTransition>
 
                 </div>
             </div>

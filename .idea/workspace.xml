@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6e29e1ad-531c-4822-b6e0-0dc749bf9a9c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/Form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/helper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/interfaces/validation/edit.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/AuthModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/AuthModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/RegisterModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/RegisterModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/EditProfilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/EditProfilePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/interfaces/validation/register.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/interfaces/validation/register.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2hohnai6Ac3wvnc9KwhROEAVHpq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\HEOBI\\Desktop\\cinema-guide-app\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HEOBI\Desktop\cinema-guide-app\frontend\src\interfaces\api" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.235" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6e29e1ad-531c-4822-b6e0-0dc749bf9a9c" name="Changes" comment="" />
+      <created>1718266507693</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718266507693</updated>
+      <workItem from="1718266509890" duration="1394000" />
+      <workItem from="1718277641746" duration="2776000" />
+      <workItem from="1718280470111" duration="2153000" />
+      <workItem from="1718350346126" duration="11958000" />
+      <workItem from="1718375990160" duration="2128000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,15 +1,5 @@
 import * as Yup from 'yup';
-import {IRegister} from "../../../../interfaces/validation/register.ts";
-
-/*const REGX = {
-    name: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,20}$/
-}*/
-
-const login = Yup
-    .string()
-    .required("Введите логин")
-    .min(3, "Слишком короткий логин")
-    .max(20, "Слишком длинный логин");
+import {IEdit} from "../../../interfaces/validation/edit.ts";
 
 const password = Yup
     .string()
@@ -32,23 +22,21 @@ const lastName = Yup
 const secondPassword = Yup
     .string()
     .required("Подтвердите пароль")
-    .min(3, "")
+    .min(3, "Слишком короткий пароль")
     .max(20, "Слишком длинный пароль");
 
 export const schemas = {
     custom: Yup.object().shape({
-        login,
-        password,
         firstName,
         lastName,
-        secondPassword
+        password,
+        secondPassword,
     })
 }
 
-export const initialState: IRegister = {
-    login: "",
-    password: "",
+export const initialState: IEdit = {
     firstName: "",
     lastName: "",
-    secondPassword: ""
+    secondPassword: "",
+    password: "",
 }

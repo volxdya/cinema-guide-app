@@ -45,7 +45,7 @@ export function RegisterForm({setCurrent}: Props) {
                     </div>
                     <div>
                         <button type="button" className="button-register"
-                                onClick={() => setCurrent("register")}>У меня есть пароль
+                                onClick={() => setCurrent("auth")}>У меня есть пароль
                         </button>
                     </div>
                 </div>

@@ -12,7 +12,6 @@ import {Formik} from "formik";
 import {IAuth} from "../../../../interfaces/validation/auth.ts";
 
 interface Props {
-
     setCurrent: React.Dispatch<React.SetStateAction<string>>
 }
 

@@ -85,7 +85,6 @@ export function RegisterModal({setCurrent}: Props) {
                 )}
             </CSSTransition>
 
-
             <CSSTransition in={isError} timeout={300} unmountOnExit classNames="my-node">
                 <div className="container-toastszxc">
                     <ToastsBS type="error" children={

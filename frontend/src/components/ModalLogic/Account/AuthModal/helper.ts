@@ -1,9 +1,5 @@
 import * as Yup from 'yup';
-
-interface IInitialState {
-    login: string;
-    password: string;
-}
+import {IAuth} from "../../../../interfaces/validation/auth.ts";
 
 /*const REGX = {
     name: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,20}$/
@@ -27,7 +23,7 @@ export const schemas = {
     })
 }
 
-export const initialState: IInitialState = {
+export const initialState: IAuth = {
     login: "",
     password: ""
 }
