@@ -15,7 +15,7 @@ export function EditForm() {
                         name="firstName"
                     />
                     <ErrorMessage name="firstName">
-                        {(error) => <div> {error} </div>}
+                        {(error) => <div className="error-input"> {error} </div>}
                     </ErrorMessage>
                 </label>
 
@@ -29,7 +29,7 @@ export function EditForm() {
                         name="lastName"
                     />
                     <ErrorMessage name="lastName">
-                        {(error) => <div> {error} </div>}
+                        {(error) => <div className="error-input"> {error} </div>}
                     </ErrorMessage>
                 </label>
 
@@ -43,7 +43,7 @@ export function EditForm() {
                         name="password"
                     />
                     <ErrorMessage name="password">
-                        {(error) => <div> {error} </div>}
+                        {(error) => <div className="error-input"> {error} </div>}
                     </ErrorMessage>
                 </label>
                 <label>
@@ -56,7 +56,7 @@ export function EditForm() {
                         name="secondPassword"
                     />
                     <ErrorMessage name="secondPassword">
-                        {(error) => <div> {error} </div>}
+                        {(error) => <div className="error-input"> {error} </div>}
                     </ErrorMessage>
                 </label>
 

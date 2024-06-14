@@ -13,31 +13,31 @@ export function RegisterForm({setCurrent}: Props) {
                     <Field name="login" placeholder="Введите логин"/>
                     <div/>
                     <ErrorMessage name="login">
-                        {(error) => <div> {error} </div>}
+                        {(error) => <div className="error-input"> {error} </div>}
                     </ErrorMessage>
 
                     <Field name="password" placeholder="Введите пароль"/>
                     <div/>
                     <ErrorMessage name="password">
-                        {(error) => <div> {error} </div>}
+                        {(error) => <div className="error-input"> {error} </div>}
                     </ErrorMessage>
 
                     <Field name="firstName" placeholder="Введите имя"/>
                     <div/>
                     <ErrorMessage name="password">
-                        {(error) => <div> {error} </div>}
+                        {(error) => <div className="error-input"> {error} </div>}
                     </ErrorMessage>
 
                     <Field name="lastName" placeholder="Введите фамилию"/>
                     <div/>
                     <ErrorMessage name="password">
-                        {(error) => <div> {error} </div>}
+                        {(error) => <div className="error-input"> {error} </div>}
                     </ErrorMessage>
 
                     <Field name="secondPassword" placeholder="Подтвердите пароль"/>
                     <div/>
                     <ErrorMessage name="password">
-                        {(error) => <div> {error} </div>}
+                        {(error) => <div className="error-input"> {error} </div>}
                     </ErrorMessage>
 
                     <div>

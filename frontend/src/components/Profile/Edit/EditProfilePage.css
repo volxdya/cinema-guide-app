@@ -35,6 +35,10 @@
     width: 350px;
 }
 
+.error-input {
+    color: red;
+}
+
 @media screen and (max-width: 768px) {
     .edit-profile-page-container {
         width: 100%;

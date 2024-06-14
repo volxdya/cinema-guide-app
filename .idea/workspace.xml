@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e29e1ad-531c-4822-b6e0-0dc749bf9a9c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/AuthModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/AuthModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/validation-helpers/auth-helper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/RegisterModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/RegisterModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/validation-helpers/register-helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/EditProfilePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/EditProfilePage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/Form.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -76,7 +77,7 @@
       <workItem from="1718277641746" duration="2776000" />
       <workItem from="1718280470111" duration="2153000" />
       <workItem from="1718350346126" duration="11958000" />
-      <workItem from="1718375990160" duration="2428000" />
+      <workItem from="1718375990160" duration="3038000" />
     </task>
     <servers />
   </component>

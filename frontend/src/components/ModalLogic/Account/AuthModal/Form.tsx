@@ -13,14 +13,14 @@ export function AuthForm({setCurrent}: Props) {
                     <Field name="login" placeholder="Введите логин"/>
                     <div/>
                     <ErrorMessage name="login">
-                        {(error) => <div> {error} </div>}
+                        {(error) => <div className="error-input"> {error} </div>}
                     </ErrorMessage>
                     <br/>
 
                     <Field name="password" placeholder="Введите пароль"/>
                     <div/>
                     <ErrorMessage name="password">
-                        {(error) => <div> {error} </div>}
+                        {(error) => <div className="error-input"> {error} </div>}
                     </ErrorMessage>
 
                     <div>
