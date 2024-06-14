@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom";
 import films from "../../../store/films.ts";
 import {FilmCard} from "../../../ui/FilmCard/FilmCard.tsx";
-import {film} from "../../../interfaces/film.ts";
+import {film} from "../../../interfaces/api/film.ts";
 import {useEffect} from "react";
 import {observer} from "mobx-react-lite";
 

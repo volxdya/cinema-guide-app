@@ -1,6 +1,6 @@
 import {makeAutoObservable} from "mobx";
 import axios from "axios";
-import {genre} from "../interfaces/genre.ts";
+import {genre} from "../interfaces/api/genre.ts";
 
 class Genres {
     constructor() {

@@ -8,18 +8,10 @@ import {ToastsBS} from "../../../../ui/Toast/ToastsBS.tsx";
 import {Check} from "../../../../icons/Check.tsx";
 import {ErrorIcon} from "../../../../icons/Error.tsx";
 import {useState} from "react";
+import {IRegister} from "../../../../interfaces/validation/register.ts";
 
 interface Props {
     setCurrent: React.Dispatch<React.SetStateAction<string>>
-}
-
-interface IRegister {
-
-    login: string,
-    password: string,
-    firstName: string,
-    lastName: string,
-    secondPassword: string;
 }
 
 export function RegisterModal({setCurrent}: Props) {

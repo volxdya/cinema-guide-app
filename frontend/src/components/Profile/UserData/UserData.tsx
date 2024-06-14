@@ -1,7 +1,7 @@
 import {observer} from "mobx-react-lite";
 import users from "../../../store/users.ts";
 import {useEffect} from "react";
-import {role} from "../../../interfaces/role.ts";
+import {role} from "../../../interfaces/api/role.ts";
 
 export const UserData = observer(() => {
     useEffect(() => {

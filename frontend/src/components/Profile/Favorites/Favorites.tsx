@@ -3,7 +3,7 @@ import {observer} from "mobx-react-lite";
 import users from "../../../store/users.ts";
 import uniqid from "uniqid";
 import {FilmCard} from "../../../ui/FilmCard/FilmCard.tsx";
-import {film} from "../../../interfaces/film.ts";
+import {film} from "../../../interfaces/api/film.ts";
 
 export const Favorites = observer(() => {
 

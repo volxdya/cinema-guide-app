@@ -1,5 +1,5 @@
 import {makeAutoObservable} from "mobx";
-import {user} from "../interfaces/user.ts";
+import {user} from "../interfaces/api/user.ts";
 import {getItem} from "../utils/localStorage.ts";
 
 import {jwtDecode, JwtPayload} from "jwt-decode";

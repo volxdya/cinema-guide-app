@@ -1,5 +1,5 @@
 import {makeAutoObservable} from "mobx";
-import {film} from "../interfaces/film.ts";
+import {film} from "../interfaces/api/film.ts";
 import axios from "axios";
 
 class Films {

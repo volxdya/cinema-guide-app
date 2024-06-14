@@ -9,6 +9,7 @@ import {ErrorIcon} from "../../../../icons/Error.tsx";
 import {CSSTransition} from 'react-transition-group';
 import {initialState, schemas} from "./helper.ts";
 import {Formik} from "formik";
+import {IAuth} from "../../../../interfaces/validation/auth.ts";
 
 interface Props {
 
@@ -31,7 +32,7 @@ export function AuthModal({setCurrent}: Props) {
         setIsError(true);
     }
 
-    const handleSubmit = async (values: { login: string, password: string }) => {
+    const handleSubmit = async (values: IAuth) => {
         await axios.post(`${import.meta.env.VITE_API_URL}/auth/login`, {
             login: values.login,
             password: values.password,

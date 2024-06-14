@@ -1,5 +1,5 @@
 import {Dots} from "../../../icons/Dots.tsx";
-import {film} from "../../../interfaces/film.ts";
+import {film} from "../../../interfaces/api/film.ts";
 import './About.css';
 
 

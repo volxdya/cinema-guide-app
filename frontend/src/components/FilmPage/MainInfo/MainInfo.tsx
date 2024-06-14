@@ -1,8 +1,8 @@
 import {Star} from "../../../icons/Star.tsx";
 import {Heart} from "../../../icons/Heart.tsx";
-import {film} from "../../../interfaces/film.ts";
+import {film} from "../../../interfaces/api/film.ts";
 import {addFavorites, deleteFavorite} from "../../../api/favorites/favorites.ts";
-import {user} from "../../../interfaces/user.ts";
+import {user} from "../../../interfaces/api/user.ts";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import users from "../../../store/users.ts";

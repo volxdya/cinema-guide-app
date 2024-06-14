@@ -3,7 +3,7 @@ import './Search.css';
 import {FilmCardSearch} from "../../ui/FIlmCardSearch/FIlmCardSearch.tsx";
 import {ChangeEvent, useState} from "react";
 import films from "../../store/films.ts";
-import {film} from "../../interfaces/film.ts";
+import {film} from "../../interfaces/api/film.ts";
 import {NoSearch} from "../../icons/NoSearch.tsx";
 import uniqid from "uniqid";
 

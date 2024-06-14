@@ -3,7 +3,7 @@ import './GenrePage.css';
 import {useEffect} from "react";
 import genres from "../../store/genres.ts";
 import {observer} from "mobx-react-lite";
-import {genre} from "../../interfaces/genre.ts";
+import {genre} from "../../interfaces/api/genre.ts";
 import uniqid from "uniqid";
 
 export const GenrePage = observer(() => {
