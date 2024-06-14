@@ -1,106 +1,109 @@
-import {FormEvent, useState} from 'react';
 import '../AccountModal.css';
-import {register} from '../../../../api/auth/register';
-import {onChange} from "../../../../utils/onChange.ts";
+import {Formik} from "formik";
+import {initialState, schemas} from "./helper.ts";
+import {RegisterForm} from "./Form.tsx";
+import axios from "axios";
+import {CSSTransition} from "react-transition-group";
+import {ToastsBS} from "../../../../ui/Toast/ToastsBS.tsx";
+import {Check} from "../../../../icons/Check.tsx";
+import {ErrorIcon} from "../../../../icons/Error.tsx";
+import {useState} from "react";
 
 interface Props {
     setCurrent: React.Dispatch<React.SetStateAction<string>>
 }
 
+interface IRegister {
+
+    login: string,
+    password: string,
+    firstName: string,
+    lastName: string,
+    secondPassword: string;
+}
 
 export function RegisterModal({setCurrent}: Props) {
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [isError, setIsError] = useState(false);
 
 
-    // позже заменить на фабрику функций
-
-    const [login, setLogin] = useState("");
-    const [password, setPassword] = useState("");
-    const [secondPassword, setSecondPassword] = useState("");
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-
-    const [isLoading, setIsLoading] = useState(false);
-
-    function clear() {
-        setFirstName("");
-        setLastName("");
-        setPassword("");
-        setLogin("");
-        setSecondPassword("");
+    // ПОЗЖЕ ЗАМЕНИТЬ НА ФАБРИКУ
+    function success() {
+        setIsError(false);
+        setIsSuccess(true);
     }
 
-    const handleSubmit = (event: FormEvent) => {
-        event.preventDefault();
-        event.stopPropagation();
+    function error() {
+        setIsSuccess(false);
+        setIsError(true);
+    }
 
-        setIsLoading(true);
 
-        setTimeout(() => {
-            register(login, password, firstName, lastName);
-            
-            clear();
 
-            setIsLoading(false);
-        }, 100);
+    function clear(values: IRegister) {
+        values.login = "";
+        values.password = "";
+        values.firstName = "";
+        values.lastName = "";
+        values.secondPassword = "";
+    }
+
+    const handleSubmit = async (values: IRegister) => {
+        if (values.password === values.secondPassword) {
+            await axios.post(`${import.meta.env.VITE_API_URL}/user/create`, {
+                login: values.login,
+                password: values.password,
+                firstName: values.firstName,
+                lastName: values.lastName,
+            }).then(res => {
+                clear(values);
+                console.log(res);
+
+                success();
+            }).catch(err => {
+                console.log(err);
+
+                error();
+            });
+        } else {
+            console.log("Неверный пароль");
+        }
     }
 
 
     return (
-        <form className="justify-content-center form-auth" onSubmit={handleSubmit}>
-            <div>
-                <input
-                    type="text"
-                    placeholder="Логин"
-                    value={login}
-                    onChange={onChange(setLogin)}
-                />
-                <br/>
-                <input
-                    type="text"
-                    placeholder="Имя"
-                    value={firstName}
-                    onChange={onChange(setFirstName)}
-                />
-                <br/>
-                <input
-                    type="text"
-                    placeholder="Фамилия"
-                    value={lastName}
-                    onChange={onChange(setLastName)}
-                />
-                <br/>
-                <input
-                    type="password"
-                    placeholder="Пароль"
-                    value={password}
-                    onChange={onChange(setPassword)}
-                />
-                <br/>
-                <input
-                    type="password"
-                    placeholder="Подтвердите пароль"
-                    value={secondPassword}
-                    onChange={onChange(setSecondPassword)}
-                />
-                <br/>
-                <div>
-                    {isLoading ? (
-                        <button className="button-auth">
-                            <div className="spinner-border" role="status">
-                                <span className="visually-hidden">Loading...</span>
-                            </div>
-                        </button>
-                    ) : (
-                        <button className="button-auth">
-                            Регистрация
-                        </button>
-                    )}
+        <>
+            <Formik
+                onSubmit={handleSubmit}
+                initialValues={initialState}
+                validationSchema={schemas.custom}
+            >
+                <RegisterForm setCurrent={setCurrent}/>
+
+            </Formik>
+
+            <CSSTransition in={isSuccess} timeout={300} unmountOnExit classNames="my-node">
+                {isSuccess && (
+                    <ToastsBS type="success" children={
+                        <div className="d-flex gap-3">
+                            <Check/>
+                            Успешно!
+                        </div>
+                    }/>
+                )}
+            </CSSTransition>
+
+
+            <CSSTransition in={isError} timeout={300} unmountOnExit classNames="my-node">
+                <div className="container-toastszxc">
+                    <ToastsBS type="error" children={
+                        <div className="d-flex gap-3">
+                            <ErrorIcon/>
+                            Неизвестная ошибка...
+                        </div>
+                    }/>
                 </div>
-                <div>
-                    <button className="button-register" onClick={() => setCurrent("auth")}>У меня есть пароль
-                    </button>
-                </div>
-            </div>
-        </form>
+            </CSSTransition>
+        </>
     )
 }

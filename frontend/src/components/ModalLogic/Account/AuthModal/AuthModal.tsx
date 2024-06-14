@@ -7,6 +7,8 @@ import {ToastsBS} from "../../../../ui/Toast/ToastsBS.tsx";
 import {useState} from "react";
 import {ErrorIcon} from "../../../../icons/Error.tsx";
 import {CSSTransition} from 'react-transition-group';
+import {initialState, schemas} from "./helper.ts";
+import {Formik} from "formik";
 
 interface Props {
 
@@ -14,18 +16,18 @@ interface Props {
 }
 
 export function AuthModal({setCurrent}: Props) {
-    const [isSuccess, setIsSucess] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
     const [isError, setIsError] = useState(false);
 
 
     // ПОЗЖЕ ЗАМЕНИТЬ НА ФАБРИКУ
     function success() {
         setIsError(false);
-        setIsSucess(true);
+        setIsSuccess(true);
     }
 
     function error() {
-        setIsSucess(false);
+        setIsSuccess(false);
         setIsError(true);
     }
 
@@ -54,7 +56,14 @@ export function AuthModal({setCurrent}: Props) {
 
     return (
         <>
-            <AuthForm handleSubmit={handleSubmit} setCurrent={setCurrent}/>
+            <Formik initialValues={initialState}
+                    onSubmit={values => {
+                        handleSubmit(values);
+                    }}
+                    validationSchema={schemas.custom}
+            >
+            <AuthForm setCurrent={setCurrent}/>
+            </Formik>
 
             <CSSTransition in={isSuccess} timeout={300} unmountOnExit classNames="my-node">
                 {isSuccess && (

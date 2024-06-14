@@ -1,4 +1,4 @@
-import {Routes, Route} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import {MainPage} from "../Main/MainPage.tsx";
 import '../../styles/main.global.css';
 import {Header} from "../Header/Header.tsx";
