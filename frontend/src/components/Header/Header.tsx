@@ -17,11 +17,8 @@ export function Header() {
                     gridTemplateColumns: "12fr 10fr 15fr 1fr"
                 }}>
                     <MainTitle/>
-
                     <LinksHeader/>
-
                     <SearchHeader/>
-
                     <ProfileHeader/>
                     <ModalWindow/>
                 </div>
@@ -29,13 +26,11 @@ export function Header() {
 
             <header className="mobile d-flex d-xl-none">
                 <MainTitle/>
-
                 <div className="d-flex gap-3 navigation-header-mobile">
                     <Link to="/genres">
                         <GenreIcon/>
                     </Link>
                     <SearchHeader/>
-
                     <ProfileHeader/>
                 </div>
             </header>

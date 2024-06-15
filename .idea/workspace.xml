@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e29e1ad-531c-4822-b6e0-0dc749bf9a9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Header/LinksHeader/LinksHeader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Header/MainTitle/MainTitle.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Header/Profile/ProfileHeader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Header/Search/SearchHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/inputs.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/inputs.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/inputs.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Search/SearchFilmBody/SearchFilmBody.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/interfaces/validation/inputs.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main/Random/RandomFilm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Search/Search.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +51,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/HEOBI/Desktop/cinema-guide-app/frontend/src/components/ModalLogic/Account/RegisterModal",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -61,6 +66,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HEOBI\Desktop\cinema-guide-app\frontend\src\components\ModalLogic\Account\RegisterModal" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HEOBI\Desktop\cinema-guide-app\frontend\src\store\default-values\users" />
       <recent name="C:\Users\HEOBI\Desktop\cinema-guide-app\frontend\src\validation-helpers" />
@@ -87,7 +95,7 @@
       <workItem from="1718280470111" duration="2153000" />
       <workItem from="1718350346126" duration="11958000" />
       <workItem from="1718375990160" duration="3458000" />
-      <workItem from="1718435761693" duration="3737000" />
+      <workItem from="1718435761693" duration="5564000" />
     </task>
     <servers />
   </component>

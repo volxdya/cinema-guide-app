@@ -1,4 +1,6 @@
 import {ErrorMessage, Field, Form} from "formik";
+import {RegisterInputs} from "./inputs.ts";
+import {IInputs} from "../../../../interfaces/validation/inputs.ts";
 
 interface Props {
     setCurrent: React.Dispatch<React.SetStateAction<string>>
@@ -10,35 +12,17 @@ export function RegisterForm({setCurrent}: Props) {
             <div className="justify-content-center form-auth">
                 <div>
 
-                    <Field name="login" placeholder="Введите логин"/>
-                    <div/>
-                    <ErrorMessage name="login">
-                        {(error) => <div className="error-input"> {error} </div>}
-                    </ErrorMessage>
-
-                    <Field name="password" placeholder="Введите пароль"/>
-                    <div/>
-                    <ErrorMessage name="password">
-                        {(error) => <div className="error-input"> {error} </div>}
-                    </ErrorMessage>
-
-                    <Field name="firstName" placeholder="Введите имя"/>
-                    <div/>
-                    <ErrorMessage name="password">
-                        {(error) => <div className="error-input"> {error} </div>}
-                    </ErrorMessage>
-
-                    <Field name="lastName" placeholder="Введите фамилию"/>
-                    <div/>
-                    <ErrorMessage name="password">
-                        {(error) => <div className="error-input"> {error} </div>}
-                    </ErrorMessage>
-
-                    <Field name="secondPassword" placeholder="Подтвердите пароль"/>
-                    <div/>
-                    <ErrorMessage name="password">
-                        {(error) => <div className="error-input"> {error} </div>}
-                    </ErrorMessage>
+                    {RegisterInputs.map((item: IInputs) => {
+                        return (
+                            <>
+                                <Field name={item.name} placeholder={item.placeholder}/>
+                                <div/>
+                                <ErrorMessage name={item.name}>
+                                    {(error) => <div className="error-input"> {error} </div>}
+                                </ErrorMessage>
+                            </>
+                        )
+                    })}
 
                     <div>
                         <button type="submit" className="button-auth">Продолжить</button>

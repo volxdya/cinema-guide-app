@@ -16,16 +16,14 @@ export const RandomFilm = observer(() => {
 
     let classNameRating = "";
 
-    if (true) {
-        if (film.random.rating < 5) {
-            classNameRating = 'bad-rating';
-        } else if (film.random.rating >= 5 && film.random.rating < 7.5) {
-            classNameRating = 'normal-rating'
-        } else if (film.random.rating >= 7.5 && film.random.rating < 8.6) {
-            classNameRating = 'good-rating'
-        } else {
-            classNameRating = 'great-rating'
-        }
+    if (film.random.rating < 5) {
+        classNameRating = 'bad-rating';
+    } else if (film.random.rating >= 5 && film.random.rating < 7.5) {
+        classNameRating = 'normal-rating'
+    } else if (film.random.rating >= 7.5 && film.random.rating < 8.6) {
+        classNameRating = 'good-rating'
+    } else {
+        classNameRating = 'great-rating'
     }
 
     const [isLike, setIsLike] = useState(false);
@@ -53,6 +51,18 @@ export const RandomFilm = observer(() => {
         }
     }, [film.random.id]);
 
+    function handleClickHeart() {
+        if (getItem("token")) {
+            if (isLike) {
+                deleteFavorite(film.random.id, users.userData.id);
+                setIsLike(!isLike);
+            } else {
+                addFavorites(film.random.id, users.userData.id);
+                setIsLike(!isLike);
+            }
+        }
+    }
+
     return (
         <div className="wrapper" style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url(${film.random.image})`,
@@ -61,12 +71,12 @@ export const RandomFilm = observer(() => {
                 <div className="col-xl-5 col-12 random-film">
                     <div className="container-sm">
                         <div className="statistics d-flex gap-4">
-                        <span className={classNameRating + ' rating-film'}>
-                            <Star/>
-                            <span className="px-1">
-                                {film.random.rating}
+                            <span className={classNameRating + ' rating-film'}>
+                                <Star/>
+                                <span className="px-1">
+                                    {film.random.rating}
+                                </span>
                             </span>
-                        </span>
                             <span className="stats-text">{film.random.year}</span>
                             <span className="stats-text">заглушка</span>
                             <span className="stats-text">{film.random.time} минут</span>
@@ -83,43 +93,22 @@ export const RandomFilm = observer(() => {
                                     <button className="dark-btn">О фильме</button>
                                 </Link>
 
-                                {isLike ? (
-                                    <button className="dark-btn" onClick={() => {
-                                        if (getItem("token")) {
-                                            deleteFavorite(film.random.id, users.userData.id);
-                                            setIsLike(false);
-                                        }
-                                    }}>
-                                        {getItem("token") ? (
-                                            <>
+                                <button className="dark-btn" onClick={handleClickHeart}>
+                                    {getItem("token") ? (
+                                        <>
+                                            {isLike ? (
                                                 <ShadedHeart/>
-                                            </>
-                                        ) : (
-                                            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                <ShadedHeart/>
-                                            </button>
-                                        )}
-                                    </button>
-                                ) : (
-                                    <button className="dark-btn"
-                                            onClick={() => {
-                                                if (getItem("token")) {
-                                                    addFavorites(film.random.id, users.userData.id);
-                                                    setIsLike(true);
-                                                }
-                                            }}
-                                    >
-                                        {getItem("token") ? (
-                                            <>
+                                            ) : (
                                                 <Heart/>
-                                            </>
-                                        ) : (
-                                            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                <Heart/>
-                                            </button>
-                                        )}
-                                    </button>
-                                )}
+                                            )}
+                                        </>
+                                    ) : (
+                                        <button data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                            <Heart/>
+                                        </button>
+                                    )}
+                                </button>
+
 
                                 <button className="dark-btn" onClick={() => film.getRandom()}>
                                     <Reroll/>

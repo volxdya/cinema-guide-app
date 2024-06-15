@@ -1,4 +1,6 @@
 import {ErrorMessage, Field, Form} from "formik";
+import {AuthInputs} from "./inputs.ts";
+import {IInputs} from "../../../../interfaces/validation/inputs.ts";
 
 interface Props {
     setCurrent: React.Dispatch<React.SetStateAction<string>>
@@ -10,18 +12,19 @@ export function AuthForm({setCurrent}: Props) {
             <div className="justify-content-center form-auth">
                 <div>
 
-                    <Field name="login" placeholder="Введите логин"/>
-                    <div/>
-                    <ErrorMessage name="login">
-                        {(error) => <div className="error-input"> {error} </div>}
-                    </ErrorMessage>
-                    <br/>
+                    {AuthInputs.map((item: IInputs) => {
+                        return (
+                            <>
+                                <Field name={item.name} placeholder={item.placeholder}/>
+                                <div/>
+                                <ErrorMessage name={item.name}>
+                                    {(error) => <div className="error-input"> {error} </div>}
+                                </ErrorMessage>
+                            </>
+                        );
+                    })}
 
-                    <Field name="password" placeholder="Введите пароль"/>
-                    <div/>
-                    <ErrorMessage name="password">
-                        {(error) => <div className="error-input"> {error} </div>}
-                    </ErrorMessage>
+                    <br/>
 
                     <div>
                         <button type="submit" className="button-auth">Войти</button>
