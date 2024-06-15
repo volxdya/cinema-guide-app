@@ -4,6 +4,7 @@ import {getItem} from "../utils/localStorage.ts";
 
 import {jwtDecode, JwtPayload} from "jwt-decode";
 import axios from "axios";
+import {userData} from "./default-values/users/user-data.ts";
 
 // интерфейс, который расширяет jwtpayload
 interface loginJwt extends JwtPayload {
@@ -20,13 +21,9 @@ class Users {
     }
 
 
-    userData: user = {
-        firstName: "", id: 0, lastName: "", login: "", password: "", roleTitle: "", favorites: [], roles: []
-    }
+    userData: user = userData;
 
-    fullUserData: user = {
-        firstName: "", id: 0, lastName: "", login: "", password: "", roleTitle: "", favorites: [], roles: []
-    }
+    fullUserData: user = userData;
 
     getUserData() {
         let decoded: loginJwt;

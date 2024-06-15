@@ -1,47 +1,20 @@
 import {makeAutoObservable} from "mobx";
 import {film} from "../interfaces/api/film.ts";
 import axios from "axios";
+import {randomFilm} from "./default-values/films/random-film.ts";
+import {oneFilm} from "./default-values/films/one-film.ts";
 
 class Films {
     constructor() {
         makeAutoObservable(this);
     }
 
-    films: film[] = [];
+    films: film[]  = [];
     genreFilms: film[] = [];
     searchFilms: film[] = [];
 
-    random: film = {
-        id: 0,
-        description: "",
-        time: 0,
-        title: "",
-        budget: 0,
-        revenue: 0,
-        genreTitle: "",
-        productionId: 0,
-        rating: 0,
-        year: 0,
-        image: "",
-        genres: [],
-        productions: []
-    };
-    oneFilm: film = {
-        budget: 0,
-        genreTitle: "",
-        genres: [],
-        image: "",
-        productionId: 0,
-        productions: [],
-        rating: 0,
-        revenue: 0,
-        time: 0,
-        title: "",
-        year: 0,
-        id: 0,
-        description: ""
-
-    }
+    random: film = randomFilm;
+    oneFilm: film = oneFilm;
     like = false;
 
     async getTenFilms() {

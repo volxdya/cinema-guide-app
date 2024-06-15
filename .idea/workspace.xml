@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e29e1ad-531c-4822-b6e0-0dc749bf9a9c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/default-values/films/one-film.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/default-values/films/random-film.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/default-values/users/user-data.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/AuthModal/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalLogic/Account/RegisterModal/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/EditProfilePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/EditProfilePage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Profile/Edit/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/films.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/films.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/users.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +55,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HEOBI\Desktop\cinema-guide-app\frontend\src\store\default-values\users" />
       <recent name="C:\Users\HEOBI\Desktop\cinema-guide-app\frontend\src\validation-helpers" />
       <recent name="C:\Users\HEOBI\Desktop\cinema-guide-app\frontend\src\interfaces\api" />
     </key>
@@ -77,7 +79,8 @@
       <workItem from="1718277641746" duration="2776000" />
       <workItem from="1718280470111" duration="2153000" />
       <workItem from="1718350346126" duration="11958000" />
-      <workItem from="1718375990160" duration="3038000" />
+      <workItem from="1718375990160" duration="3458000" />
+      <workItem from="1718435761693" duration="1333000" />
     </task>
     <servers />
   </component>
