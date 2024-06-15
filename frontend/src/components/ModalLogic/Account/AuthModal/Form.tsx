@@ -1,6 +1,7 @@
 import {ErrorMessage, Field, Form} from "formik";
 import {AuthInputs} from "./inputs.ts";
 import {IInputs} from "../../../../interfaces/validation/inputs.ts";
+import uniqid from "uniqid";
 
 interface Props {
     setCurrent: React.Dispatch<React.SetStateAction<string>>
@@ -14,13 +15,13 @@ export function AuthForm({setCurrent}: Props) {
 
                     {AuthInputs.map((item: IInputs) => {
                         return (
-                            <>
+                            <div key={uniqid()}>
                                 <Field name={item.name} placeholder={item.placeholder}/>
                                 <div/>
                                 <ErrorMessage name={item.name}>
                                     {(error) => <div className="error-input"> {error} </div>}
                                 </ErrorMessage>
-                            </>
+                            </div>
                         );
                     })}
 

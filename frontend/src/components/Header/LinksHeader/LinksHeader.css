@@ -1,0 +1,23 @@
+.links-header {
+    display: flex;
+    gap: 90px;
+}
+.link {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 19px;
+}
+.link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    text-decoration-color: #DC5DFC;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 1px;
+}
+
+.active {
+    text-decoration: underline;
+    text-decoration-color: #DC5DFC;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 1px;
+}

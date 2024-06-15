@@ -1,0 +1,13 @@
+.header-title {
+    background: -webkit-linear-gradient(150deg, #7c69f8, #d537ff);
+    -webkit-background-clip: text;
+    font-weight: 500;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+    .header-title {
+        font-size: 35px;
+        margin-left: 15px
+    }
+}

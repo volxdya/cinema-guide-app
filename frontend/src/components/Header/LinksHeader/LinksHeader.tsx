@@ -1,5 +1,5 @@
 import {Link, useLocation} from "react-router-dom";
-
+import './LinksHeader.css';
 
 interface navigationHeader {
     link: string;

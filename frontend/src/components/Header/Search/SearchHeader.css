@@ -1,0 +1,21 @@
+.input-header {
+    background: #393B3C;
+    border: none;
+    color: #FFFFFF80;
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+.input-header::placeholder {
+    color: #FFFFFF80;
+}
+
+
+.input-header:active, .input-header:focus {
+    outline: none;
+    border: 3px solid #252525;
+    transition: all 0.3s ease-in-out;
+}

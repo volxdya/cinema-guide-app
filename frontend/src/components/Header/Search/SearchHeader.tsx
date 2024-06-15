@@ -1,5 +1,6 @@
 import {Search} from "../../Search/Search.tsx";
 import {SearchIcon} from "../../../icons/SearchIcon.tsx";
+import './SearchHeader.css';
 
 export function SearchHeader() {
     return (

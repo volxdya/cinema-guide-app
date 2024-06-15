@@ -1,6 +1,7 @@
 import {ErrorMessage, Field, Form} from "formik";
 import {EditInputs} from "./inputs.ts";
 import {IInputs} from "../../../interfaces/validation/inputs.ts";
+import uniqid from "uniqid";
 
 export function EditForm() {
     return (
@@ -10,7 +11,7 @@ export function EditForm() {
 
                 {EditInputs.map((item: IInputs) => {
                     return (
-                        <label>
+                        <label key={uniqid()}>
                             <div className="label-edit-input">
                                 {item.label}
                             </div>
