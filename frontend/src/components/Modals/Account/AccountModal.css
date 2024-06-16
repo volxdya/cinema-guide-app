@@ -1,8 +1,4 @@
-.form-auth {
-    width: 500px;
-    display: flex;
-    justify-content: center;
-}
+
 .form-auth input {
     width: 350px;
     border-radius: 10px;
@@ -11,7 +7,7 @@
     outline: 1px solid #e8e8e8;
     padding-left: 15px;
     font-size: 17px;
-    color: black;
+    color: #ffffff;
 }
 .form-auth input:focus {
     outline: 1px solid var(--purple);
@@ -33,7 +29,7 @@
     transition: all ease-in-out 0.2s;
 }
 .button-register {
-    color: #000000;
+    color: #ffffff;
     font-weight: 500;
     width: 350px;
     margin-top: 15px;

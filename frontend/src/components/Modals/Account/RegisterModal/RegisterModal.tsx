@@ -10,11 +10,7 @@ import {ErrorIcon} from "../../../../icons/Error.tsx";
 import {useState} from "react";
 import {IRegister} from "../../../../interfaces/validation/register.ts";
 
-interface Props {
-    setCurrent: React.Dispatch<React.SetStateAction<string>>
-}
-
-export function RegisterModal({setCurrent}: Props) {
+export function RegisterModal() {
     const [isSuccess, setIsSuccess] = useState(false);
     const [isError, setIsError] = useState(false);
 
@@ -70,7 +66,7 @@ export function RegisterModal({setCurrent}: Props) {
                 initialValues={initialState}
                 validationSchema={schemas.custom}
             >
-                <RegisterForm setCurrent={setCurrent}/>
+                <RegisterForm/>
 
             </Formik>
 

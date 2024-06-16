@@ -11,11 +11,8 @@ import {initialState, schemas} from "../../../../validation-helpers/auth-helper.
 import {Formik} from "formik";
 import {IAuth} from "../../../../interfaces/validation/auth.ts";
 
-interface Props {
-    setCurrent: React.Dispatch<React.SetStateAction<string>>
-}
 
-export function AuthModal({setCurrent}: Props) {
+export function AuthModal() {
     const [isSuccess, setIsSuccess] = useState(false);
     const [isError, setIsError] = useState(false);
 
@@ -62,7 +59,7 @@ export function AuthModal({setCurrent}: Props) {
                     }}
                     validationSchema={schemas.custom}
             >
-            <AuthForm setCurrent={setCurrent}/>
+            <AuthForm/>
             </Formik>
 
             <CSSTransition in={isSuccess} timeout={300} unmountOnExit classNames="my-node">
