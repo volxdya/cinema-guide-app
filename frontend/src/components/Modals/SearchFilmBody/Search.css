@@ -1,0 +1,8 @@
+.search-input {
+    height: 50px;
+    font-size: 18px;
+}
+.search-value-no-results {
+    font-weight: bold;
+    overflow: hidden;
+}

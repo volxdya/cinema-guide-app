@@ -8,6 +8,7 @@ import {GenreFilms} from "../GenrePage/GenreFilms/GenreFilms.tsx";
 import {Profile} from "../Profile/Profile.tsx";
 import {FilmPage} from "../FilmPage/FilmPage.tsx";
 import {EditProfilePage} from "../Profile/Edit/EditProfilePage.tsx";
+import {Modals} from "../Modals/Modals.tsx";
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/film/:id" element={<FilmPage/>}/>
                 <Route path="/edit/" element={<EditProfilePage/>}/>
             </Routes>
+            <Modals/>
             <Footer/>
         </>
     );

@@ -1,0 +1,10 @@
+.modal-logic {
+    background-color: var(--darkBtn);
+    color: aliceblue;
+}
+.modal-header {
+    border-bottom: 1px solid #2e2e2e;
+}
+.modal-footer {
+    border-top: 1px solid #2e2e2e;
+}

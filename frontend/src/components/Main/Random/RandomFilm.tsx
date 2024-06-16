@@ -11,6 +11,7 @@ import users from "../../../store/users.ts";
 import axios from "axios";
 import {ShadedHeart} from "../../../icons/ShadedHeart.tsx";
 import {getItem} from "../../../utils/localStorage.ts";
+import Modal from "../../../store/modal.ts";
 
 export const RandomFilm = observer(() => {
 
@@ -87,7 +88,8 @@ export const RandomFilm = observer(() => {
                             <p className="description-film mt-xl-3 mt-1">{film.random.description}</p>
                         </div>
                         <div className="buttons-film d-xl-flex gap-3 mt-xl-5 mt-4">
-                            <button className="purple-btn trailer-btn">Трейлер</button>
+                            <button className="purple-btn trailer-btn" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onClick={() => Modal.setCurrent("trailer")}>Трейлер</button>
                             <div className="d-flex justify-content-between mt-xl-0 mt-3 gap-xl-3">
                                 <Link to={"/film/" + film.random.id}>
                                     <button className="dark-btn">О фильме</button>

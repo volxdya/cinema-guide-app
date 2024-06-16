@@ -9,6 +9,7 @@ import users from "../../../store/users.ts";
 import {ShadedHeart} from "../../../icons/ShadedHeart.tsx";
 import {getItem} from "../../../utils/localStorage.ts";
 import './MainInfo.css';
+import Modal from "../../../store/modal.ts";
 
 interface Props {
     film: film;
@@ -19,19 +20,18 @@ export const MainInfo = ({film, user}: Props) => {
 
     let classNameRating = '';
 
-    if (true) {
-        if (film.rating < 5) {
-            classNameRating = 'bad-rating';
-        } else if (film.rating >= 5 && film.rating < 7.5) {
-            classNameRating = 'normal-rating'
-        } else if (film.rating >= 7.5 && film.rating < 8.6) {
-            classNameRating = 'good-rating'
-        } else {
-            classNameRating = 'great-rating'
-        }
+    if (film.rating < 5) {
+        classNameRating = 'bad-rating';
+    } else if (film.rating >= 5 && film.rating < 7.5) {
+        classNameRating = 'normal-rating'
+    } else if (film.rating >= 7.5 && film.rating < 8.6) {
+        classNameRating = 'good-rating'
+    } else {
+        classNameRating = 'great-rating'
     }
 
     const [isLike, setIsLike] = useState(false);
+
 
     useEffect(() => {
         if (getItem("token")) {
@@ -49,6 +49,18 @@ export const MainInfo = ({film, user}: Props) => {
             });
         }
     });
+
+    function handleClickHeart() {
+        if (getItem("token")) {
+            if (isLike) {
+                deleteFavorite(film.id, users.userData.id);
+                setIsLike(!isLike);
+            } else {
+                addFavorites(film.id, users.userData.id);
+                setIsLike(!isLike);
+            }
+        }
+    }
 
     return (
         <div className="wrapper" style={{
@@ -74,26 +86,24 @@ export const MainInfo = ({film, user}: Props) => {
                             <p className="description-film mt-xl-3 mt-1">{film.description}</p>
                         </div>
                         <div className="buttons-film d-flex gap-3 mt-5">
-                            <button className="purple-btn trailer-btn">Трейлер</button>
-                            {isLike ? (
-                                <button className="dark-btn" onClick={() => {
-                                    if (getItem("token")) {
-                                        deleteFavorite(film.id, users.userData.id);
-                                        setIsLike(false);
-                                    }
-                                }}>
-                                    <ShadedHeart/>
-                                </button>
-                            ) : (
-                                <button className="dark-btn" onClick={() => {
-                                    if (getItem("token")) {
-                                        addFavorites(film.id, users.userData.id);
-                                        setIsLike(true);
-                                    }
-                                }}>
-                                    <Heart/>
-                                </button>
-                            )}
+                            <button className="purple-btn trailer-btn" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onClick={() => Modal.setCurrent("trailer")}>Трейлер
+                            </button>
+                            <button className="dark-btn" onClick={handleClickHeart}>
+                                {getItem("token") ? (
+                                    <>
+                                        {isLike ? (
+                                            <ShadedHeart/>
+                                        ) : (
+                                            <Heart/>
+                                        )}
+                                    </>
+                                ) : (
+                                    <button data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <Heart/>
+                                    </button>
+                                )}
+                            </button>
                         </div>
                     </div>
                 </div>

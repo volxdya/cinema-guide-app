@@ -4,6 +4,7 @@ import {FilmCardSearch} from "../../../ui/FIlmCardSearch/FIlmCardSearch.tsx";
 import uniqid from "uniqid";
 import {NoSearch} from "../../../icons/NoSearch.tsx";
 import {ChangeEvent, useState} from "react";
+import './Search.css';
 
 export function SearchFilmBody(){
 
@@ -16,7 +17,7 @@ export function SearchFilmBody(){
     }
 
     return (
-        <div className="modal-body">
+        <>
             <input
                 type="text"
                 placeholder="Поиск"
@@ -46,6 +47,6 @@ export function SearchFilmBody(){
                     </p>
                 </div>
             )}
-        </div>
+        </>
     )
 }
