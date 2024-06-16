@@ -1,4 +1,6 @@
 # Платформа для поиска фильмов
+<img src="https://github.com/l1agosta/cinema-guide-app/assets/143471369/b572e5c3-920b-44a9-8219-4a45008e6c93">
+
 # Макеты:
 
 Основной:
