@@ -4,6 +4,7 @@ import {Person} from "../../../icons/Person.tsx";
 import {getItem} from "../../../utils/localStorage.ts";
 import {useEffect} from "react";
 import {observer} from "mobx-react-lite";
+import Modal from "../../../store/modal.ts";
 
 export const ProfileHeader = observer(() => {
     const url = useLocation();
@@ -19,8 +20,9 @@ export const ProfileHeader = observer(() => {
         <>
             <div className="d-flex align-items-center pt-3 px-3 d-xl-block d-none">
                 {!token || token === "" || token === undefined || token === null ? (
-                    <button type="button" className="link" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
+                    <button type="button" className="link" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            onClick={() => Modal.setCurrent("auth")}
+                    >
                         Войти
                     </button>
                 ) : (

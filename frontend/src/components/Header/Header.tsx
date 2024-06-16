@@ -1,5 +1,4 @@
 import './Header.css';
-import {ModalWindow} from "../../ui/Modal/Modal.tsx";
 import {Link} from "react-router-dom";
 import {GenreIcon} from "../../icons/GenreIcon.tsx";
 import {MainTitle} from "./MainTitle/MainTitle.tsx";
@@ -19,7 +18,6 @@ export function Header() {
                     <LinksHeader/>
                     <SearchHeader/>
                     <ProfileHeader/>
-                    <ModalWindow/>
                 </div>
             </header>
 
