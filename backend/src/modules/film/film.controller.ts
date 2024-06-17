@@ -3,6 +3,7 @@ import {FilmDto} from './dto/filmDto';
 import {FilmService} from './film.service';
 import {ApiOperation, ApiResponse, ApiTags} from '@nestjs/swagger';
 import {Film} from './film.model';
+import {LimitDto} from "./dto/limitDto";
 
 @ApiTags('Films')
 @Controller('/film/')
@@ -116,9 +117,9 @@ export class FilmController {
         status: 200,
         type: [FilmDto],
     })
-    @Get(`/get_limit/:limit`)
-    getTenFilms(@Param('limit') limit: number) {
-        return this.filmService.getWithLimit(limit);
+    @Post(`/get_limit/`)
+    getTenFilms(@Body() dto: LimitDto) {
+        return this.filmService.getWithLimit(dto);
     }
 
 
