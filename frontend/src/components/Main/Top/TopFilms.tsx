@@ -19,6 +19,9 @@ export const TopFilms = observer(() => {
                     return <FilmCard id={item.id} title={item.title} image={item.image} index={index} key={uniqid()}  />;
                 })}
             </div>
+            <div className="mt-5 d-flex justify-content-center">
+                <button className="purple-btn load-more" onClick={films.getTenFilms}>Загрузить еще</button>
+            </div>
         </div>
     );
 });
