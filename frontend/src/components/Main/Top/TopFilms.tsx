@@ -1,15 +1,25 @@
 import {FilmCard} from "../../../ui/FilmCard/FilmCard.tsx";
 import {film} from "../../../interfaces/api/film.ts";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import films from "../../../store/films.ts";
 import {observer} from "mobx-react-lite";
 import uniqid from 'uniqid';
 import './TopFilms.css';
 
 export const TopFilms = observer(() => {
+
+    const [after, setAfter] = useState(1);
+
     useEffect(() => {
-        films.getTenFilms();
+        films.getTenFilms(10, 0);
     }, []);
+
+    async function loadMore() {
+        setAfter(prevState => prevState + 1);
+
+        console.log(after);
+        films.getTenFilms(10, after);
+    }
 
     return (
         <div className="main-container mt-5 top">
@@ -20,7 +30,7 @@ export const TopFilms = observer(() => {
                 })}
             </div>
             <div className="mt-5 d-flex justify-content-center">
-                <button className="purple-btn load-more" onClick={films.getTenFilms}>Загрузить еще</button>
+                <button className="purple-btn load-more" onClick={loadMore}>Загрузить еще</button>
             </div>
         </div>
     );

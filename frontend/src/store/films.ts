@@ -15,11 +15,18 @@ class Films {
 
     random: film = randomFilm;
     oneFilm: film = oneFilm;
-    like = false;
 
-    async getTenFilms() {
-        await axios.get(`${import.meta.env.VITE_API_URL}/film/get_limit/10`).then(res => {
-            this.films = res.data;
+
+    async getTenFilms(limit: number, after: number) {
+        await axios.post(`${import.meta.env.VITE_API_URL}/film/get_limit/`, {
+            limit: limit,
+            after: after
+        }).then(res => {
+            if (after >= 1) {
+                this.films = this.films.concat(...res.data);
+            } else {
+                this.films = res.data;
+            }
         }).catch((err) => {
             console.log(err);
         });

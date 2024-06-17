@@ -4,6 +4,8 @@ import {Film} from './film.model';
 import {FilmDto} from './dto/filmDto';
 import {GenreService} from '../genre/genre.service';
 import {Genre} from '../genre/genre.model';
+import {filter} from "rxjs";
+import {LimitDto} from "./dto/limitDto";
 
 @Injectable()
 
@@ -89,14 +91,10 @@ export class FilmService {
         return film;
     }
 
-    async getWithLimit(limit: number) {
-        const films = await this.filmService.findAll();
+    async getWithLimit(dto: LimitDto) {
+        const allFilms = await this.filmService.findAll();
+        const filmsLimit = await this.filmService.findAll({limit: dto.limit, offset: dto.after * dto.limit});
 
-        if (films.length < limit) {
-            return new HttpException({message: "Нет столько фильмов"}, 404);
-        }
-
-        const filmsLimit = await this.filmService.findAll({limit: limit});
 
         return filmsLimit;
     }
