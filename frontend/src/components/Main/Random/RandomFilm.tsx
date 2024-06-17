@@ -79,8 +79,7 @@ export const RandomFilm = observer(() => {
                                 </span>
                             </span>
                             <span className="stats-text">{film.random.year}</span>
-                            <span className="stats-text">заглушка</span>
-                            <span className="stats-text">{film.random.time} минут</span>
+                            <span className="stats-text">{film.random.time} минута</span>
                             {/*<span className="stats-text">{randomFilm.random.productions[0].title}</span>*/}
                         </div>
                         <div className="main-title-film mt-xl-4 mt-3">
