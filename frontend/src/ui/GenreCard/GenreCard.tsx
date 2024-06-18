@@ -10,9 +10,9 @@ interface Props {
 export function GenreCard({title, image}: Props) {
     return (
         <Link to={"/genre/" + title}>
-            <div className="genre-card">
+            <div className="main-card">
                 <img src={image} alt={"Картинка жанра " + title}/>
-                <div className="genre-card-title">
+                <div className="card-title">
                     <p className="text-center">{title}</p>
                 </div>
             </div>

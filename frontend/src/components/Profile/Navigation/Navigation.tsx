@@ -33,6 +33,11 @@ export function Navigation() {
         title: "Продакшены",
         svg: <Movie/>,
         component: <Productions/>
+    }, {
+        link: "/profile/admin",
+        title: "Админка",
+        svg: <Person/>,
+        component: <Productions/>
     }]
 
     const url = useLocation();
@@ -81,7 +86,7 @@ export function Navigation() {
                             </>
                         )}
                     </>
-                )
+                );
             })}
         </>
 

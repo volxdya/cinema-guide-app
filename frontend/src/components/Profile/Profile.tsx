@@ -1,23 +1,31 @@
 import './Profile.css';
 import {observer} from "mobx-react-lite";
 import {Navigation} from "./Navigation/Navigation.tsx";
-import {useState} from "react";
 import {getItem} from "../../utils/localStorage.ts";
+import Modal from "../../store/modal.ts";
 
 export const Profile = observer(() => {
 
-    const [current, setCurrent] = useState("favorites");
+    function goAuth() {
+        Modal.setCurrent("auth");
+    }
 
     if (getItem("token")) {
         return (
             <div className="main-container mt-5">
                 <h1 className="text-xl-start text-center">Мой аккаунт</h1>
-                <Navigation setCurrent={setCurrent} current={current}/>
+                <Navigation/>
             </div>
         );
     }
 
     return (
-        <div>Токена нет</div>
+        <div className="main-container mt-5">
+            <h1 className="text-center">Пожалуйста,
+                <span className="auth-helper px-3" onClick={goAuth} data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Войдите в учётную запись
+                </span>
+            </h1>
+        </div>
     )
 });

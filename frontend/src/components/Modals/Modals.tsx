@@ -6,6 +6,7 @@ import {SearchFilmBody} from "./SearchFilmBody/SearchFilmBody.tsx";
 import {AuthModal} from "./Account/AuthModal/AuthModal.tsx";
 import {RegisterModal} from "./Account/RegisterModal/RegisterModal.tsx";
 import {ModalSkeleton} from "../../ui/Modal/ModalSkeleton.tsx";
+import {ProductionModal} from "./Production/ProductionModal.tsx";
 
 export const Modals = observer(() => {
 
@@ -21,5 +22,8 @@ export const Modals = observer(() => {
 
         case "register":
             return <ModalSkeleton content={<RegisterModal/>}/>
+
+        case "production":
+            return <ModalSkeleton content={<ProductionModal/>}/>
     }
 });
