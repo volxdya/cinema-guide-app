@@ -1,6 +1,7 @@
 import {Heart} from "../../../icons/Heart.tsx";
 import {Person} from "../../../icons/Person.tsx";
 import '../Profile.css';
+import {Movie} from "../../../icons/Movie.tsx";
 
 interface Props {
     setCurrent: React.Dispatch<React.SetStateAction<string>>;
@@ -24,6 +25,13 @@ export function Navigation({setCurrent, current}: Props) {
                 <span className={current === "settings" ? "active link" : "link"}>
                     <Person/>
                     <span className="px-2" onClick={() => setCurrent("settings")}>Настройка аккаунта</span>
+                </span>
+            </span>
+
+            <span className="d-xl-inline d-none">
+                <span className={current === "productions" ? "active link" : "link"}>
+                    <Movie/>
+                    <span className="px-2" onClick={() => setCurrent("productions")}>Продакшены</span>
                 </span>
             </span>
 

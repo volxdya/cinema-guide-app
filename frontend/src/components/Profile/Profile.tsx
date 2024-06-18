@@ -7,6 +7,7 @@ import {useState} from "react";
 import {Favorites} from "./Favorites/Favorites.tsx";
 import {EditProfile} from "./Edit/EditProfile.tsx";
 import {getItem} from "../../utils/localStorage.ts";
+import {Productions} from "./Productions/Productions.tsx";
 
 export const Profile = observer(() => {
 
@@ -31,6 +32,11 @@ export const Profile = observer(() => {
                 {current === "favorites" && (
                     <Favorites/>
                 )}
+
+                {current === "productions" && (
+                    <Productions/>
+                )}
+
             </div>
         );
     }
