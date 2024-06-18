@@ -17,7 +17,7 @@ function App() {
             <Header/>
             <Routes>
                 <Route path="/" element={<MainPage/>}/>
-                <Route path="/profile" element={<Profile/>}/>
+                <Route path="/profile/:title" element={<Profile/>}/>
                 <Route path="/genres" element={<GenrePage/>}/>
                 <Route path="/genre/:title" element={<GenreFilms/>}/>
                 <Route path="/film/:id" element={<FilmPage/>}/>
