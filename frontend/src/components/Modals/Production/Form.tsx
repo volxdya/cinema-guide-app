@@ -2,6 +2,7 @@ import {IInputs} from "../../../interfaces/validation/inputs.ts";
 import uniqid from "uniqid";
 import {ErrorMessage, Field, Form} from "formik";
 import {ProductionInputs} from "./inputs.ts";
+import './Production.css';
 
 export function ProductionForm() {
     return (
@@ -20,6 +21,10 @@ export function ProductionForm() {
                                 </div>
                             )
                         })}
+                        <label className="input-file mt-3">
+                            <input type="file" name="file"/>
+                            <span>Выберите автарку</span>
+                        </label>
 
                         <div>
                             <button type="submit" className="button-auth">Продолжить</button>
