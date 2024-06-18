@@ -1,0 +1,4 @@
+.trailer-modal {
+    max-width: 1700px;
+    height: calc(100vh - 100px);
+}

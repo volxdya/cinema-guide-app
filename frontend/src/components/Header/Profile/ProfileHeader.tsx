@@ -26,7 +26,7 @@ export const ProfileHeader = observer(() => {
                         Войти
                     </button>
                 ) : (
-                    <Link to="/profile"
+                    <Link to="/profile/favorites"
                           className={url.pathname === "/profile" ? 'active link' : 'link'}>
                         {users.fullUserData.firstName}
                     </Link>

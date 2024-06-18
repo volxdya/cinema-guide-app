@@ -10,12 +10,21 @@ class Films {
     }
 
     films: film[]  = [];
+    allFilms: film[] = [];
     genreFilms: film[] = [];
     searchFilms: film[] = [];
 
     random: film = randomFilm;
     oneFilm: film = oneFilm;
 
+
+    async getAllFilms() {
+        await axios.get(`${import.meta.env.VITE_API_URL}/film/get_all`).then(res => {
+            this.films = res.data;
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
 
     async getTenFilms(limit: number, after: number) {
         await axios.post(`${import.meta.env.VITE_API_URL}/film/get_limit/`, {

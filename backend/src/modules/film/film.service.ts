@@ -33,7 +33,7 @@ export class FilmService {
     }
 
     async getAll() {
-        const films = await this.filmService.findAll({include: [Genre]});
+        const films = await this.filmService.findAll();
 
         return films;
     }
@@ -92,9 +92,7 @@ export class FilmService {
     }
 
     async getWithLimit(dto: LimitDto) {
-        const allFilms = await this.filmService.findAll();
         const filmsLimit = await this.filmService.findAll({limit: dto.limit, offset: dto.after * dto.limit});
-
 
         return filmsLimit;
     }
