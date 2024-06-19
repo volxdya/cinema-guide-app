@@ -27,7 +27,7 @@ export class FilmService {
     }
 
     async getOne(id: number) {
-        const film = await this.filmService.findOne({where: {id}});
+        const film = await this.filmService.findOne({where: {id}, include: {all: true}});
 
         return film;
     }
@@ -109,5 +109,11 @@ export class FilmService {
         // }
 
         return filmsSearch;
+    }
+
+    async getByProdId(prodId: number) {
+        const films = await this.filmService.findAll({where: {productionId: prodId}});
+
+        return films;
     }
 }

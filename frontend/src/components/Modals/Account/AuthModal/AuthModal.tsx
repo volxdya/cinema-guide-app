@@ -54,9 +54,7 @@ export function AuthModal() {
     return (
         <>
             <Formik initialValues={initialState}
-                    onSubmit={values => {
-                        handleSubmit(values);
-                    }}
+                    onSubmit={handleSubmit}
                     validationSchema={schemas.custom}
             >
             <AuthForm/>

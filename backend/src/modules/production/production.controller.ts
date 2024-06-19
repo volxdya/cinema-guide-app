@@ -57,7 +57,7 @@ export class ProductionController {
         status: 200,
         type: ProductionDto
     })
-    @Get(`/get_by_title/:id`)
+    @Get(`/get_by_id/:id`)
     getById(@Param('id') id: number) {
         return this.productionService.getOneById(id);
     }

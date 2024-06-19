@@ -54,7 +54,7 @@ export function About({film}: Props) {
                             <Dots/>
                         </div>
                         <div className="col-xl-2 col-3 px-5">
-                            заглушка
+                            After
                         </div>
                     </div>
                 </div>

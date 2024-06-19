@@ -98,12 +98,12 @@ export class UserService {
     async getUserFilms(dto: CheckUserDto) {
         const user = await this.getOneUserById(dto.userId);
 
-         for (let i = 0; i < user.favorites.length; i++){
-             if (user.favorites[i].id === dto.filmId) {
-                 return true;
-             }
-         }
+        for (let i = 0; i < user.favorites.length; i++) {
+            if (user.favorites[i].id === dto.filmId) {
+                return true;
+            }
+        }
 
-         return false;
+        return false;
     }
 }
