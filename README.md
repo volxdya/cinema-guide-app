@@ -4,13 +4,10 @@
 <img src="https://github.com/l1agosta/cinema-guide-app/assets/143471369/8b382361-084e-4d35-90f1-d6edad9d5e51" width="410px">
 <img src="https://github.com/l1agosta/cinema-guide-app/assets/143471369/5a96aec8-d481-4d9c-b1bd-c5c62ea3d7a5" width="410px">
 
-# Макеты:
+# Макет:
 
 Основной:
 https://www.figma.com/design/GtNGAcKrZJ8us5RRGJThdJ/Diplom?node-id=0-1&t=T2nc3qivwu09bbUY-0
-
-Админ-панелька:
-https://www.figma.com/design/vjXwycRPHynXW6vKsjmnTi/admin-menu-cinema-guide?m=dev&node-id=0-1&t=VtBYhgnXeIfCCxeK-1
 
 API запросы в директории backend
 
