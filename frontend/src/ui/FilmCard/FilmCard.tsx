@@ -9,6 +9,8 @@ interface Props {
 }
 
 export function FilmCard({image, title, index, id}: Props){
+
+
     return (
         <Link to={"/film/" + id}>
             <div className="film-card">
@@ -17,4 +19,11 @@ export function FilmCard({image, title, index, id}: Props){
             </div>
         </Link>
     );
+
+    // return (
+    //     <Skeleton
+    //         sx={{bgcolor: 'grey.900', borderRadius: '15px'}}
+    //         variant="rounded" animation="wave" width={261} height={350}/>
+    // );
+
 }

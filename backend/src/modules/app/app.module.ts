@@ -16,6 +16,8 @@ import {RolesModule} from '../roles/roles.module';
 import {UserRoles} from '../roles/user-roles.model';
 import {Production} from "../production/production.model";
 import {ProductionModule} from "../production/production.module";
+import {Review} from "../review/review.model";
+import {ReviewModule} from "../review/review.module";
 
 @Module({
     imports: [
@@ -30,14 +32,15 @@ import {ProductionModule} from "../production/production.module";
             password: process.env.POSTGRES_PASSWORD,
             database: process.env.POSTGRES_DB,
             autoLoadModels: true,
-            models: [User, Genre, Film, FilmGenres, Favorites, Roles, UserRoles, Production],
+            models: [User, Genre, Film, FilmGenres, Favorites, Roles, UserRoles, Production, Review],
         }),
         UserModule,
         AuthModule,
         GenreModule,
         FilmModule,
         RolesModule,
-        ProductionModule
+        ProductionModule,
+        ReviewModule
     ],
     controllers: [],
     providers: [],

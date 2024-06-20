@@ -22,7 +22,7 @@ export function FilmModal() {
     let prodId = 0;
 
     if (id){
-        prodId = id;
+        prodId = Number(id);
     }
 
     const handleSubmit = (values: IFilm) => {

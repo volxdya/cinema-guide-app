@@ -5,6 +5,7 @@
     --darkBtn: rgb(33, 33, 33);
     --secondaryDark: #232323;
     --secondaryPurple: #6049ff;
+    --loading-grey: #ededed;
 }
 
 body {
@@ -58,10 +59,12 @@ a {
     display: none;
 }
 
+
 @media screen and (max-width: 768px) {
     .main-container {
         width: 100%;
     }
+
     .container {
         display: block;
     }
