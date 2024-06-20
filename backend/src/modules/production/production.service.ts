@@ -21,7 +21,7 @@ export class ProductionService {
     }
 
     async getOneById(id: number){
-        const production = await this.productionService.findOne({where: { id }});
+        const production = await this.productionService.findOne({where: { id }, include: {all: true}});
 
         return production;
     }

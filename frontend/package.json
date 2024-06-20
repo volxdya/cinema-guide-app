@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.20",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
@@ -22,6 +26,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
     "react-transition-group": "^4.4.5",
+    "styled-components": "^6.1.11",
     "uniqid": "^5.4.0",
     "yup": "^1.4.0"
   },

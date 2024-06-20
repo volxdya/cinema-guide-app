@@ -3,14 +3,15 @@ import {film} from "../interfaces/api/film.ts";
 import axios from "axios";
 import {randomFilm} from "./default-values/films/random-film.ts";
 import {oneFilm} from "./default-values/films/one-film.ts";
+import {getItem} from "../utils/localStorage.ts";
 
 class Films {
     constructor() {
         makeAutoObservable(this);
     }
 
-    films: film[]  = [];
-    allFilms: film[] = [];
+    films: film[] = [];
+    productionFilms: film[] = [];
     genreFilms: film[] = [];
     searchFilms: film[] = [];
 
@@ -49,7 +50,7 @@ class Films {
         });
     }
 
-    async getByGenre(genreTitle: string){
+    async getByGenre(genreTitle: string) {
         await axios.get(`http://localhost:${import.meta.env.VITE_API_PORT}/genre/get_film_by_genre/${genreTitle}`).then(res => {
             this.genreFilms = res.data;
         }).catch((err) => {
@@ -73,6 +74,15 @@ class Films {
         })
     }
 
+    async getProductionFilms(prodId: number) {
+        if (getItem("token")) {
+            await axios.get(`${import.meta.env.VITE_API_URL}/film/get_by_prodId/${prodId}`).then(res => {
+                this.productionFilms = res.data;
+            }).catch((err) => {
+                console.log(err);
+            });
+        }
+    }
 
 }
 

@@ -4,9 +4,11 @@ import '../Profile.css';
 import {Movie} from "../../../icons/Movie.tsx";
 import {Link, useLocation} from "react-router-dom";
 import {Favorites} from "../Favorites/Favorites.tsx";
-import {Productions} from "../Productions/Productions.tsx";
 import {Settings} from "../Settings/Settings.tsx";
 import * as React from "react";
+import {ProductionsProfile} from "../Productions/Productions.tsx";
+import uniqid from "uniqid";
+import {Admin} from "../Admin/Admin.tsx";
 
 interface INavigationProfile {
     link: string;
@@ -32,13 +34,13 @@ export function Navigation() {
         link: "/profile/productions",
         title: "Продакшены",
         svg: <Movie/>,
-        component: <Productions/>
+        component: <ProductionsProfile/>
     }, {
         link: "/profile/admin",
         title: "Админка",
         svg: <Person/>,
-        component: <Productions/>
-    }]
+        component: <Admin/>
+    }];
 
     const url = useLocation();
 
@@ -49,7 +51,7 @@ export function Navigation() {
 
                 {navigationProfile.map((item) => {
                     return (
-                        <Link to={item.link}>
+                        <Link to={item.link} key={uniqid()}>
                             <span className="d-xl-inline d-none">
                                 <span className={item.link === url.pathname ? "active link" : "link"}>
                                     {item.svg}
@@ -81,9 +83,9 @@ export function Navigation() {
                 return (
                     <>
                         {item.link === url.pathname && (
-                            <>
+                            <div key={uniqid()}>
                                 {item.component}
-                            </>
+                            </div>
                         )}
                     </>
                 );

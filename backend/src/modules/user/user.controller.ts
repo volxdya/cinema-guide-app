@@ -5,6 +5,7 @@ import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { FavoriteDto } from './dto/favoriteDto';
 import { AuthGuard } from '../../guards/auth.guard';
 import {CheckUserDto} from "./dto/checkUserDto";
+import {Production} from "../production/production.model";
 
 @ApiTags('User')
 @Controller('/user/')

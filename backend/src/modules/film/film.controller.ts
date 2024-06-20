@@ -136,4 +136,9 @@ export class FilmController {
     getBySearch(@Param('valueInput') valueInput: string) {
         return this.filmService.searchFilms(valueInput);
     }
+
+    @Get(`/get_by_prodId/:prodId`)
+    getByProdId(@Param('prodId') prodId: number){
+        return this.filmService.getByProdId(prodId);
+    }
 }

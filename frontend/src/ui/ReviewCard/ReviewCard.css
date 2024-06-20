@@ -1,0 +1,30 @@
+.review-container {
+    outline: 1px solid rgba(46, 46, 46, 0.38);
+    padding: 15px;
+    border-radius: 25px;
+    background: rgba(34, 34, 34, 0.26);
+}
+
+.avatar-review {
+    border-radius: 50%;
+    background: var(--darkBtn);
+    height: 75px;
+    width: 75px;
+    display: flex;
+    font-size: 21px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.text-review {
+    font-size: 20px;
+}
+.date-review {
+    color: #e4e4e4;
+    font-size: 17px;
+}
+.rating-film-user {
+    font-size: 35px;
+    color: var(--purple);
+    font-weight: bold;
+}

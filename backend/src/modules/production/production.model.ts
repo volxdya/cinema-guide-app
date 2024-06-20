@@ -1,14 +1,4 @@
-import {
-    BelongsTo,
-    BelongsToMany,
-    Column,
-    DataType,
-    ForeignKey,
-    HasMany,
-    HasOne,
-    Model,
-    Table
-} from 'sequelize-typescript';
+import {BelongsTo, Column, DataType, ForeignKey, HasMany, Model, Table} from 'sequelize-typescript';
 import {User} from "../user/user.model";
 import {Film} from "../film/film.model";
 import {ApiProperty} from "@nestjs/swagger";
