@@ -5,6 +5,7 @@ import {useParams} from "react-router-dom";
 import {MainInfo} from "./MainInfo/MainInfo.tsx";
 import {About} from "./About/About.tsx";
 import users from "../../store/users.ts";
+import {Reviews} from "./Reviews/Reviews.tsx";
 
 export const FilmPage = observer(() => {
     const {id} = useParams();
@@ -23,6 +24,7 @@ export const FilmPage = observer(() => {
         <>
             <MainInfo film={films.oneFilm} user={users.fullUserData}/>
             <About film={films.oneFilm}/>
+            <Reviews/>
         </>
     );
 });
