@@ -12,6 +12,7 @@ import {EditForm} from "./Form.tsx";
 import {ToastsBS} from "../../../ui/Toast/ToastsBS.tsx";
 import {Check} from "../../../icons/Check.tsx";
 import {ErrorIcon} from "../../../icons/Error.tsx";
+import {getFirstSymbol} from "../../../utils/getFirstSymbol.ts";
 
 
 export const EditProfilePage = observer(() => {
@@ -62,8 +63,8 @@ export const EditProfilePage = observer(() => {
                 <div className="edit-profile-page-container">
                     <div className="d-flex gap-3 d-flex align-items-center">
                         <p className="profile-avatar">
-                            {users.fullUserData.firstName.charAt(0).toUpperCase()}
-                            {users.fullUserData.lastName.charAt(0).toUpperCase()}
+                            {getFirstSymbol(users.fullUserData.firstName)}
+                            {getFirstSymbol(users.fullUserData.lastName)}
                         </p>
                         <p>{users.fullUserData.firstName} {users.fullUserData.lastName}</p>
                     </div>

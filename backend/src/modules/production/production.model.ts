@@ -34,9 +34,10 @@ export class Production extends Model<Production, IProduction> {
 
     @ApiProperty({example: '[owner1, owner2, ...ownerN]', description: 'Владелец продакшена'})
     @BelongsTo(() => User)
-    owner: User[]
+    owner: User
 
     @ApiProperty({example: '[film1, film2, ...filmN]', description: 'Массив фильмов продакшена'})
     @HasMany(() => Film)
     films: Film[];
+
 }

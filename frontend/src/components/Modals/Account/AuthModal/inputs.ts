@@ -4,10 +4,12 @@ export const AuthInputs: IInputs[] =
     [
         {
             placeholder: "Введите логин",
-            name: "login"
+            name: "login",
+            type: "text"
         },
         {
             placeholder: "Введите пароль",
-            name: "password"
+            name: "password",
+            type: "password"
         },
     ];

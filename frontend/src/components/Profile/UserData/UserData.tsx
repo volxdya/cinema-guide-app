@@ -2,6 +2,7 @@ import {observer} from "mobx-react-lite";
 import users from "../../../store/users.ts";
 import {useEffect} from "react";
 import {role} from "../../../interfaces/api/role.ts";
+import {getFirstSymbol} from "../../../utils/getFirstSymbol.ts";
 
 export const UserData = observer(() => {
     useEffect(() => {
@@ -15,8 +16,8 @@ export const UserData = observer(() => {
             <section className="d-flex gap-3">
                 <div>
                     <p className="profile-avatar">
-                        {users.fullUserData.firstName.charAt(0).toUpperCase()}
-                        {users.fullUserData.lastName.charAt(0).toUpperCase()}
+                        {getFirstSymbol(users.fullUserData.firstName)}
+                        {getFirstSymbol(users.fullUserData.lastName)}
                     </p>
                 </div>
                 <div className="profile-info">
@@ -30,7 +31,7 @@ export const UserData = observer(() => {
 
             <section className="d-flex gap-3 mt-3">
                 <div>
-                    <p className="profile-avatar">{users.fullUserData.login.charAt(0).toUpperCase()}</p>
+                    <p className="profile-avatar">{getFirstSymbol(users.fullUserData.login)}</p>
                 </div>
                 <div className="profile-info">
                     <p className="m-0">Логин</p>
