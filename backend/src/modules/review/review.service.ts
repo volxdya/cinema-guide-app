@@ -5,7 +5,8 @@ import {Review} from "./review.model";
 
 @Injectable()
 export class ReviewService {
-    constructor(@InjectModel(Review) private readonly reviewService: typeof Review) {}
+    constructor(@InjectModel(Review) private readonly reviewService: typeof Review) {
+    }
 
     async create(dto: ReviewDto) {
         const review = await this.reviewService.create(dto);
@@ -15,6 +16,12 @@ export class ReviewService {
 
     async getAll() {
         const reviews = await this.reviewService.findAll({include: {all: true}});
+
+        return reviews;
+    }
+
+    async getByFilmId(filmId: number) {
+        const reviews = await this.reviewService.findAll({where: {filmId}, include: {all: true}});
 
         return reviews;
     }

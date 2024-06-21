@@ -6,22 +6,15 @@ import {ReviewInputs} from "./inputs.ts";
 import {initialState} from "../../../validation-helpers/review-helper.ts";
 import {IReview} from "../../../interfaces/validation/review.ts";
 import axios from "axios";
-import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import users from "../../../store/users.ts";
 import {onChange} from "../../../utils/onChange.ts";
+import reviews from "../../../store/reviews.ts";
 
-export function ReviewForm() {
+export function ReviewForm({filmId}: {filmId: number}) {
 
     const [valueRating, setValueRating] = useState("");
 
-    const {id} = useParams();
-
-    let filmId = 0;
-
-    if (id) {
-        filmId = Number(id);
-    }
 
     useEffect(() => {
         users.getUserData();
@@ -33,8 +26,8 @@ export function ReviewForm() {
             filmId: filmId,
             userId: users.userData.id,
             rating: valueRating
-        }).then((resp) => {
-            console.log(resp.data);
+        }).then(() => {
+            reviews.getReviews(filmId);
         }).catch((err) => {
             console.log(err);
         });
