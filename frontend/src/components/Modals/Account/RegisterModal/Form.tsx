@@ -14,7 +14,7 @@ export function RegisterForm() {
                         {RegisterInputs.map((item: IInputs) => {
                             return (
                                 <div key={uniqid()}>
-                                    <Field name={item.name} placeholder={item.placeholder}/>
+                                    <Field name={item.name} placeholder={item.placeholder} type={item.type}/>
                                     <div/>
                                     <ErrorMessage name={item.name}>
                                         {(error) => <div className="error-input"> {error} </div>}

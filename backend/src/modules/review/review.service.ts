@@ -14,7 +14,7 @@ export class ReviewService {
     }
 
     async getAll() {
-        const reviews = await this.reviewService.findAll();
+        const reviews = await this.reviewService.findAll({include: {all: true}});
 
         return reviews;
     }

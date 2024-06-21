@@ -18,6 +18,8 @@ class Films {
     random: film = randomFilm;
     oneFilm: film = oneFilm;
 
+    isErrorCards = false;
+
 
     async getAllFilms() {
         await axios.get(`${import.meta.env.VITE_API_URL}/film/get_all`).then(res => {
@@ -32,13 +34,18 @@ class Films {
             limit: limit,
             after: after
         }).then(res => {
+            this.isErrorCards = false;
+
             if (after >= 1) {
                 this.films = this.films.concat(...res.data);
             } else {
                 this.films = res.data;
             }
+
         }).catch((err) => {
             console.log(err);
+            this.isErrorCards = true;
+            console.log(this.isErrorCards);
         });
     }
 

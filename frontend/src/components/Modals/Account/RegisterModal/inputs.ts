@@ -4,22 +4,27 @@ export const RegisterInputs: IInputs[] =
     [
         {
             placeholder: "Введите логин",
-            name: "login"
+            name: "login",
+            type: "text"
         },
         {
             placeholder: "Введите пароль",
-            name: "password"
+            name: "password",
+            type: "password"
         },
         {
             placeholder: "Введите имя",
             name: "firstName",
+            type: "text"
         },
         {
             placeholder: "Введите фамилию",
             name: "lastName",
+            type: "text"
         },
         {
             placeholder: "Подтвердите пароль",
-            name: "secondPassword"
+            name: "secondPassword",
+            type: "password"
         }
     ];

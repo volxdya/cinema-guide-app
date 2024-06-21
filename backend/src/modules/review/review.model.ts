@@ -1,4 +1,4 @@
-import {Column, DataType, ForeignKey, Model, Table} from "sequelize-typescript";
+import {BelongsTo, Column, DataType, ForeignKey, HasOne, Model, Table} from "sequelize-typescript";
 import {User} from "../user/user.model";
 import {Film} from "../film/film.model";
 
@@ -22,7 +22,13 @@ export class Review extends Model<Review, IReview>{
     @Column({type: DataType.INTEGER})
     userId: number;
 
+    @BelongsTo(() => User)
+    user: User
+
     @ForeignKey(() => Film)
     @Column({type: DataType.INTEGER})
     filmId: number;
+
+    @BelongsTo(() => Film)
+    film: Film
 }

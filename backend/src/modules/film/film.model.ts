@@ -2,7 +2,7 @@ import {
   BelongsTo,
   BelongsToMany,
   Column,
-  DataType, ForeignKey,
+  DataType, ForeignKey, HasMany,
   Model,
   Table,
 } from 'sequelize-typescript';
@@ -12,6 +12,7 @@ import { User } from '../user/user.model';
 import { Favorites } from './favorites.model';
 import {Production} from "../production/production.model";
 import {ApiProperty} from "@nestjs/swagger";
+import {Review} from "../review/review.model";
 
 interface IFilm {
   title: string;
@@ -79,4 +80,7 @@ export class Film extends Model<Film, IFilm> {
   @ApiProperty({example: "[production1, production2, ...produdctionN]", description: "Массив продакшенов, которым принадлежит этот фильм"})
   @BelongsTo(() => Production)
   productions: Production[];
+
+  @HasMany(() => Review)
+  reviews: Review[]
 }

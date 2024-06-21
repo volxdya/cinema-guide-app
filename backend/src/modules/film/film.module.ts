@@ -8,12 +8,13 @@ import { FilmGenres } from '../genre/film-genres.model';
 import { GenreModule } from '../genre/genre.module';
 import { User } from '../user/user.model';
 import {Production} from "../production/production.model";
+import {Review} from "../review/review.model";
 
 @Module({
   providers: [FilmService],
   controllers: [FilmController],
   imports: [
-    SequelizeModule.forFeature([Genre, Film, FilmGenres, User, Production]),
+    SequelizeModule.forFeature([Genre, Film, FilmGenres, User, Production, Review]),
     GenreModule,
   ],
   exports: [FilmService],
