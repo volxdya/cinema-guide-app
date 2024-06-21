@@ -8,9 +8,13 @@ class Reviews {
 
     reviews = [];
 
-    async getReviews(filmId: number) {
-        axios.get(`${import.meta.env.VITE_API_URL}/review/get_by_filmId/${filmId}`).then(res => {
-            this.reviews = res.data;
+    async getReviews(filmId: number, offset: number) {
+        axios.get(`${import.meta.env.VITE_API_URL}/review/get_by_filmId/${filmId}/${offset}`).then(res => {
+            if (offset >= 1) {
+                this.reviews = this.reviews.concat(...res.data);
+            } else {
+                this.reviews = res.data;
+            }
         }).catch((err) => {
             console.log(err);
         });

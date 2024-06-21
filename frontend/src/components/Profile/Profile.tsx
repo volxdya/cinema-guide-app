@@ -4,7 +4,7 @@ import {Navigation} from "./Navigation/Navigation.tsx";
 import {getItem} from "../../utils/localStorage.ts";
 import Modal from "../../store/modal.ts";
 
-export const Profile = observer(() => {
+const Profile = observer(() => {
 
     function goAuth() {
         Modal.setCurrent("auth");
@@ -29,3 +29,5 @@ export const Profile = observer(() => {
         </div>
     )
 });
+
+export default Profile;

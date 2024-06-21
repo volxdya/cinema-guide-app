@@ -10,6 +10,7 @@ export const ProfileHeader = observer(() => {
     const url = useLocation();
     const token = getItem("token");
 
+
     useEffect(() => {
         users.getUserData();
 
@@ -27,7 +28,11 @@ export const ProfileHeader = observer(() => {
                     </button>
                 ) : (
                     <Link to="/profile/favorites"
-                          className={url.pathname === "/profile" ? 'active link' : 'link'}>
+                          className={
+                              url.pathname === "/profile/favorites"
+                              || url.pathname === "/profile/settings"
+                              || url.pathname === "/profile/productions" ? 'active link' : 'link'
+                          }>
                         {users.fullUserData.firstName}
                     </Link>
                 )}
@@ -46,6 +51,7 @@ export const ProfileHeader = observer(() => {
                     </Link>
                 )}
             </div>
+
         </>
     )
 });

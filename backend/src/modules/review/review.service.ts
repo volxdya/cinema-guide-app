@@ -20,8 +20,15 @@ export class ReviewService {
         return reviews;
     }
 
-    async getByFilmId(filmId: number) {
-        const reviews = await this.reviewService.findAll({where: {filmId}, include: {all: true}});
+    async getByFilmId(filmId: number, offset: number) {
+        const reviews = await this.reviewService.findAll(
+            {
+                where: {filmId},
+                include: {all: true},
+                limit: 5,
+                offset: offset * 5
+            }
+        );
 
         return reviews;
     }

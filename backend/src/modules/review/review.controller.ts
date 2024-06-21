@@ -16,9 +16,9 @@ export class ReviewController {
         return this.reviewService.create(dto);
     }
 
-    @Get(`/get_by_filmId/:filmId`)
-    getByFilmId(@Param('filmId') filmId: number) {
-        return this.reviewService.getByFilmId(filmId);
+    @Get('/get_by_filmId/:filmId/:offset')
+    getByFilmId(@Param('filmId') filmId: number, @Param('offset') offset: number) {
+        return this.reviewService.getByFilmId(filmId, offset);
     }
 
 }
