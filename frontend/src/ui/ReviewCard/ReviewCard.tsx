@@ -1,5 +1,8 @@
 import './ReviewCard.css';
 import {getFirstSymbol} from "../../utils/getFirstSymbol.ts";
+import {Stars} from "../../icons/Stars.tsx";
+import {skTemplate} from "../../utils/skeletonTemplate.ts";
+import {EmptyStars} from "../../icons/EmptyStars.tsx";
 
 interface Props {
     text: string;
@@ -24,7 +27,21 @@ export function ReviewCard({text, firstName, lastName,rating}: Props) {
                         <p className="pt-2 date-review">12.04.2023</p>
                     </div>
                 </div>
-                <div className="ms-auto p-2 rating-film-user pe-5 d-flex align-items-center">{rating}</div>
+                <div className="ms-auto p-2 rating-film-user pe-5 d-flex align-items-center">
+                    <div className="text-center">
+                        <div className="text-center">
+                            {rating}
+                        </div>
+
+                        {skTemplate(rating).map(() => {
+                            return <Stars/>
+                        })}
+
+                        {skTemplate(10 - rating).map(() => {
+                            return <EmptyStars/>
+                        })}
+                    </div>
+                </div>
             </div>
             <p className="text-review p-2">{text}</p>
         </div>
