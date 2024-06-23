@@ -5,6 +5,7 @@ import {film} from "../../../interfaces/api/film.ts";
 import {useEffect} from "react";
 import {observer} from "mobx-react-lite";
 import {LeftArrowIcon} from "../../../icons/LeftArrow.tsx";
+import uniqid from 'uniqid';
 
 export const GenreFilms = observer(() => {
     const {title} = useParams();
@@ -27,8 +28,10 @@ export const GenreFilms = observer(() => {
             </div>
             <div className="d-flex gap-5 mt-5 flex-wrap mx-xl-0 mx-5">
                 {films.genreFilms.map((item: film, index: number) => {
-                    return <FilmCard key={item.id} title={item.title} id={item.id} image={item.image} index={index}/>
+                    return <FilmCard key={uniqid()} title={item.title} id={item.id} image={item.image} index={index}/>
                 })}
+            </div>
+            <div>
             </div>
         </div>
     );
