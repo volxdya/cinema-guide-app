@@ -8,7 +8,7 @@ import uniqid from "uniqid";
 import {SkeletonGenreCard} from "../../ui/GenreCard/SkeletonGenreCard.tsx";
 import {skTemplate} from "../../utils/skeletonTemplate.ts";
 
-export const GenrePage = observer(() => {
+const GenrePage = observer(() => {
 
     useEffect(() => {
         genres.getAllGenres();
@@ -38,3 +38,5 @@ export const GenrePage = observer(() => {
         </div>
     );
 });
+
+export default GenrePage;

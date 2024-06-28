@@ -9,7 +9,9 @@ import {ModalSkeleton} from "../../ui/Modal/ModalSkeleton.tsx";
 import {ProductionModal} from "./Production/ProductionModal.tsx";
 import {FilmModal} from "./Film/FilmModal.tsx";
 
-export const Modals = observer(() => {
+
+const Modals = observer(() => {
+
 
     switch (Modal.current) {
         case "trailer":
@@ -30,4 +32,8 @@ export const Modals = observer(() => {
         case "film":
             return <ModalSkeleton content={<FilmModal/>}/>
     }
+
+
 });
+
+export default Modals;

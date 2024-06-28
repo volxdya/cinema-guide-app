@@ -8,7 +8,7 @@ import uniqid from "uniqid";
 import users from "../../store/users.ts";
 import Modal from "../../store/modal.ts";
 
-export const MyFilms = observer(() => {
+const MyFilms = observer(() => {
     const [isMyFilms, setIsMyFilms] = useState(true);
 
     const {id} = useParams();
@@ -76,5 +76,7 @@ export const MyFilms = observer(() => {
         <div className="main-container mt-5">
             <h1>Извините, вы не имеете доступа к этому продакшену.</h1>
         </div>
-    )
+    );
 });
+
+export default MyFilms;

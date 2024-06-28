@@ -15,7 +15,7 @@ import {ErrorIcon} from "../../../icons/Error.tsx";
 import {getFirstSymbol} from "../../../utils/getFirstSymbol.ts";
 
 
-export const EditProfilePage = observer(() => {
+const EditProfilePage = observer(() => {
 
     const [isSuccess, setIsSuccess] = useState(false);
     const [isError, setIsError] = useState(false);
@@ -109,3 +109,5 @@ export const EditProfilePage = observer(() => {
         </div>
     )
 });
+
+export default EditProfilePage;

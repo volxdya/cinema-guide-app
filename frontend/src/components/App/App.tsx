@@ -1,21 +1,25 @@
 import {Route, Routes} from 'react-router-dom';
-import {MainPage} from "../Main/MainPage.tsx";
 import '../../styles/main.global.css';
-import {Header} from "../Header/Header.tsx";
-import {Footer} from "../Footer/Footer.tsx";
-import {GenrePage} from "../GenrePage/GenrePage.tsx";
-import {GenreFilms} from "../GenrePage/GenreFilms/GenreFilms.tsx";
-import {FilmPage} from "../FilmPage/FilmPage.tsx";
-import {EditProfilePage} from "../Profile/Edit/EditProfilePage.tsx";
-import {Modals} from "../Modals/Modals.tsx";
-import {MyFilms} from "../MyFilms/MyFilms.tsx";
 import {lazy, Suspense} from "react";
+import {Loader} from "../../ui/Loader/Loader.tsx";
+
+
 
 function App() {
+
     const Profile = lazy(() => import('../Profile/Profile.tsx'));
+    const MainPage = lazy(() => import('../Main/MainPage.tsx'));
+    const GenrePage = lazy(() => import('../GenrePage/GenrePage.tsx'));
+    const GenreFilms = lazy(() => import('../GenrePage/GenreFilms/GenreFilms.tsx'));
+    const FilmPage = lazy(() => import('../FilmPage/FilmPage.tsx'));
+    const EditProfilePage = lazy(() => import('../Profile/Edit/EditProfilePage.tsx'));
+    const MyFilms = lazy(() => import('../MyFilms/MyFilms.tsx'));
+    const Header = lazy(() => import('../Header/Header.tsx'));
+    const Footer = lazy(() => import('../Footer/Footer.tsx'));
+    const Modals = lazy(() => import('../Modals/Modals.tsx'));
 
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader/>}>
             <Header/>
             <Routes>
                 <Route path="/" element={<MainPage/>}/>

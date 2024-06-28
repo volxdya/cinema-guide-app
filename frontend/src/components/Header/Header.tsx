@@ -7,7 +7,7 @@ import {ProfileHeader} from "./Profile/ProfileHeader.tsx";
 import {SearchHeader} from "./Search/SearchHeader.tsx";
 
 
-export function Header() {
+function Header() {
     return (
         <>
             <header className="main-container mt-2 mb-2 header-pc">
@@ -34,3 +34,5 @@ export function Header() {
         </>
     );
 }
+
+export default Header;

@@ -1,4 +1,4 @@
-import {Footer} from "../../components/Footer/Footer.tsx";
+import Footer from "../../components/Footer/Footer.tsx";
 
 interface Props {
     content: React.ReactNode;
@@ -6,6 +6,8 @@ interface Props {
 }
 
 export function ModalSkeleton({content, className}: Props) {
+
+
     return (
         <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel"
              aria-hidden="true">

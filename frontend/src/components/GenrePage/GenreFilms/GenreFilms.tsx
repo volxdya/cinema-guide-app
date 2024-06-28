@@ -6,7 +6,7 @@ import {useEffect} from "react";
 import {observer} from "mobx-react-lite";
 import {LeftArrowIcon} from "../../../icons/LeftArrow.tsx";
 
-export const GenreFilms = observer(() => {
+const GenreFilms = observer(() => {
     const {title} = useParams();
 
     useEffect(() => {
@@ -33,3 +33,5 @@ export const GenreFilms = observer(() => {
         </div>
     );
 });
+
+export default GenreFilms;

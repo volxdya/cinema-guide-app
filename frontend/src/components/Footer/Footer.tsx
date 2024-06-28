@@ -2,7 +2,7 @@ import './Footer.css';
 import {VK} from "../../icons/VK.tsx";
 import {Telegram} from "../../icons/Telegram.tsx";
 
-export function Footer() {
+export default function Footer() {
     const RICROLL_URL = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
     return (
@@ -21,4 +21,4 @@ export function Footer() {
             </div>
         </footer>
     );
-}
+};
