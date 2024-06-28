@@ -1,5 +1,6 @@
 import {genre} from "./genre.ts";
 import {production} from "./production.ts";
+import {Review} from "./review.ts";
 
 export interface film {
     readonly id: number;
@@ -15,4 +16,5 @@ export interface film {
     readonly productionId: number;
     readonly genres: genre[];
     readonly productions: production[];
+    readonly reviews: Review[]
 }
