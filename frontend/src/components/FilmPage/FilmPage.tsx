@@ -7,7 +7,7 @@ import {About} from "./About/About.tsx";
 import users from "../../store/users.ts";
 import {Reviews} from "./Reviews/Reviews.tsx";
 
-export const FilmPage = observer(() => {
+const FilmPage = observer(() => {
     const {id} = useParams();
 
     useEffect(() => {
@@ -28,3 +28,5 @@ export const FilmPage = observer(() => {
         </>
     );
 });
+
+export default FilmPage;

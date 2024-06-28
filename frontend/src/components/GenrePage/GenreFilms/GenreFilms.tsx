@@ -7,7 +7,7 @@ import {observer} from "mobx-react-lite";
 import {LeftArrowIcon} from "../../../icons/LeftArrow.tsx";
 import uniqid from 'uniqid';
 
-export const GenreFilms = observer(() => {
+const GenreFilms = observer(() => {
     const {title} = useParams();
 
     useEffect(() => {
@@ -36,3 +36,5 @@ export const GenreFilms = observer(() => {
         </div>
     );
 });
+
+export default GenreFilms;
