@@ -1,13 +1,12 @@
-import {film} from "../interfaces/api/film.ts";
 
 let classNameRating = "";
 
-export function getFilmRating(film: film) {
-    if (film.rating < 5) {
+export function getFilmRating(rating: number): string {
+    if (rating < 5) {
         classNameRating = 'bad-rating';
-    } else if (film.rating >= 5 && film.rating < 7.5) {
+    } else if (rating >= 5 && rating < 7.5) {
         classNameRating = 'normal-rating'
-    } else if (film.rating >= 7.5 && film.rating < 8.6) {
+    } else if (rating >= 7.5 && rating < 8.6) {
         classNameRating = 'good-rating'
     } else {
         classNameRating = 'great-rating'

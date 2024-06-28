@@ -1,13 +1,17 @@
 import {Star} from "../../../../icons/Star.tsx";
 import {film} from "../../../../interfaces/api/film.ts";
 import {getFilmRating} from "../../../../utils/filmRating.ts";
+import {checkFilmRating} from "../../../../utils/checkFilmRating.ts";
 
 interface Props {
     film: film
 }
 
 export function MainInfoFilm({film}: Props) {
-    const classNameRating = getFilmRating(film);
+
+    const rating = checkFilmRating(film);
+
+    const classNameRating = getFilmRating(rating);
 
     return (
         <>
@@ -15,7 +19,7 @@ export function MainInfoFilm({film}: Props) {
                             <span className={classNameRating + ' rating-film'}>
                                 <Star/>
                                 <span className="px-1">
-                                    {film.rating}
+                                    {rating}
                                 </span>
                             </span>
                 <span className="stats-text">{film.year}</span>

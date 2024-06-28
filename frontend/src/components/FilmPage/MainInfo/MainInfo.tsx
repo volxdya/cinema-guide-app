@@ -11,8 +11,6 @@ interface Props {
 
 export const MainInfo = ({film, user}: Props) => {
 
-
-
     return (
         <div className="wrapper" style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url(${film.image})`,
