@@ -22,23 +22,45 @@ API запросы в директории backend
 7. After maybe Docker
 
 # Запуск проекта
-(пока что только через внедерение зависимостей, возможно позже заверну все в Docker-контейнеры, README.md будет обновляться)
 
-* BACKEND dev build:
+## Backend
 
-вам необходим Postgresql и Node.js, если по какой-то причине сервер не запускается, поменяйте конфигурационный файл .env и подставьте свои данные от локальной БД 
+> [!NOTE]
+> Вам необходим Postgresql и Node.js, если по какой-то причине сервер не запускается, поменяйте конфигурационный файл .env и подставьте свои данные от локальной БД 
 
- ```bash
-    cd ./backend
-    npm install
-    npm run start:dev
-  ```
+### Установка зависимостей
 
-* FRONTEND dev build:
+```
+$ npm install
+```
 
+### Запуск сервера
+```
+$ npm run start:dev
+```
 
- ```bash
-    cd ./backend
-    npm install
-    npm run dev
-  ```
+## Frontend
+
+### Установка зависимостей
+
+```
+$ npm install
+```
+
+### Запуск клиента
+
+```
+$ npm run start:dev
+```
+
+## Docker
+
+### Билд имеджей
+```
+$ docker-compose build
+```
+
+### Запуск контейнеров
+```
+$ docker-compose up
+```
